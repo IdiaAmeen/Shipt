@@ -1,0 +1,92 @@
+[
+    {
+        "imgURL": "https://i.imgur.com/623yAtQ.png",
+        "price": "3",
+        "name": "Tostitos Scoops Tortilla Chips",
+        "measurement": "10 oz"
+    },
+    {
+        "imgURL": "https://i.imgur.com/Wb2jTnA.png",
+        "price": "2.33",
+        "name": "Quaker Chewy Chocolate Chip Granola Bars",
+        "measurement": "0.84 oz"
+    },
+    {
+        "imgURL": "https://i.imgur.com/TmIM3kH.png",
+        "price": "2.99",
+        "name": "Strawberries",
+        "measurement": "1 lb"
+    },
+    {
+        "imgURL": "https://i.imgur.com/lZFdUEx.png",
+        "price": "1.69",
+        "name": "Smartly Plastic Spoons",
+        "measurement": "48 ct"
+    },
+    {
+        "imgURL": "https://i.imgur.com/Wmiua2f.png",
+        "price": "1.99",
+        "name": "Vaseline Original Petroleum Jelly",
+        "measurement": "1.75 oz"
+    },
+    {
+        "imgURL": "https://i.imgur.com/nErkX5z.png",
+        "price": "1.39",
+        "name": "Organic Bananas - Bunch",
+        "measurement": "1 ct"
+    },
+    {
+        "imgURL": "https://i.imgur.com/Gk7kMhl.png",
+        "price": "2.69",
+        "name": "Dawn Ultra Original Dish Soap",
+        "measurement": "19.4 oz"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/5788542/thumb_19a0e0766f16dd09716c75d249bf5138.webp",
+        "price": "1.19",
+        "name": "Plastic Straws - Smartly",
+        "measurement": "100 ct"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/1696210/thumb_c1806f5df7c6a4c6fec0c180afa48190.webp",
+        "price": "3.99",
+        "name": "Simply Orange Pulp Free Juice",
+        "measurement": "52 fl oz"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/1397108/thumb_bf264d9838824f98629aa5a287175e06.webp",
+        "price": "1.99",
+        "name": "Oscar Mayer Lunchables",
+        "measurement": "3.4 oz"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/1462245/thumb_ce5fe66a98f27e7a3dec322a0b5fbc88.webp",
+        "price": "1.49",
+        "name": "Avocado",
+        "measurement": "1 ct"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/1414547/thumb_965821ecaedd66b8c318b842aff5e737.webp",
+        "price": "5.89",
+        "name": "Aquaphor Healing Ointment Tube",
+        "measurement": "1.75 oz"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/1405825/thumb_d80298b407d084f3110395f3c6ff911e.webp",
+        "price": "2.99",
+        "name": "Premium Grape Tomatoes",
+        "measurement": "10.5 oz"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/1399832/thumb_7bd5e59800d65af73bb69441f7848593.webp",
+        "price": "3.29",
+        "name": "Thomas' Plain Pre-sliced Bagels",
+        "measurement": "6 ct"
+    },
+    {
+        "imgURL": "https://dsom-imager-prod.shipt.com/1383940/thumb_332807d29d7796455efe034f65426c7f.webp",
+        "price": "3.69",
+        "name": "Kellogg's Rice Kripies Treats Original",
+        "measurement": "16 ct"
+    }
+]
