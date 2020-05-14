@@ -4,6 +4,7 @@ const Product = require('../models/product')
 
 db.on("error", console.error.bind(console, "MongoDB Connection Error"));
 
+const status500 = response.status(500).json({ error: error.message });
 
 /* -------------------------------------------------------------------------- */
 /*                                    users                                   */
@@ -20,6 +21,7 @@ const signUp = async (request, response) => {
     try {
         //! grab username, email and password from the body of the page.
         const { username, email, password } = request.body;
+        username = username.toLowerCase();
         const password_digest = await bcrypt.hash(password, SALT_ROUNDS);
 
         const user = await new User({
@@ -59,7 +61,7 @@ const signIn = async (request, response) => {
         const { username, password } = request.body;
         //! const username = request.body.username
 
-        const user = await User.findOne({ username: username })
+        const user = await User.toLowerCase().findOne({ username: username })
 
         //! bcrypt.compare automatically hashes entered password
         //! if bcrypt.compare password matches previous digest, 
@@ -70,15 +72,102 @@ const signIn = async (request, response) => {
                 username: user.username,
                 email: user.email,
             }
+            const token = jwt.sign(payload, TOKEN_KEY);
+            return response.status(201).json({ user, token });
+            //! Status Code (201): Continue;
         }
+        else {
+            response.status(401).send("Invalid Credentials")
+        }
+
+
+    }
+    catch (error) {
+        status500;
+        //! internal server error
     }
 }
 
 
 
+const verifyUser = async (request, response) => {
+    try {
+        //! find headers.authorziation from db
+        //! split at space and take the second one 
 
+        /*  headers: {
+            Authorization: 
+                `Bearer $(token)`
+        }  */
+        //! parse token out of header
 
+        const token = request.headers.authorization.split(" ")[1];
+        console.log(token);
 
+        //! jwt verify function checks if token matches secret.
+        //! returns the decoded token if secret matches.
+        const decodedToken = jwt.verify(token, TOKEN_KEY);
+        //! verify decodes
+        if (decodedToken) {
+            const user = await User.findOne({ username: decodedToken.username })
+            //! if response is true, return user information
+            response.json({ user });
+
+            //?   localStorage.setItem('token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYmMyMTkxNTc2ZWIzYjA5YzdhNTczNiIsInVzZXJuYW1lIjoic2FhZGF0IiwiZW1haWwiOiJzYWFkYXRAZ21haWwuY29tIiwicG9zdHMiOltdLCJpYXQiOjE1ODkzODc2NjV9.YkpQ2tKxkVu2mzZ9ZjSOOBMtJ6QiRCaQiXaS3eo3RZM") 
+
+        }
+    }
+    catch (error) {
+        response.status(401).send('Not Authorized')
+    }
+}
+
+const changePassword = async (request, response) => {
+    try {
+        //! pull variables password, newPassword, and username
+        const { username, password, newPassword } = request.body;
+
+        const user = await User.toLowerCase().findOne({ username }); //? looks differnet check to see if error 
+
+        //! check if user is authenticated. match password with old password
+        if (await bcrypt.compare(password, user.password_digest)) {
+            //! once authenticated, check if newPassword matches old password
+            if (await bcrypt.compare(newPassword, user.password_digest)) {
+                return response.status(400).json({ error: "Password cannot be the same as previously entered" });
+            }
+            else {
+                //! if newPassword !== old password, make oldPassword === newPassword
+
+                //! user is already saved. replace password_digest
+                user.password_digest = await bcrypt.hash(newPassword, SALT_ROUNDS);
+                //! save new credentials
+                await user.save();
+
+                const payload = {
+                    id: user._id,
+                    username: user.username,
+                    email: user.email,
+                    posts: user.posts
+                };
+
+                //! ReEncrypt
+                const token = jwt.sign(payload, TOKEN_KEY);
+
+                return response.status(200).json({
+                    user, token
+                });
+            }
+        }
+        else {
+            //! if authentication fails, 
+            return response.status(401).json({ error: "Unauthorized" });
+        }
+    }
+    catch (error) {
+        status500;
+        //! Internal server error;
+    }
+}
 
 
 
@@ -99,7 +188,7 @@ const getProducts = async (request, response) => {
         //! converts to json;
     }
     catch (error) {
-        response.status(500).json({ error: error.message })
+        status500;
         //! 500 = Internal Server Error;
     }
 }
@@ -118,7 +207,7 @@ const getProduct = async (request, response) => {
         //! 404 = Not Found
     }
     catch (error) {
-        response.status(500).json({ error: error.message })
+        status500;
         //! 500 = Internal Server Error;
     }
 }
@@ -137,7 +226,7 @@ const createProduct = async (request, response) => {
     }
     catch (error) {
         console.log(error);
-        response.status(500).json({ error: error.message });
+        status500;;
         //! 500 = Internal Server Error;
     }
 }
@@ -150,7 +239,7 @@ const updateProduct = async (request, response) => {
         { new: true }, //! make new body using Method
         (error, product) => {  //! if not found / if found
             if (error) {
-                return response.status(500).json({ error: error.message })
+                return status500;
                 //! 500 = Internal Server Error
             }
             if (!product) {
@@ -180,7 +269,7 @@ const deleteProduct = async (request, response) => {
     }
     catch (error) {
         {
-            response.status(500).json({ error: error.message });
+            status500;;
             //! 500 = Internal Server Error;
         }
     }
@@ -191,6 +280,10 @@ const deleteProduct = async (request, response) => {
 
 
 module.exports = {
+    signUp,
+    signIn,
+    verifyUser,
+    changePassword,
     getProduct,
     getProducts,
     createProduct,
