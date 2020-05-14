@@ -11,9 +11,10 @@ router.put('/products/:id', controllers.updateProduct);
 router.delete('/products/:id', controllers.deleteProduct);
 
 
-router.post('/sign-up', controllers.signUp);
-router.post('/sign-in', controllers.signIn);
-router.get('/verify', controllers.verifyUser);
+router.post('/sign-up', controllers.signUp); //? works
+router.post('/sign-in', controllers.signIn); //? works
+router.get('/verify', controllers.verifyUser); //? works
 router.post('/change-password', controllers.changePassword)
+
 
 module.exports = router

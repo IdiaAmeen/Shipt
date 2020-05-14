@@ -4,7 +4,7 @@ const Product = require('../models/product')
 
 db.on("error", console.error.bind(console, "MongoDB Connection Error"));
 
-const status500 = response.status(500).json({ error: error.message });
+
 
 /* -------------------------------------------------------------------------- */
 /*                                    users                                   */
@@ -21,7 +21,8 @@ const signUp = async (request, response) => {
     try {
         //! grab username, email and password from the body of the page.
         const { username, email, password } = request.body;
-        username = username.toLowerCase();
+
+        // username = username.toLowerCase();
         const password_digest = await bcrypt.hash(password, SALT_ROUNDS);
 
         const user = await new User({
@@ -61,7 +62,7 @@ const signIn = async (request, response) => {
         const { username, password } = request.body;
         //! const username = request.body.username
 
-        const user = await User.toLowerCase().findOne({ username: username })
+        const user = await User.findOne({ username: username })
 
         //! bcrypt.compare automatically hashes entered password
         //! if bcrypt.compare password matches previous digest, 
@@ -83,7 +84,7 @@ const signIn = async (request, response) => {
 
     }
     catch (error) {
-        status500;
+        response.status(500).json({ error: error.message });
         //! internal server error
     }
 }
@@ -127,7 +128,7 @@ const changePassword = async (request, response) => {
         //! pull variables password, newPassword, and username
         const { username, password, newPassword } = request.body;
 
-        const user = await User.toLowerCase().findOne({ username }); //? looks differnet check to see if error 
+        const user = await User.findOne({ username }); //? looks differnet check to see if error 
 
         //! check if user is authenticated. match password with old password
         if (await bcrypt.compare(password, user.password_digest)) {
@@ -146,8 +147,7 @@ const changePassword = async (request, response) => {
                 const payload = {
                     id: user._id,
                     username: user.username,
-                    email: user.email,
-                    posts: user.posts
+                    email: user.email
                 };
 
                 //! ReEncrypt
@@ -164,7 +164,7 @@ const changePassword = async (request, response) => {
         }
     }
     catch (error) {
-        status500;
+        response.status(500).json({ error: error.message });
         //! Internal server error;
     }
 }
@@ -188,7 +188,7 @@ const getProducts = async (request, response) => {
         //! converts to json;
     }
     catch (error) {
-        status500;
+        response.status(500).json({ error: error.message });
         //! 500 = Internal Server Error;
     }
 }
@@ -207,7 +207,7 @@ const getProduct = async (request, response) => {
         //! 404 = Not Found
     }
     catch (error) {
-        status500;
+        response.status(500).json({ error: error.message });
         //! 500 = Internal Server Error;
     }
 }
@@ -226,7 +226,7 @@ const createProduct = async (request, response) => {
     }
     catch (error) {
         console.log(error);
-        status500;;
+        response.status(500).json({ error: error.message });
         //! 500 = Internal Server Error;
     }
 }
@@ -239,7 +239,7 @@ const updateProduct = async (request, response) => {
         { new: true }, //! make new body using Method
         (error, product) => {  //! if not found / if found
             if (error) {
-                return status500;
+                return response.status(500).json({ error: error.message });
                 //! 500 = Internal Server Error
             }
             if (!product) {
@@ -269,7 +269,7 @@ const deleteProduct = async (request, response) => {
     }
     catch (error) {
         {
-            status500;;
+            response.status(500).json({ error: error.message });
             //! 500 = Internal Server Error;
         }
     }

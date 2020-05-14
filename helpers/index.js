@@ -1,6 +1,6 @@
 const jwt = require('jasonwebtoken')
 const User = require('../models/user')
-const TOKEN_KEY = 'ourgroupisthebestgroup'
+const TOKEN_KEY = 'shiptgroupletsgetit'
 
 const restrict = async (req, res, next) => {
     const token = req.headers.authorication.split(" ")[1]
