@@ -11,6 +11,7 @@ export default function SignIn(props) {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
     const [signInCreated, setSignInCreated] = useState(null);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const signInAndRedirect = async (e) => {
         e.preventDefault();
@@ -18,14 +19,23 @@ export default function SignIn(props) {
             username: username,
             password: password,
         };
-        const { user } = await signIn(signInObject);
-        props.setCurrentUser(user);
-        //! created SetState object, and need to connect to database before redirect
-        setSignInCreated(!!user._id);
+        try {
+
+            let user = await signIn(signInObject);
+            user = user.user
+            props.setCurrentUser(user);
+            // console.log(user);
+
+            //! created SetState object, and need to connect to database before redirect
+            setSignInCreated(!!user._id);
+        }
+        catch (error) {
+            setErrorMessage("Invalid Credentials. Please try again!")
+        }
     };
     if (signInCreated) {
         //TODO: Redirect to homePage on SignIn.
-        alert("Found Credentials")
+        // alert("Found Credentials")
         return <Redirect to="/" />;
     }
 
@@ -35,8 +45,16 @@ export default function SignIn(props) {
                 <Layout>
                     <div style={{ justifyContent: "center", display: "flex" }}>
                         <div className="sign-in-area">
+                            <h1 className="signUpHeader1"> Welcome Back!</h1>
+                            <p className="signUpHeader2">Your day is about to get a whole lot easier.</p>
                             <StaticButtons />
+
                             <p style={{ color: "#838383" }}>_____________________or_____________________</p>
+                            {/* Guard Operator */}
+                            <p style={{ color: "red", fontWeight: "900" }}>
+
+                                {errorMessage && errorMessage}
+                            </p>
                             <div className="log-in-input">
                                 <p className="inputField">Username:</p>
                                 <input

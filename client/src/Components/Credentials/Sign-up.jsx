@@ -3,6 +3,7 @@ import Layout from "../shared/Layout";
 import { Redirect } from "react-router-dom";
 import { signUp } from "../services/user";
 import StaticButtons from "./StaticButtons.jsx";
+import { Link } from "react-router-dom"
 import "./inputField.css"
 
 
@@ -47,6 +48,8 @@ const SignUp = (props) => {
                 <Layout>
                     <div style={{ justifyContent: "center", display: "flex" }}>
                         <div className="sign-up-area">
+                            <h1 className="signUpHeader1">Let's Get Started</h1>
+                            <p className="signUpHeader2">Nice to meet you</p>
                             <StaticButtons />
                             <p style={{ color: "#838383" }}>_____________________or_____________________</p>
                             <div className="sign-up-input">
@@ -81,6 +84,9 @@ const SignUp = (props) => {
                             <button className="post-button" onClick={callSignUp}>
                                 Sign Up
                             </button>
+                            <div>
+                                Already have an account?<Link to="/sign-in" style={{ color: "rgb(43,122,95)", fontWeight: "900", textDecoration: "none" }}> Sign In </Link>
+                            </div>
                         </div>
                     </div>
                 </Layout>
