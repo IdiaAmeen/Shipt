@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import "./Modal.css";
 export default function Modal() {
   const [isDisplay, setIsDisplay] = useState(true);
 
@@ -9,7 +9,17 @@ export default function Modal() {
   return (
     <div className="outer-modal">
       <div className="inner-modal">
-        <button onClick={() => setIsDisplay(false)}>X</button>
+        <button className="x" onClick={() => setIsDisplay(false)}>
+          X
+        </button>
+        <img className="nav-shipt-logo" src="/Images/brand-elements.png"></img>
+        <p>
+          Due to high demand, we recommend you choose your preferred delivery
+          time before shopping.{" "}
+        </p>
+        <button className="got-it" onClick={() => setIsDisplay(false)}>
+          Got It
+        </button>
       </div>
     </div>
   );

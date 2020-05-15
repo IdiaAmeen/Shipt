@@ -1,19 +1,19 @@
-
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import Layout from './components/shared/Layout';
-
+import Layout from "./components/shared/Layout";
+import Modal from "./components/Modal";
 
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Layout></Layout>
-      </Switch>
+      <Layout>
+        <Switch>
+          <Modal />
+        </Switch>
+      </Layout>
     </div>
   );
-
 }
 
 export default App;
