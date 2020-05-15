@@ -1,13 +1,18 @@
-import React from "react";
-import ShoppingList from './Components/AccountMenu/ShoppingList/ShoppingList'
-import "./App.css";
+import React from 'react';
+import './App.css';
+import { Switch, Route } from "react-router-dom";
+import Layout from './components/shared/Layout';
+
 
 function App() {
   return (
     <div className="App">
-      <ShoppingList/>
+      <Switch>
+        <Layout></Layout>
+      </Switch>
     </div>
   );
+
 }
 
 export default App;
