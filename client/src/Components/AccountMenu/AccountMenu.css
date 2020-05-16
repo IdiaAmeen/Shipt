@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Account-Menu-Container {
+  display: flex;
+  height: 100%;
+  width: 80vw;
+  margin-left: auto;
+  box-shadow: 0px 5px 10px;
+}
+
+.Account-Menu-UL {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin-left: auto;
+  min-height: 100%;
+  width: 100vw;
+  background-color: white;
+}
+
+.Account-Menu-List {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 0px 1px #dfdede;
+  list-style: none;
+  padding-top: 30px;
+  height: 50px;
+  width: 80vw;
+  text-align: left;
+  font-weight: 900;
+  font-size: 22px;
+  font-family: "Rubik", sans-serif;
+}
+
+.Shopping-List-Link {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 0px 1px #dfdede;
+  list-style: none;
+  padding-top: 30px;
+  height: 50px;
+  width: 80vw;
+  text-align: left;
+  font-weight: 900;
+  font-size: 22px;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.List-Name {
+  margin-left: 20px;
+  opacity: 0.3;
+}
+
+.Shopping-List-Name {
+  margin-left: 20px;
+}
+
+.Shopping-List-Icon {
+  float: right;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.Menu-Icon-Span {
+  float: right;
+  width: 25px;
+  margin-right: 20px;
+}
+.Menu-Icon {
+  width: 25px;
+  opacity: 0.4;
+}

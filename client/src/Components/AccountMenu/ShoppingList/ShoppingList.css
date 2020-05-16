@@ -1,6 +1,7 @@
 .Shopping-List {
   display: flex;
   margin-left: 15px;
+  margin-top: 10px;
   height: 15px;
   font-family: "Rubik", sans-serif;
   font-size: 24px;
@@ -19,6 +20,7 @@
   flex-direction: column;
   text-align: left;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 5px;
   width: 90vw;
   min-height: 380px;
