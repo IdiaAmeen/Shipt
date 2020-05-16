@@ -77,7 +77,7 @@ const SignUp = (props) => {
                             <div className="sign-up-input">
                                 <p className="inputField">Confirm Password:</p>
                                 <input
-                                    type="password" placeholder="text"
+                                    type="password" placeholder="Re-enter Password"
                                     className="inputBox" onChange={(e) => setConfirmPassword(e.target.value)}
                                 ></input>
                             </div>
