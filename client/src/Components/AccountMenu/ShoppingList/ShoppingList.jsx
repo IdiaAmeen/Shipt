@@ -23,7 +23,7 @@ export default function ShoppingList(item, index) {
     newItems[index].completed = true;
     setItem(newItems);
   };
-
+  ;
   const removeItem = (index) => {
     const newItems = [...items];
     newItems.splice(index, 1);
