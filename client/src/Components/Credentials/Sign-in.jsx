@@ -1,9 +1,8 @@
 import Layout from "../shared/Layout";
 import { signIn } from "../services/user";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import React, { useState } from 'react'
 import StaticButtons from "./StaticButtons.jsx";
-import { Link } from "react-router-dom";
 import "./inputField.css"
 
 export default function SignIn(props) {
