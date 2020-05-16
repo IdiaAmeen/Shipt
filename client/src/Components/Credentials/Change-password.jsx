@@ -75,10 +75,10 @@ export default function ChangePassword(props) {
                             />
                         </div>
                         <div>
-                            <p className="inputField">Re-enter Password:</p>
+                            <p className="inputField">Enter New Password:</p>
                             <input
                                 type="password"
-                                className="inputBox" placeholder="Enter your password" onChange={(e) => setNewPassword(e.target.value)}
+                                className="inputBox" placeholder="Enter new password" onChange={(e) => setNewPassword(e.target.value)}
                             />
                         </div>
                         <div style={{ paddingTop: "20px", transform: "translateX(-15%)" }}>
