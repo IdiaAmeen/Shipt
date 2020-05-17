@@ -46,66 +46,66 @@ export default function ShoppingList(item, index) {
 
   return (
     <>
-    <div className="Account-Shopping-Container">
-      <div className="Desktop-Menu-Container">
-        <p className="Desktop-Account">Account</p>
-        <ul className="Desktop-Menu-UL">
-          <li className="Desktop-Menu-List">
-            <span className="Desktop-List-Name">Profile</span>
-            <span className="Desktop-Menu-Icon-Span">
-              <img className="Desktop-Menu-Icon" src={AccountIcon} />
+    <div className="account-shopping-container">
+      <div className="desktop-menu-container">
+        <p className="desktop-account">Account</p>
+        <ul className="desktop-menu-ul">
+          <li className="desktop-menu-list">
+            <span className="desktop-list-name">Profile</span>
+            <span className="desktop-menu-icon-span">
+              <img className="desktop-menu-icon" src={AccountIcon} />
             </span>
           </li>
-          <li className="Desktop-Menu-List">
-            <span className="Desktop-List-Name">Addresses</span>
-            <span className="Desktop-Menu-Icon-Span">
-              <img className="Desktop-Menu-Icon" src={AddressIcon} />
+          <li className="desktop-menu-list">
+            <span className="desktop-list-name">Addresses</span>
+            <span className="desktop-menu-icon-span">
+              <img className="desktop-menu-icon" src={AddressIcon} />
             </span>
           </li>
-          <li className="Desktop-Menu-List">
-            <span className="Desktop-List-Name">Payments</span>
-            <span className="Desktop-Menu-Icon-Span">
-              <img className="Desktop-Menu-Icon" src={PaymentIcon} />
+          <li className="desktop-menu-list">
+            <span className="desktop-list-name">Payments</span>
+            <span className="desktop-menu-icon-span">
+              <img className="desktop-menu-icon" src={PaymentIcon} />
             </span>
           </li>
-          <li className="Desktop-Menu-List">
-            <span className="Desktop-List-Name">Order History</span>
-            <span className="Desktop-Menu-Icon-Span">
-              <img className="Desktop-Menu-Icon" src={OrderHistoryIcon} />
+          <li className="desktop-menu-list">
+            <span className="desktop-list-name">Order History</span>
+            <span className="desktop-menu-icon-span">
+              <img className="desktop-menu-icon" src={OrderHistoryIcon} />
             </span>
           </li>
-          <li className="Desktop-Menu-List">
-            <span className="Desktop-List-Name">Rewards</span>
-            <span className="Desktop-Menu-Icon-Span">
-              <img className="Desktop-Menu-Icon" src={RewardsIcon} />
+          <li className="desktop-menu-list">
+            <span className="desktop-list-name">Rewards</span>
+            <span className="desktop-menu-icon-span">
+              <img className="desktop-menu-icon" src={RewardsIcon} />
             </span>
           </li>
-          <Link className="Desktop-Shopping-List-Link" to={"/ShoppingList"}>
-            <span className="Desktop-Shopping-List-Name">Shopping List</span>
-            <span className="Desktop-Shopping-List-Icon">
+          <Link className="desktop-shopping-list-link" to={"/ShoppingList"}>
+            <span className="desktop-shopping-list-name">Shopping List</span>
+            <span className="desktop-shopping-list-icon">
               <img
-                className="Desktop-Shopping-List-Icon"
+                className="desktop-shopping-list-icon"
                 src={ShoppingListIcon}
               />
             </span>
           </Link>
-          <li className="Desktop-Menu-List">
-            <span className="Desktop-List-Name">Log Out</span>
-            <span className="Desktop-Menu-Icon-Span">
-              <img className="Desktop-Menu-Icon" src={LogoutIcon} />
+          <li className="desktop-menu-list">
+            <span className="desktop-list-name">Log Out</span>
+            <span className="desktop-menu-icon-span">
+              <img className="desktop-menu-icon" src={LogoutIcon} />
             </span>
           </li>
         </ul>
       </div>
-      <div className="Main-Shopping-List-Container">
-        <h1 className="Shopping-List">Shopping List</h1>
-        <div className="Shopping-List-Form">
-          <div className="Input-Section">
-            <img className="Add-Icon" src={AddIcon} />
+      <div className="main-shopping-list-container">
+        <h1 className="shopping-list">Shopping List</h1>
+        <div className="shopping-list-form">
+          <div className="input-section">
+            <img className="add-icon" src={AddIcon} />
 
             <form onSubmit={handleSubmit}>
               <input
-                className="Shopping-List-Input"
+                className="shopping-list-input"
                 type="text"
                 value={value}
                 placeholder="Add Item"
@@ -113,31 +113,31 @@ export default function ShoppingList(item, index) {
               />
             </form>
           </div>
-          <div className="List">
+          <div className="list">
             {items.map((item, index) => (
               <li
-                className={item.completed ? "Complete" : "Shopping-List-Items"}
+                className={item.completed ? "complete" : "shopping-list-items"}
                 key={index}
               >
                 {item.name}
                 <button
                   className={
-                    item.completed ? "Deleted" : "Shopping-List-Delete"
+                    item.completed ? "deleted" : "shopping-list-delete"
                   }
                   onClick={() => removeItem(index)}
                 >
-                  <span className="Trash">
-                    <img className="TrashIcon" src={TrashIcon} />
+                  <span className="trash">
+                    <img className="trash-icon" src={TrashIcon} />
                   </span>
                 </button>
                 <button
                   className={
-                    item.completed ? "Checked" : "Shopping-List-Complete"
+                    item.completed ? "checked" : "shopping-list-complete"
                   }
                   onClick={() => completeItem(index)}
                 >
-                  <span className="Check">
-                    <img className="CheckIcon" src={CheckIcon} />
+                  <span className="check">
+                    <img className="check-icon" src={CheckIcon} />
                   </span>
                 </button>
               </li>

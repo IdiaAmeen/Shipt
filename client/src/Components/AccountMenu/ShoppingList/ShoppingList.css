@@ -1,4 +1,4 @@
-.Shopping-List {
+.shopping-list {
   display: flex;
   margin-left: 15px;
   margin-top: 10px;
@@ -7,15 +7,13 @@
   font-size: 24px;
   font-weight: 900;
 }
-
-.Input-Section {
+.input-section {
   display: flex;
   margin-bottom: 8px;
   padding-bottom: 8px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
-
-.Shopping-List-Form {
+.shopping-list-form {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -28,22 +26,22 @@
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
 }
-
-.Add-Icon {
+.add-icon {
   display: flex;
   flex-wrap: wrap;
   width: 40px;
 }
-
-.Shopping-List-Input {
+.trash{
+  margin: 0 10px;
+}
+.shopping-list-input {
   display: flex;
   font-size: 25px;
   width: 80vw;
   margin-left: 5px;
   margin-top: 5px;
 }
-
-.Shopping-List-Items {
+.shopping-list-items {
   font-size: 25px;
   color: black;
   margin-bottom: 8px;
@@ -51,8 +49,7 @@
   padding-left: 8px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
-
-.Complete {
+.complete {
   font-size: 25px;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 8px;
@@ -61,50 +58,48 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   text-decoration: line-through;
 }
-
-.Shopping-List-Complete {
+.shopping-list-complete {
   float: right;
   margin-top: 5px;
   margin-right: 5px;
   border-style: none;
   background-color: white;
 }
-
-.Checked {
+.checked {
   display: none;
 }
-
-.Shopping-List-Delete {
+.shopping-list-delete {
   float: right;
   border-style: none;
   background-color: white;
 }
-
-.Deleted {
-  display: none;
+.deleted {
+  /* display: none; */
+  float: right;
+  border-style: none;
+  background-color: white;
 }
-
-.Desktop-Menu-Container{
+.desktop-menu-container{
   display: none;
 }
 
 
 @media (min-width: 700px){
 
-  .Account-Shopping-Container{
+  .account-shopping-container{
     display: flex;
     justify-content: center;
   }
-  .Main-Shopping-List-Container{
+  .main-shopping-list-container{
     margin-top: 160px;
     margin-left: 40px;
     height: 550px;
   }
-  .Shopping-List-Form {
+  .shopping-list-form {
     width: 30vw;
     min-width: 40vw;
   }
-  .Shopping-List-Input {
+  .shopping-list-input {
     display: flex;
     font-size: 25px;
     width: 30vw;
@@ -112,30 +107,15 @@
     margin-top: 5px;
     border: none;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .Desktop-Menu-Container {
+  .desktop-menu-container {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 300px;
+    width: 280px;
     margin-top: 50px;
     margin-left: 20px;
   }
-  .Desktop-Account {
+  .desktop-account {
     font-family: "Rubik", sans-serif;
     font-weight: bolder;
     font-size: 40px;
@@ -143,12 +123,12 @@
     margin-left: 15px;
     margin-bottom: 50px;
   }
-  .Desktop-Menu-UL {
+  .desktop-menu-ul {
     display: flex;
     flex-direction: column;
     list-style: none;
   }
-  .Desktop-Menu-List {
+  .desktop-menu-list {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-top: 30px;
     height: 50px;
@@ -158,7 +138,7 @@
     font-size: 18px;
     font-family: "Rubik", sans-serif;
   }
-  .Desktop-Shopping-List-Link {
+  .desktop-shopping-list-link {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-top: 30px;
     height: 50px;
@@ -170,24 +150,24 @@
     text-decoration: none;
     color: black;
   }
-  .Desktop-List-Name {
+  .desktop-list-name {
     margin-left: 20px;
     opacity: 0.3;
   }
-  .Desktop-Shopping-List-Name {
+  .desktop-shopping-list-name {
     margin-left: 20px;
   }
-  .Desktop-Shopping-List-Icon {
+  .desktop-shopping-list-icon {
     float: right;
     width: 20px;
     margin-right: 10px;
   }
-  .Desktop-Menu-Icon-Span {
+  .desktop-menu-icon-span {
     float: right;
     width: 20px;
     margin-right: 20px;
   }
-  .Desktop-Menu-Icon {
+  .desktop-menu-icon {
     width: 20px;
     opacity: 0.4;
   }

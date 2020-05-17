@@ -38,51 +38,51 @@ export default function AccountMenu() {
     <div>
       <nav>
         {/* <button onClick={toggleHamburgerMenu}>Click Me</button> */}
-        <div className="Account-Menu-Container">
-          <ul className="Account-Menu-UL">
-            <li className="Account-Menu-List">
-              <span className="List-Name">Profile</span>
-              <span className="Menu-Icon-Span">
-                <img className="Menu-Icon" src={AccountIcon} />
+        <div className="account-menu-container">
+          <ul className="account-menu-ul">
+            <li className="account-menu-list">
+              <span className="list-name">Profile</span>
+              <span className="menu-icon-span">
+                <img className="menu-icon" src={AccountIcon} />
               </span>
             </li>
-            <li className="Account-Menu-List">
-              <span className="List-Name">Addresses</span>
-              <span className="Menu-Icon-Span">
-                <img className="Menu-Icon" src={AddressIcon} />
+            <li className="account-menu-list">
+              <span className="list-name">Addresses</span>
+              <span className="menu-icon-span">
+                <img className="menu-icon" src={AddressIcon} />
               </span>
             </li>
-            <li className="Account-Menu-List">
-              <span className="List-Name">Payments</span>
-              <span className="Menu-Icon-Span">
-                <img className="Menu-Icon" src={PaymentIcon} />
+            <li className="account-menu-list">
+              <span className="list-name">Payments</span>
+              <span className="menu-icon-span">
+                <img className="menu-icon" src={PaymentIcon} />
               </span>
             </li>
-            <li className="Account-Menu-List">
-              <span className="List-Name">Order History</span>
-              <span className="Menu-Icon-Span">
-                <img className="Menu-Icon" src={OrderHistoryIcon} />
+            <li className="account-menu-list">
+              <span className="list-name">Order History</span>
+              <span className="menu-icon-span">
+                <img className="menu-icon" src={OrderHistoryIcon} />
               </span>
             </li>
-            <li className="Account-Menu-List">
-              <span className="List-Name">Rewards</span>
-              <span className="Menu-Icon-Span">
-                <img className="Menu-Icon" src={RewardsIcon} />
+            <li className="account-menu-list">
+              <span className="list-name">Rewards</span>
+              <span className="menu-icon-span">
+                <img className="menu-icon" src={RewardsIcon} />
               </span>
             </li>
-            <Link className="Shopping-List-Link" to={"/ShoppingList"}>
-              <span className="Shopping-List-Name">Shopping List</span>
-              <span className="Shopping-List-Icon">
-                <img className="Shopping-List-Icon" src={ShoppingListIcon} />
+            <Link className="shopping-list-link" to={"/ShoppingList"}>
+              <span className="shopping-list-name">Shopping List</span>
+              <span className="shopping-list-icon">
+                <img className="shopping-list-icon" src={ShoppingListIcon} />
               </span>
             </Link>
-            <li className="Account-Menu-List">
-              <span className="List-Name">Log Out</span>
-              <span className="Menu-Icon-Span">
-                <img className="Menu-Icon" src={LogoutIcon} />
+            <li className="account-menu-list">
+              <span className="list-name">Log Out</span>
+              <span className="menu-icon-span">
+                <img className="menu-icon" src={LogoutIcon} />
               </span>
             </li>
-            <div className="Remainder-List"></div>
+            <div className="remainder-list"></div>
           </ul>
         </div>
       </nav>
