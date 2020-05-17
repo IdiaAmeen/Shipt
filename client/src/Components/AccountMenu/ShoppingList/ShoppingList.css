@@ -83,3 +83,112 @@
 .Deleted {
   display: none;
 }
+
+.Desktop-Menu-Container{
+  display: none;
+}
+
+
+@media (min-width: 700px){
+
+  .Account-Shopping-Container{
+    display: flex;
+    justify-content: center;
+  }
+  .Main-Shopping-List-Container{
+    margin-top: 160px;
+    margin-left: 40px;
+    height: 550px;
+  }
+  .Shopping-List-Form {
+    width: 30vw;
+    min-width: 40vw;
+  }
+  .Shopping-List-Input {
+    display: flex;
+    font-size: 25px;
+    width: 30vw;
+    margin-left: 5px;
+    margin-top: 5px;
+    border: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .Desktop-Menu-Container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  .Desktop-Account {
+    font-family: "Rubik", sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 50px;
+  }
+  .Desktop-Menu-UL {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  .Desktop-Menu-List {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 30px;
+    height: 50px;
+    max-width: 30vw;
+    text-align: left;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+  }
+  .Desktop-Shopping-List-Link {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 30px;
+    height: 50px;
+    max-width: 30vw;
+    text-align: left;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    text-decoration: none;
+    color: black;
+  }
+  .Desktop-List-Name {
+    margin-left: 20px;
+    opacity: 0.3;
+  }
+  .Desktop-Shopping-List-Name {
+    margin-left: 20px;
+  }
+  .Desktop-Shopping-List-Icon {
+    float: right;
+    width: 20px;
+    margin-right: 10px;
+  }
+  .Desktop-Menu-Icon-Span {
+    float: right;
+    width: 20px;
+    margin-right: 20px;
+  }
+  .Desktop-Menu-Icon {
+    width: 20px;
+    opacity: 0.4;
+  }
+}
