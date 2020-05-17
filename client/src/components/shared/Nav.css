@@ -23,16 +23,18 @@
   text-decoration: none;
   font-size: 25px;
   font-weight: 500;
+  margin-right: 10px;
 }
 
 .nav-account-icon {
   height: 35px;
-  margin-left: 20px;
+  border: none;
 }
 
 .desktop-nav-container {
   display: none;
 }
+
 
 @media (min-width: 700px) {
   .nav-account-icon {
