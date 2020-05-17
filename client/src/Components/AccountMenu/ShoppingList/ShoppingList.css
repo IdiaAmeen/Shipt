@@ -7,12 +7,14 @@
   font-size: 24px;
   font-weight: 900;
 }
+
 .input-section {
   display: flex;
   margin-bottom: 8px;
   padding-bottom: 8px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
+
 .shopping-list-form {
   display: flex;
   flex-direction: column;
@@ -26,21 +28,26 @@
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
 }
+
 .add-icon {
   display: flex;
   flex-wrap: wrap;
   width: 40px;
 }
+
 .trash {
   margin: 0 10px;
 }
+
 .shopping-list-input {
   display: flex;
   font-size: 25px;
   width: 80vw;
   margin-left: 5px;
   margin-top: 5px;
+  padding-left: 10px;
 }
+
 .shopping-list-items {
   font-size: 25px;
   color: black;
@@ -49,6 +56,7 @@
   padding-left: 8px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
+
 .complete {
   font-size: 25px;
   color: rgba(0, 0, 0, 0.5);
@@ -58,6 +66,7 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   text-decoration: line-through;
 }
+
 .shopping-list-complete {
   float: right;
   margin-top: 5px;
@@ -65,39 +74,46 @@
   border-style: none;
   background-color: white;
 }
+
 .checked {
   display: none;
 }
+
 .shopping-list-delete {
   float: right;
   border-style: none;
   background-color: white;
 }
+
 .deleted {
   /* display: none; */
   float: right;
   border-style: none;
   background-color: white;
 }
+
 .desktop-menu-container {
   display: none;
 }
-
 
 @media (min-width: 700px) {
   .account-shopping-container {
     display: flex;
     justify-content: center;
   }
+
   .main-shopping-list-container {
     margin-top: 160px;
     margin-left: 40px;
-    height: 550px;
   }
+
   .shopping-list-form {
     width: 30vw;
     min-width: 40vw;
+    min-height: 550px;
+    height: inherit;
   }
+
   .shopping-list-input {
     display: flex;
     font-size: 25px;
@@ -106,6 +122,7 @@
     margin-top: 5px;
     border: none;
   }
+
   .desktop-menu-container {
     display: flex;
     flex-direction: column;
@@ -114,6 +131,7 @@
     margin-top: 50px;
     margin-left: 20px;
   }
+
   .desktop-account {
     font-family: "Rubik", sans-serif;
     font-weight: bolder;
@@ -122,11 +140,13 @@
     margin-left: 15px;
     margin-bottom: 50px;
   }
+
   .desktop-menu-ul {
     display: flex;
     flex-direction: column;
     list-style: none;
   }
+
   .desktop-menu-list {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-top: 30px;
@@ -137,6 +157,7 @@
     font-size: 18px;
     font-family: "Rubik", sans-serif;
   }
+
   .desktop-shopping-list-link {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-top: 30px;
@@ -149,23 +170,28 @@
     text-decoration: none;
     color: black;
   }
+
   .desktop-list-name {
     margin-left: 20px;
     opacity: 0.3;
   }
+
   .desktop-shopping-list-name {
     margin-left: 20px;
   }
+
   .desktop-shopping-list-icon {
     float: right;
     width: 20px;
     margin-right: 10px;
   }
+
   .desktop-menu-icon-span {
     float: right;
     width: 20px;
     margin-right: 20px;
   }
+
   .desktop-menu-icon {
     width: 20px;
     opacity: 0.4;

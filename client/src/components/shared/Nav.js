@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
-import AccountMenu from '../AccountMenu/AccountMenu'
+import AccountMenu from "../AccountMenu/AccountMenu";
 
 export default function Nav() {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="nav-container">
       <img className="nav-shipt-logo" src="/Images/brand-elements.png"></img>
@@ -12,8 +12,6 @@ export default function Nav() {
         <Link className="nav-question-mark" to="/">
           ?
         </Link>
-
-        
 
         <button
           onClick={() => setShowMenu(!showMenu)}
@@ -23,7 +21,6 @@ export default function Nav() {
         </button>
         {showMenu}
 
-        
         <Link to="/ShoppingList" className="desktop-nav-container">
           <img
             className="desktop-nav-account-icon"

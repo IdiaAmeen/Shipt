@@ -14,12 +14,7 @@ import LogoutIcon from "../../../Assets/logout-icon.svg";
 
 export default function ShoppingList(item, index) {
   const [value, setValue] = useState("");
-  const [items, setItem] = useState([
-    {
-      name: "",
-      completed: true,
-    },
-  ]);
+  const [items, setItem] = useState([]);
 
   const addItem = (name) => {
     const newItems = [...items, { name, completed: false }];
