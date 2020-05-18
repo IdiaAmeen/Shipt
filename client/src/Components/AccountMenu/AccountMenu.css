@@ -3,14 +3,6 @@
   padding: 0;
 }
 
-.account-menu-container {
-  /* display: flex;
-  justify-content: flex-end;
-  margin-top: 35px;
-  box-shadow: 0px 5px 10px; */
-
-}
-
 .account-menu-ul {
   display: flex;
   flex-direction: column;
@@ -91,16 +83,6 @@
   display: flex;
   flex-direction: column;
 }
-
-.nav-account-icon {
-  /* float: right; */
-}
-/* 
-@media (max-width: 382px) {
-  .account-menu-ul {
-    transform: translateX(-40px);
-  }
-} */
 
 @media (min-width: 765px) {
   .account-menu-ul {

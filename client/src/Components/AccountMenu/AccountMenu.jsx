@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ShoppingList from "./ShoppingList/ShoppingList";
 import { Link, Route } from "react-router-dom";
 import "./AccountMenu.css";
 import AccountIcon from "../../Assets/account-icon.svg";

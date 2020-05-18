@@ -3,7 +3,6 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Layout from "./Components/shared/Layout";
 import ShoppingList from "./Components/AccountMenu/ShoppingList/ShoppingList";
-import AccountMenu from "./Components/AccountMenu/AccountMenu";
 
 
 function App() {
@@ -11,10 +10,7 @@ function App() {
     <div className="App">
       <Switch>
         <Layout>
-          {/* <Route exact path='/'>
-            <AccountMenu/>
-          </Route> */}
-          <Route path="/ShoppingList">
+          <Route exact path="/ShoppingList">
             <ShoppingList />
           </Route>
         </Layout>
