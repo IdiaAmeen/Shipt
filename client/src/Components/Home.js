@@ -4,7 +4,7 @@ import Layout from "./shared/Layout";
 import { Link } from "react-router-dom";
 import DeliveryTime from "./DeliveryTime";
 import SmallProduct from "./SmallProduct"
-import { getProducts } from "./services/product"
+import { getProducts } from "../services/product"
 
 export default function Home() {
   const [buyAgainProducts, updateBuyAgainProducts] = useState([])
@@ -22,13 +22,16 @@ export default function Home() {
     updateForYouProducts(apiResults.splice(0, 4))
     updateOnSaleProducts(apiResults.splice(0, 4))
   }
-  
+
   return (
     <div>
       <Layout>
+
         <div className="home-delivery-time-container">
           <DeliveryTime />
         </div>
+
+
         <div className="home-search-container">
           <img className="home-target-logo" src="/images/Target Logo.png"></img>
           <img className="home-target-text" src="/images/Group 123.png"></img>
@@ -38,9 +41,14 @@ export default function Home() {
             placeholder="Search for..."
           ></input>
         </div>
+
+
+
         <div className="gift-bar">
           <img src="/images/Gift.png"></img> <span>Get $10 Off</span>
         </div>
+
+
         <div className="home-products-links">
           <div>
             <img className="home-group-icons" src="/images/Buy Again Icon.png"></img>
@@ -55,9 +63,16 @@ export default function Home() {
             <span>On Sale</span>
           </div>
         </div>
+
+
+
         <div>
           <img src="/images/Exclusive Saving.png"></img>
         </div>
+
+
+
+
         <h3 className="SmallProduct-header">Buy Again</h3>
         <div className="home-SmallProduct-container">
           {buyAgainProducts.map((item) => (
@@ -66,6 +81,8 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+
         <h3 className="SmallProduct-header">For You</h3>
         <div className="home-SmallProduct-container">
           {forYouProducts.map((item) => (
@@ -74,6 +91,9 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+
+
         <h3 className="SmallProduct-header">On Sale</h3>
         <div className="home-SmallProduct-container">
           {onSaleProducts.map((item) => (
@@ -82,6 +102,9 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+
+
       </Layout>
     </div>
   );

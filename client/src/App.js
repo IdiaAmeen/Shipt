@@ -10,12 +10,6 @@ import Layout from './Components/shared/Layout';
 import Home from "./Components/Home"
 
 
-
-
-import Modal from "./Components/Modal"
-​
-​
-​
 function App() {
 
   const [input, setInput] = useState('');
@@ -43,36 +37,37 @@ function App() {
   return (
     <div className="App">
 
-        <Layout>
- 
-    <Switch>
-      <Route exact path="/" render={() => <Home />} />
-      
-        <Route exact path="/" render={() => <Modal />} />
+
+      <Switch>
+        <Route exact path="/" render={() => <Home />} />
+
+        <Route exact path="/" >
+          <Modal />
+        </Route>
       </Switch>
-  
-        <Route path='/'>
-          <Search
-            results={results}
-            value={input}
-            onChange={e => setInput(e.target.value)}
-          />
-          <button onClick={callList}>Go</button>
-        </Route>
-        <Route
-          exact path='/'>
-          {results.length && <Redirect to='/searchlist' />}
-        </Route>
-        <Route exact path='/searchlist'>
-          <SearchList results={results} />
-        </Route>
 
-      </Layout>
+      <Route path='/'>
+        <Search
+          results={results}
+          value={input}
+          onChange={e => setInput(e.target.value)}
+        />
+        <button onClick={callList}>Go</button>
+      </Route>
+      <Route
+        exact path='/'>
+        {results.length && <Redirect to='/searchlist' />}
+      </Route>
+      <Route exact path='/searchlist'>
+        <SearchList results={results} />
+      </Route>
 
-    
+
+
+
     </div>
   );
-​
+
 }
-​
+
 export default App;
