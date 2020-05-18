@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Layout from "./shared/Layout";
 import { Route } from "react-router-dom";
-import BuyAgain from "./BuyAgain"
-import ForYou from "./ForYou"
+import BuyAgain from "./BuyAgain";
+import ForYou from "./ForYou";
 import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
-import axios from "axios"
+import axios from "axios";
 import OnSale from "./OnSale";
-
 
 export default function Home() {
   const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
@@ -19,20 +18,20 @@ export default function Home() {
     callGetProducts();
   }, []);
 
-
   const callGetProducts = async () => {
-    const apiResults = await axios("https://shiptserver.herokuapp.com/api/products")
-    console.log(apiResults.data.splice(0, 4))
-    updateBuyAgainProducts(apiResults.data.splice(0, 4))
-    updateForYouProducts(apiResults.data.splice(0, 4))
-    updateOnSaleProducts(apiResults.data.splice(0, 4))
-  }
+    const apiResults = await axios(
+      "https://shiptserver.herokuapp.com/api/products"
+    );
+    console.log(apiResults.data.splice(0, 4));
+    updateBuyAgainProducts(apiResults.data.splice(0, 4));
+    updateForYouProducts(apiResults.data.splice(0, 4));
+    updateOnSaleProducts(apiResults.data.splice(0, 4));
+  };
 
   return (
     <div>
       <Layout>
-
-        <Route exact path="/" >
+        <Route exact path="/">
           <Modal />
         </Route>
 
@@ -79,7 +78,6 @@ export default function Home() {
         <BuyAgain results={buyAgainProducts} />
         <ForYou results={forYouProducts} />
         <OnSale results={onSaleProducts} />
-
       </Layout>
     </div>
   );
