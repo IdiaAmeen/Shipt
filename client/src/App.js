@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Switch, Route, Redirect, Link } from "react-router-dom";
-import Layout from "./Components/shared/Layout";
 import Home from "./Components/Home";
 import ShoppingList from "./Components/AccountMenu/ShoppingList/ShoppingList";
 import SignUp from "./Components/Credentials/Sign-up";
