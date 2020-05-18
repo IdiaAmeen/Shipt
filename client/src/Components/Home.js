@@ -7,18 +7,17 @@ import ForYou from "./ForYou"
 import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
 import axios from "axios"
-
-import { getProducts } from "../services/product"
 import OnSale from "./OnSale";
 
+
 export default function Home() {
-  const [buyAgainProducts, updateBuyAgainProducts] = useState([])
-  const [forYouProducts, updateForYouProducts] = useState([])
-  const [onSaleProducts, updateOnSaleProducts] = useState([])
+  const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
+  const [forYouProducts, updateForYouProducts] = useState([]);
+  const [onSaleProducts, updateOnSaleProducts] = useState([]);
 
   useEffect(() => {
-    callGetProducts()
-  }, [])
+    callGetProducts();
+  }, []);
 
 
   const callGetProducts = async () => {
@@ -27,9 +26,7 @@ export default function Home() {
     updateBuyAgainProducts(apiResults.data.splice(0, 4))
     updateForYouProducts(apiResults.data.splice(0, 4))
     updateOnSaleProducts(apiResults.data.splice(0, 4))
-
   }
-
 
   return (
     <div>
@@ -56,11 +53,17 @@ export default function Home() {
         </div>
         <div className="home-products-links">
           <div>
-            <img className="home-group-icons" src="/images/Buy Again Icon.png"></img>
+            <img
+              className="home-group-icons"
+              src="/images/Buy Again Icon.png"
+            ></img>
             <span>Buy Again</span>
           </div>
           <div>
-            <img className="home-group-icons" src="/images/Shopping Bag Icon.png"></img>
+            <img
+              className="home-group-icons"
+              src="/images/Shopping Bag Icon.png"
+            ></img>
             <span>For You</span>
           </div>
           <div>

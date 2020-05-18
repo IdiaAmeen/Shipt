@@ -9,8 +9,8 @@
   background: grey;
   z-index: 1000;
   background-color: rgb(0,0,0,0.3);
-}
 
+}
 .inner-modal {
   position: absolute;
   height: 440px;

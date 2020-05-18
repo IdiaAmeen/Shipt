@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.account-menu-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin-left: auto;
+  margin-top: 17px;
+  min-height: 100%;
+  width: 63vw;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  transform: translateY(1px);
+}
+
+.account-menu-list {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0px 1px #dfdede;
+  list-style: none;
+  padding-top: 30px;
+  height: 50px;
+  width: 63vw;
+  text-align: left;
+  font-weight: 900;
+  font-size: 22px;
+  font-family: "Rubik", sans-serif;
+}
+
+.shopping-list-link {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0px 1px #dfdede;
+  list-style: none;
+  padding-top: 30px;
+  height: 50px;
+  width: 63vw;
+  text-align: left;
+  font-weight: 900;
+  font-size: 22px;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.list-name {
+  margin-left: 20px;
+  opacity: 0.3;
+}
+
+.shopping-list-name {
+  margin-left: 20px;
+}
+
+.shopping-list-icon {
+  display: flex;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.menu-icon-span {
+  display: flex;
+  margin-left: auto;
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.menu-icon {
+  width: 25px;
+  opacity: 0.4;
+}
+
+.account-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 765px) {
+  .account-menu-ul {
+    display: none;
+  }
+}

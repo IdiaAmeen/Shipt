@@ -1,17 +1,17 @@
 import axios from "axios";
 
 const getToken = () => {
-  return new Promise((resolve) => {
-    resolve(`Bearer ${localStorage.getItem("token") || null}`);
-  });
+  // return new Promise((resolve) => {
+  //     resolve(`Bearer ${localStorage.getItem("token") || null}`);
+  // });
+  const token = localStorage.getItem(`token`);
+  return token;
 };
 
 let apiUrl;
 
 const apiUrls = {
-
-  production: "https://shiptserver.herokuapp.com/api",
-
+  production: "https://shiptserver.herokuapp.com/api/",
   development: "http://localhost:3001/api",
 };
 
@@ -26,7 +26,7 @@ const api = axios.create({
 });
 api.interceptors.request.use(
   async function (options) {
-    options.headers["Authorization"] = await getToken();
+    options.headers["Authorization"] = `Bearer ${getToken()}`;
     return options;
   },
   function (error) {
