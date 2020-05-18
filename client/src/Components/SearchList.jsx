@@ -1,11 +1,11 @@
 import React from 'react'
 
-function BuyAgainList(props) {
+function SearchList(props) {
 
 
   return (
 
-    <div className='buyagainlist'>
+    <div className='searchlist'>
       {props.results.map((result, index) =>
         <div className='list-items'>
           {/* <img
@@ -27,5 +27,6 @@ function BuyAgainList(props) {
 }
 
 
-export default BuyAgainList
+export default SearchList
+
 

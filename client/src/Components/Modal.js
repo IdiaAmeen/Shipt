@@ -12,7 +12,7 @@ export default function Modal() {
         <button className="x" onClick={() => setIsDisplay(false)}>
           X
         </button>
-        <img className="nav-shipt-logo" src="/Images/brand-elements.png"></img>
+        <img className="nav-shipt-logo" src="/Images/brand-elements.png" alt="product"></img>
         <p>
           Due to high demand, we recommend you choose your preferred delivery
           time before shopping.{" "}

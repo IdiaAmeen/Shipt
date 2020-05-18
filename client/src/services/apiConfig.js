@@ -10,7 +10,7 @@ let apiUrl;
 
 const apiUrls = {
   production: "https://shiptserver.herokuapp.com/api/products",
-  development: "http://localhost:3000/api",
+  development: "http://localhost:3001/api",
 };
 
 if (window.location.hostname === "localhost") {
