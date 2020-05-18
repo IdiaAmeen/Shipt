@@ -7,10 +7,10 @@
   height: 100vh;
   width: 100vw;
   background: grey;
+  z-index: 1;
   opacity: 0.8;
   transition: opacity 1s;
 }
-
 .inner-modal {
   position: absolute;
   height: 440px;

@@ -3,26 +3,26 @@ import "./Home.css";
 import Layout from "./shared/Layout";
 import { Link } from "react-router-dom";
 import DeliveryTime from "./DeliveryTime";
-import SmallProduct from "./SmallProduct"
-import { getProducts } from "./services/product"
+import SmallProduct from "./SmallProduct";
+import { getProducts } from "../services/product";
 
 export default function Home() {
-  const [buyAgainProducts, updateBuyAgainProducts] = useState([])
-  const [forYouProducts, updateForYouProducts] = useState([])
-  const [onSaleProducts, updateOnSaleProducts] = useState([])
+  const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
+  const [forYouProducts, updateForYouProducts] = useState([]);
+  const [onSaleProducts, updateOnSaleProducts] = useState([]);
 
   useEffect(() => {
-    callGetProducts()
-  }, [])
+    callGetProducts();
+  }, []);
 
   const callGetProducts = async () => {
-    let apiResults = await getProducts()
+    let apiResults = await getProducts();
 
-    updateBuyAgainProducts(apiResults.splice(0, 4))
-    updateForYouProducts(apiResults.splice(0, 4))
-    updateOnSaleProducts(apiResults.splice(0, 4))
-  }
-  
+    updateBuyAgainProducts(apiResults.splice(0, 4));
+    updateForYouProducts(apiResults.splice(0, 4));
+    updateOnSaleProducts(apiResults.splice(0, 4));
+  };
+
   return (
     <div>
       <Layout>
@@ -43,11 +43,17 @@ export default function Home() {
         </div>
         <div className="home-products-links">
           <div>
-            <img className="home-group-icons" src="/images/Buy Again Icon.png"></img>
+            <img
+              className="home-group-icons"
+              src="/images/Buy Again Icon.png"
+            ></img>
             <span>Buy Again</span>
           </div>
           <div>
-            <img className="home-group-icons" src="/images/Shopping Bag Icon.png"></img>
+            <img
+              className="home-group-icons"
+              src="/images/Shopping Bag Icon.png"
+            ></img>
             <span>For You</span>
           </div>
           <div>
