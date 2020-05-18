@@ -9,6 +9,7 @@ import RewardsIcon from "../../Assets/rewards-icon.svg";
 import ShoppingListIcon from "../../Assets/shopping-list-icon.svg";
 import LogoutIcon from "../../Assets/logout-icon.svg";
 
+
 export default function AccountMenu() {
   return (
     <div className="account-menu-container">
