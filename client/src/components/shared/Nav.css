@@ -3,6 +3,7 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .nav-shipt-logo {
@@ -13,11 +14,12 @@
 .nav-links-container {
   display: flex;
   margin: auto 50px auto 0;
+  /* position: absolute; */
+  /* left: 400px; */
 }
 
 .nav-help-icon {
   display: flex;
-  float: right;
   margin-left: auto;
   margin-right: 10px;
   max-width: 35px;
@@ -38,6 +40,15 @@
   display: none;
 }
 
+.drop-down {
+  position: absolute;
+  z-index: 0;
+  display: inline-block;
+  margin-top: 34px;
+  margin-right: 240px;
+  transform: translateX(-185px);
+}
+
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -53,7 +64,7 @@
     text-decoration: none;
     color: black;
   }
-  .nav-help-icon{
+  .nav-help-icon {
     height: 30px;
     width: 30px;
   }

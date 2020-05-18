@@ -41,7 +41,6 @@ export default function ShoppingList(item, index) {
 
   return (
     <>
-      <div className="account-shopping-container">
         <div className="desktop-menu-container">
           <p className="desktop-account">Account</p>
           <ul className="desktop-menu-ul">
@@ -163,7 +162,6 @@ export default function ShoppingList(item, index) {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }

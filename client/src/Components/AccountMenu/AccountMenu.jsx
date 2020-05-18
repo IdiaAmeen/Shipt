@@ -11,18 +11,8 @@ import ShoppingListIcon from "../../Assets/shopping-list-icon.svg";
 import LogoutIcon from "../../Assets/logout-icon.svg";
 
 export default function AccountMenu() {
-  const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="account-menu">
-      {/* <button
-        onClick={() => setShowMenu(!showMenu)}
-        className="nav-account-icon"
-      >
-        <img src="/Images/account-icon@2x.png" className="nav-account-icon" />
-      </button> */}
-      {/* {showMenu && ( */}
-        <nav>
           <div className="account-menu-container">
             <ul className="account-menu-ul">
               <li className="account-menu-list">
@@ -97,9 +87,6 @@ export default function AccountMenu() {
               </li>
               <div className="remainder-list"></div>
             </ul>
-          </div>
-        </nav>
-      
-    </div>
+          </div>      
   );
 }

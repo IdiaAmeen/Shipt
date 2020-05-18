@@ -14,7 +14,6 @@ export default function Nav() {
         <Link className="nav-question-mark" to="/">
           <img src={HelpIcon} className="nav-help-icon" />
         </Link>
-
         <div className="mobile-menu">
           <button
             className="nav-account-icon"
@@ -25,7 +24,8 @@ export default function Nav() {
               className="nav-account-icon"
             />
           </button>
-          {showMenu && <AccountMenu />}
+
+          <div className="drop-down">{showMenu && <AccountMenu />}</div>
         </div>
 
         <Link to="/ShoppingList" className="desktop-nav-container">
