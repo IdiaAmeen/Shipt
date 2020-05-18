@@ -68,7 +68,7 @@ export default function SignIn(props) {
                                     className="inputBox" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)}
                                 ></input>
                             </div>
-                            <div style={{ paddingTop: "20px", transform: "translateX(-18%)" }}>
+                            <div style={{ paddingTop: "10px", transform: "translateX(-25%)" }}>
                                 <Link to="./change-password" style={{
                                     color: "black", textDecoration: "none", fontWeight: "900", fontSize: "10px"
                                 }}>
