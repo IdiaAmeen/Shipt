@@ -41,6 +41,7 @@ export default function ShoppingList(item, index) {
 
   return (
     <>
+      <div className="account-shopping-container">
         <div className="desktop-menu-container">
           <p className="desktop-account">Account</p>
           <ul className="desktop-menu-ul">
@@ -53,41 +54,25 @@ export default function ShoppingList(item, index) {
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Addresses</span>
               <span className="desktop-menu-icon-span">
-                <img
-                  className="desktop-menu-icon"
-                  src={AddressIcon}
-                  alt="address icon"
-                />
+                <img className="desktop-menu-icon" src={AddressIcon} alt="address icon"/>
               </span>
             </li>
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Payments</span>
               <span className="desktop-menu-icon-span">
-                <img
-                  className="desktop-menu-icon"
-                  src={PaymentIcon}
-                  alt="payment icon"
-                />
+                <img className="desktop-menu-icon" src={PaymentIcon} alt="payment icon"/>
               </span>
             </li>
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Order History</span>
               <span className="desktop-menu-icon-span">
-                <img
-                  className="desktop-menu-icon"
-                  src={OrderHistoryIcon}
-                  alt="order history icon"
-                />
+                <img className="desktop-menu-icon" src={OrderHistoryIcon} alt="order history icon"/>
               </span>
             </li>
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Rewards</span>
               <span className="desktop-menu-icon-span">
-                <img
-                  className="desktop-menu-icon"
-                  src={RewardsIcon}
-                  alt="rewards icon"
-                />
+                <img className="desktop-menu-icon" src={RewardsIcon} alt="rewards icon"/>
               </span>
             </li>
             <Link className="desktop-shopping-list-link" to={"/ShoppingList"}>
@@ -103,11 +88,7 @@ export default function ShoppingList(item, index) {
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Log Out</span>
               <span className="desktop-menu-icon-span">
-                <img
-                  className="desktop-menu-icon"
-                  src={LogoutIcon}
-                  alt="logout icon"
-                />
+                <img className="desktop-menu-icon" src={LogoutIcon} alt="logout-icon"/>
               </span>
             </li>
           </ul>
@@ -116,7 +97,7 @@ export default function ShoppingList(item, index) {
           <h1 className="shopping-list">Shopping List</h1>
           <div className="shopping-list-form">
             <div className="input-section">
-              <img className="add-icon" src={AddIcon} alt="add icon" />
+              <img className="add-icon" src={AddIcon} alt="add icon"/>
 
               <form onSubmit={handleSubmit}>
                 <input
@@ -162,6 +143,7 @@ export default function ShoppingList(item, index) {
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 }
