@@ -1,6 +1,6 @@
 .nav-container {
   margin: 0 auto;
-  width:85%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   z-index: 2;
@@ -8,7 +8,7 @@
 
 .nav-border {
   box-shadow: 0 1px 12px 0;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 .nav-shipt-logo {
@@ -48,7 +48,7 @@
 
 .drop-down {
   position: absolute;
-  z-index: 0;
+  z-index: 2;
   display: inline-block;
   margin-top: 34px;
   margin-right: 240px;
@@ -84,7 +84,6 @@
     padding-left: 5px;
     font-size: 20px;
   }
-
 }
 
 .nav-services-container {

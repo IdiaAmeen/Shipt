@@ -21,7 +21,8 @@ export default function Nav() {
             src="/Images/brand-elements.png"
           ></img>
           <div className="nav-links-container">
-            <img src={HelpIcon} className="nav-help-icon" />
+          <Link className="nav-question-mark" to="/">
+          <img src={HelpIcon} className="nav-help-icon" />
         </Link>
         <div className="mobile-menu">
           <button
