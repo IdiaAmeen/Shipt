@@ -1,13 +1,21 @@
+
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import { Switch, Route, Redirect } from "react-router-dom";
-import Layout from "./Components/shared/Layout"
 import Modal from "./Components/Modal";
 import Search from "./Components/Search"
 import axios from 'axios'
 import SearchList from "./Components/SearchList"
-import BuyAgain from "./Components/BuyAgain"
+import './App.css';
+import { Switch, Route, Redirect } from "react-router-dom";
+import Layout from './Components/shared/Layout';
+import Home from "./Components/Home"
 
+
+
+
+import Modal from "./Components/Modal"
+​
+​
+​
 function App() {
 
   const [input, setInput] = useState('');
@@ -34,12 +42,15 @@ function App() {
 
   return (
     <div className="App">
-      <Layout>
-        <Switch>
-          <Modal />
 
-        </Switch>
-
+        <Layout>
+ 
+    <Switch>
+      <Route exact path="/" render={() => <Home />} />
+      
+        <Route exact path="/" render={() => <Modal />} />
+      </Switch>
+  
         <Route path='/'>
           <Search
             results={results}
@@ -57,8 +68,11 @@ function App() {
         </Route>
 
       </Layout>
+
+    
     </div>
   );
+​
 }
-
+​
 export default App;

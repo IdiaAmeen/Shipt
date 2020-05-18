@@ -9,7 +9,9 @@ const getToken = () => {
 let apiUrl;
 
 const apiUrls = {
-  production: "https://shiptserver.herokuapp.com/api/products",
+
+  production: "https://shiptserver.herokuapp.com/api",
+
   development: "http://localhost:3001/api",
 };
 
