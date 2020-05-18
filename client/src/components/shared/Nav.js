@@ -3,10 +3,11 @@ import "./Nav.css";
 import { Link } from "react-router-dom";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import HelpIcon from "../../Assets/help-icon.svg";
+import LiveChat from "../LiveChat";
 
 export default function Nav() {
   const [showMenu, setShowMenu] = useState(false);
-
+  const [isDisplay, setIsDisplay] = useState(false);
   return (
     <div>
       <div className="nav-border">
@@ -52,14 +53,14 @@ export default function Nav() {
             <img src="/images/SearchIcon.png"></img>
           </Link>
         </div>
-        <div className="nav-services-icons">
-          <Link to="">
-            <img src="/images/1381552 2.png"></img>
-          </Link>
-          <Link to="">
-            <img src="/images/Shopping Cart.png"></img>
-          </Link>
-        </div>
+
+        <Link to="/livechat">
+          <img src="/images/1381552 2.png" />
+        </Link>
+
+        <Link to="">
+          <img src="/images/Shopping Cart.png"></img>
+        </Link>
       </div>
     </div>
   );
