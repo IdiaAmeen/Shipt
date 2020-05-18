@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Layout from "../../shared/Layout";
+import Layout from "../shared/Layout";
 import { Redirect } from "react-router-dom";
-import { signUp } from "../services/user";
+import { signUp } from "../../services/user";
 import StaticButtons from "./StaticButtons.jsx";
 import { Link } from "react-router-dom";
 import "./inputField.css";
