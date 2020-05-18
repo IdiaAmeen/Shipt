@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
+
     <div>
       <div className="nav-border">
         <div className="nav-container">
@@ -41,6 +42,7 @@ export default function Nav() {
             <img src="/images/Shopping Cart.png"></img>
           </Link>
         </div>
+
       </div>
     </div>
   );
