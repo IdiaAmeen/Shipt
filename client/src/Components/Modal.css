@@ -1,0 +1,43 @@
+.outer-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: grey;
+  z-index: 1;
+  opacity: 0.8;
+  transition: opacity 1s;
+}
+.inner-modal {
+  position: absolute;
+  height: 440px;
+  width: 100vw;
+  background-color: white;
+  top: 11.5%;
+  opacity: 1;
+  bottom: 25%;
+  border-radius: 21.7px;
+  font-family: Rubik, sans-serif;
+  font-size: 24px;
+}
+.got-it {
+  background-color: #3a8569;
+  height: 37px;
+  width: 146px;
+  border-radius: 11.2px;
+  font-family: Rubik, sans-serif;
+  font-size: 20.2px;
+  color: white;
+}
+
+.x {
+  font-family: Rubik, sans-serif;
+  font-size: 32.2px;
+  float: right;
+  width: 40px;
+  height: 36.7;
+  color: grey;
+}
