@@ -7,19 +7,19 @@
   height: 100vh;
   width: 100vw;
   background: grey;
-  z-index: 1;
-  opacity: 0.8;
-  transition: opacity 1s;
+  z-index: 1000;
+  background-color: rgb(0,0,0,0.3);
+
 }
 .inner-modal {
   position: absolute;
   height: 440px;
   width: 100vw;
-  background-color: white;
   top: 11.5%;
-  opacity: 1;
+  background-color: rgb(255,255,255,1);
   bottom: 25%;
   border-radius: 21.7px;
+  z-index: 1;
   font-family: Rubik, sans-serif;
   font-size: 24px;
 }
