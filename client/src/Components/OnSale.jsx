@@ -1,13 +1,12 @@
 import React from "react";
-import { Link, } from 'react-router-dom'
 import "./ItemCarousels.css"
-function BuyAgain(props) {
+
+
+function OnSale(props) {
   const results = props.results
   return (
     <div>
-      <Link to={`/BuyAgainList/`} ><h3>Buy Again</h3></Link>
-
-
+      <h3>On Sale</h3>
       <div className='section-box'>
         {props.results.map((result, index) =>
           <div className='list-items'>
@@ -17,6 +16,7 @@ function BuyAgain(props) {
               width='125px'
               alt="item"
             />
+
             <p className="price">$ {result.price}</p>
             <p className="name">{result.name}</p>
             <p className="measurement">{result.measurement}</p>
@@ -28,8 +28,4 @@ function BuyAgain(props) {
     </div>
   )
 
-} export default BuyAgain
-
-
-// alt = "item"
-// const results = props.results
+} export default OnSale
