@@ -49,7 +49,7 @@ export default function SignIn(props) {
                                     <h1 className="signUpHeader1"> Welcome Back!</h1>
                                     <p className="signUpHeader2">Your day is about to get a whole lot easier.</p>
                                 </div>
-                                <img className="signUpImage" src="Images/SignInimage.png" alt="Sign In Image" width="500px" />
+                                <img className="signUpImage" src="Images/SignInimage.png" alt="Sign In Image" width="400px" />
                             </div>
                             <div style={{ justifyContent: "center", display: "flex" }}>
                                 <div className="sign-in-area">
