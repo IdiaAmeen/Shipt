@@ -54,25 +54,41 @@ export default function ShoppingList(item, index) {
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Addresses</span>
               <span className="desktop-menu-icon-span">
-                <img className="desktop-menu-icon" src={AddressIcon} />
+                <img
+                  className="desktop-menu-icon"
+                  src={AddressIcon}
+                  alt="address icon"
+                />
               </span>
             </li>
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Payments</span>
               <span className="desktop-menu-icon-span">
-                <img className="desktop-menu-icon" src={PaymentIcon} />
+                <img
+                  className="desktop-menu-icon"
+                  src={PaymentIcon}
+                  alt="payment icon"
+                />
               </span>
             </li>
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Order History</span>
               <span className="desktop-menu-icon-span">
-                <img className="desktop-menu-icon" src={OrderHistoryIcon} />
+                <img
+                  className="desktop-menu-icon"
+                  src={OrderHistoryIcon}
+                  alt="order history icon"
+                />
               </span>
             </li>
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Rewards</span>
               <span className="desktop-menu-icon-span">
-                <img className="desktop-menu-icon" src={RewardsIcon} />
+                <img
+                  className="desktop-menu-icon"
+                  src={RewardsIcon}
+                  alt="rewards icon"
+                />
               </span>
             </li>
             <Link className="desktop-shopping-list-link" to={"/ShoppingList"}>
@@ -81,13 +97,18 @@ export default function ShoppingList(item, index) {
                 <img
                   className="desktop-shopping-list-icon"
                   src={ShoppingListIcon}
+                  alt="shopping list icon"
                 />
               </span>
             </Link>
             <li className="desktop-menu-list">
               <span className="desktop-list-name">Log Out</span>
               <span className="desktop-menu-icon-span">
-                <img className="desktop-menu-icon" src={LogoutIcon} />
+                <img
+                  className="desktop-menu-icon"
+                  src={LogoutIcon}
+                  alt="logout icon"
+                />
               </span>
             </li>
           </ul>
@@ -96,7 +117,7 @@ export default function ShoppingList(item, index) {
           <h1 className="shopping-list">Shopping List</h1>
           <div className="shopping-list-form">
             <div className="input-section">
-              <img className="add-icon" src={AddIcon} />
+              <img className="add-icon" src={AddIcon} alt="add icon" />
 
               <form onSubmit={handleSubmit}>
                 <input

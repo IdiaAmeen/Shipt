@@ -15,18 +15,21 @@
   margin: auto 50px auto 0;
 }
 
-.nav-question-mark {
-  border-radius: 50%;
-  border: 2px solid black;
-  height: 31px;
-  width: 31px;
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: 500;
+.nav-help-icon {
+  display: flex;
+  float: right;
+  margin-left: auto;
   margin-right: 10px;
+  max-width: 35px;
+  height: 35px;
+  border: none;
 }
 
 .nav-account-icon {
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  max-width: 35px;
   height: 35px;
   border: none;
 }
@@ -35,8 +38,12 @@
   display: none;
 }
 
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+}
 
-@media (min-width: 700px) {
+@media (min-width: 765px) {
   .nav-account-icon {
     display: none;
   }
@@ -46,10 +53,9 @@
     text-decoration: none;
     color: black;
   }
-  .nav-question-mark {
-    height: 26px;
-    width: 26px;
-    font-size: 20px;
+  .nav-help-icon{
+    height: 30px;
+    width: 30px;
   }
   .desktop-nav-account-icon {
     display: flex;
