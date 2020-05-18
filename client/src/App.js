@@ -12,17 +12,17 @@ function App() {
 
   const [input, setInput] = useState('');
   const [results, setResults] = useState([])
-  const [buy, setBuy] = useState([])
+  // const [buy, setBuy] = useState([])
 
-  useEffect(() => {
-    const apiCall = async (e) => {
-      const response = await axios("https://shiptserver.herokuapp.com/api/products")
-      // console.log(response.data)
-      setBuy(response.data)
-      //Set result filter function ?
-    }
-    apiCall()
-  }, [])
+  // useEffect(() => {
+  //   const apiCall = async (e) => {
+  //     const response = await axios("https://shiptserver.herokuapp.com/api/products")
+  //     // console.log(response.data)
+  //     setBuy(response.data)
+  //     //Set result filter function ?
+  //   }
+  //   apiCall()
+  // }, [])
 
 
   const callList = async (e) => {
@@ -55,9 +55,7 @@ function App() {
         <Route exact path='/searchlist'>
           <SearchList results={results} />
         </Route>
-        <Route>
-          <BuyAgain results={buy} />
-        </Route>
+
       </Layout>
     </div>
   );
