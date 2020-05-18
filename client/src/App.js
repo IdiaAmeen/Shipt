@@ -1,22 +1,18 @@
-import React from "react";
-import "./App.css";
-import { Switch, Route } from "react-router-dom";
-import Layout from "./Components/shared/Layout";
-import ShoppingList from "./Components/AccountMenu/ShoppingList/ShoppingList";
 
-
+import React, { useState, useEffect } from "react";
+import './App.css';
+import { Route } from "react-router-dom";
+import Home from "./Components/Home"
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Layout>
+      <Route exact path="/" render={() => <Home />} />
+   
           <Route exact path="/ShoppingList">
             <ShoppingList />
           </Route>
-        </Layout>
-      </Switch>
+     
     </div>
   );
 }
-
 export default App;
