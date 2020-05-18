@@ -6,7 +6,6 @@
   font-family: "Rubik", sans-serif;
   font-size: 24px;
   font-weight: 900;
-  
 }
 
 .input-section {
@@ -29,7 +28,6 @@
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   background-color: white;
-
 }
 
 .add-icon {
@@ -99,7 +97,7 @@
   display: none;
 }
 
-.account-shopping-container{
+.account-shopping-container {
   z-index: -1;
 }
 
