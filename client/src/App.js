@@ -1,15 +1,16 @@
-
 import React from 'react';
 import './App.css';
 import { Switch, Route } from "react-router-dom";
-import Layout from './components/shared/Layout';
+import Layout from './Components/shared/Layout';
+import Home from "./Components/Home"
+
 
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Layout></Layout>
+      <Route exact path="/" render={() => <Home />} />
       </Switch>
     </div>
   );

@@ -1,0 +1,67 @@
+.gift-bar {
+  background-color: #CFE7E1;
+  font-weight: bold;
+  padding: 5px;
+  box-shadow: 0px 9px 15px 0px rgba(186,186,186,1);
+}
+
+.home-delivery-time-container {
+  background-color: #F7F4EA;
+  padding: 30px;
+}
+  
+.home-search-container {
+  background-image: url("/Images/Rectangle 174.png");
+  background-repeat: round;
+  min-height: 150px;
+  padding-top: 10px;
+}
+
+.home-target-logo, .home-target-text {
+  margin-top: 10px;
+  min-width: 75px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.home-search {
+  min-width: 75%;
+  border-radius: 25px;
+  padding: 8px 0 8px 10px;
+  background-image: url("/Images/Group 55.png");
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  background-size: 28px;
+  font-size: 15px;
+}
+
+.home-products-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top:10px;
+}
+
+.home-group-icons {
+  display: block;
+  margin: 0 auto;
+  min-height: 30px;
+}
+
+.home-SmallProduct-container {
+  display: flex;
+  flex-flow:wrap;
+  justify-content: space-around;
+}
+
+.SmallProduct-area {
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+.SmallProduct-header {
+  color: #5B5461;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+}
