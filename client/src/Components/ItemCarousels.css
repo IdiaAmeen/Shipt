@@ -21,10 +21,10 @@
   /* margin: 0 auto; */
   margin-left: 15px;
 }
-img{
+/* img {
   height:100%;
   margin-top: 10px
-}
+} */
 
 .price {
   margin-top: 25px;
@@ -35,4 +35,26 @@ img{
   color:gray;
   text-align: left;
   margin-left: 15px;
+}
+
+.ItemCarousel-container {
+  display: flex;
+  flex-flow:wrap;
+  justify-content: space-around;
+}
+
+.SmallProduct-area {
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+.ItemCarousel-header {
+  color: #5B5461;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ItemCarousel-link {
+  text-decoration: none;
 }
