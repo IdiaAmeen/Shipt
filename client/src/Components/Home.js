@@ -8,7 +8,7 @@ import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
 import axios from "axios";
 import OnSale from "./OnSale";
-import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import SmallProduct from "./SmallProduct";
 
 export default function Home() {
@@ -30,13 +30,13 @@ export default function Home() {
     updateOnSaleProducts(apiResults.data.splice(0, 4));
   };
 
-  let menuItems = buyAgainProducts.map(item => {
+  let menuItems = buyAgainProducts.map((item) => {
     return {
       key: item._id,
-      ...item
-    }
-  })
-  console.log(menuItems)
+      ...item,
+    };
+  });
+  console.log(menuItems);
   return (
     <div>
       <Layout>
@@ -83,7 +83,7 @@ export default function Home() {
         <div>
           <img src="/images/Exclusive Saving.png"></img>
         </div>
-       
+
         <BuyAgain results={buyAgainProducts} />
         <ForYou results={forYouProducts} />
         <OnSale results={onSaleProducts} />
