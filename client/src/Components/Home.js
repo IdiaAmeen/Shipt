@@ -24,7 +24,6 @@ export default function Home() {
     const apiResults = await axios(
       "https://shiptserver.herokuapp.com/api/products"
     );
-    console.log(apiResults.data.splice(0, 4));
     updateBuyAgainProducts(apiResults.data.splice(0, 4));
     updateForYouProducts(apiResults.data.splice(0, 4));
     updateOnSaleProducts(apiResults.data.splice(0, 4));
@@ -36,7 +35,7 @@ export default function Home() {
       ...item,
     };
   });
-  console.log(menuItems);
+  
   return (
     <div>
       <Layout>
@@ -87,6 +86,7 @@ export default function Home() {
         <BuyAgain results={buyAgainProducts} />
         <ForYou results={forYouProducts} />
         <OnSale results={onSaleProducts} />
+        
       </Layout>
     </div>
   );
