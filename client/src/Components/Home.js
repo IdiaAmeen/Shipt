@@ -8,7 +8,7 @@ import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
 import axios from "axios";
 import OnSale from "./OnSale";
-import ScrollMenu from "react-horizontal-scrolling-menu";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import SmallProduct from "./SmallProduct";
 
 export default function Home() {
@@ -35,6 +35,7 @@ export default function Home() {
       ...item,
     };
   });
+  
   return (
     <div>
       <Layout>
