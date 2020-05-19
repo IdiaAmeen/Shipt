@@ -7,26 +7,25 @@ export default function ProductDetail(props) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [measurement, setMeasurement] = useState("");
-  const { id } = props.productDetail.match.params;
+  const { id } = useParams();
 
   async function getProductData() {
+    console.log("hello", id)
     let product = await getProduct(id);
     setImgURL(product.imgURL);
     setName(product.name);
     setPrice(product.price);
     setMeasurement(product.measurement);
+    console.log("here is ", product)
   }
-  console.log(id)
 
   useEffect(() => {
     getProductData();
   });
 
-console.log(props.productDetail)
 
   return (
     <div>
-      <h1>Hello</h1>
 
       <img src={imgURL} alt={name}/>
       <div>{name}</div>

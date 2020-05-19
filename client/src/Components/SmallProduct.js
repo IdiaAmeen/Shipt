@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./SmallProduct.css";
 
 export default function SmallProduct({ product }) {
-  console.log(product._id)
   return (
     <Link to={"/products/" + product._id}>
       <div className="SmallProduct-container">

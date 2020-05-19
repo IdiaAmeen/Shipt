@@ -10,7 +10,6 @@ import axios from "axios";
 import OnSale from "./OnSale";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import SmallProduct from "./SmallProduct";
-import ProductDetail from "./ProductDetail";
 
 export default function Home() {
   const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
@@ -25,7 +24,6 @@ export default function Home() {
     const apiResults = await axios(
       "https://shiptserver.herokuapp.com/api/products"
     );
-    console.log(apiResults.data.splice(0, 4));
     updateBuyAgainProducts(apiResults.data.splice(0, 4));
     updateForYouProducts(apiResults.data.splice(0, 4));
     updateOnSaleProducts(apiResults.data.splice(0, 4));
@@ -37,7 +35,6 @@ export default function Home() {
       ...item,
     };
   });
-  console.log(menuItems);
   return (
     <div>
       <Layout>
@@ -89,7 +86,6 @@ export default function Home() {
         <ForYou results={forYouProducts} />
         <OnSale results={onSaleProducts} />
         
-        <Route exact path="/products/:id" render={() => <ProductDetail />} />
       </Layout>
     </div>
   );
