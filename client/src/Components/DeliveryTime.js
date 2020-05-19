@@ -4,9 +4,13 @@ import "./DeliveryTime.css";
 export default function DeliveryTime() {
   //!State variables
   //!ShowTimeWindow toggles the visibility of the dropdown area
-  const [showTimeWindow, updateShowTimeWindow] = useState("show-time-window-hidden");
+  const [showTimeWindow, updateShowTimeWindow] = useState(
+    "show-time-window-hidden"
+  );
   //What's displayed on top
-  const [deliveryTime, updateDeliveryTime] = useState("Choose your delivery time ...");
+  const [deliveryTime, updateDeliveryTime] = useState(
+    "Choose your delivery time ..."
+  );
   //Keeps track of what day was selected
   const [deliveryDate, updateDeliveryDate] = useState("today");
 
@@ -25,17 +29,17 @@ export default function DeliveryTime() {
   const deliveryTimeChanged = (event) => {
     updateDeliveryTime(`Delivery ${deliveryDate} ${event.target.value}`);
     //!Unselect all selected radio buttons
-    let selectedItems = document.querySelectorAll(".time-window-selected")
-    selectedItems.forEach(item =>  
-      item.className = "time-window-unselected"
-    )
+    let selectedItems = document.querySelectorAll(".time-window-selected");
+    selectedItems.forEach(
+      (item) => (item.className = "time-window-unselected")
+    );
     //!get the radio button parent label and change the class name of the child div to show either white or green
-    let label = event.target.parentElement
-    let divImage = label.childNodes[1]
-    divImage.className = "time-window-selected"
+    let label = event.target.parentElement;
+    let divImage = label.childNodes[1];
+    divImage.className = "time-window-selected";
 
     //!after selecting a time, close the window
-    showHideDeliveryTime()
+    showHideDeliveryTime();
   };
   //!onClick event for the today and tomorrow buttons. Toggles the style and sets state variable
   const deliveryDateChanged = (event) => {
@@ -50,19 +54,17 @@ export default function DeliveryTime() {
     updateDeliveryDate(event.target.value);
 
     //!Unselect all radio buttons
-    let radioButtons = document.querySelectorAll("input[type='radio']")
-    radioButtons.forEach(radio => 
-      unselectRadioButton(radio)
-    )
-    updateDeliveryTime("Choose your delivery time ...")
+    let radioButtons = document.querySelectorAll("input[type='radio']");
+    radioButtons.forEach((radio) => unselectRadioButton(radio));
+    updateDeliveryTime("Choose your delivery time ...");
   };
 
-  const unselectRadioButton = (radio) => { 
+  const unselectRadioButton = (radio) => {
     radio.checked = false;
-    let label = radio.parentElement
-    let divImage = label.childNodes[1]
-    divImage.className = "time-window-unselected"
-  }
+    let label = radio.parentElement;
+    let divImage = label.childNodes[1];
+    divImage.className = "time-window-unselected";
+  };
 
   return (
     <div className="delivery-time-container">
@@ -101,26 +103,26 @@ export default function DeliveryTime() {
             <label>
               <input
                 className="input-radio-hidden"
-              type="radio"
-              name="delivery-time"
-              value="12pm-1pm"
-              onChange={deliveryTimeChanged}
+                type="radio"
+                name="delivery-time"
+                value="12pm-1pm"
+                onChange={deliveryTimeChanged}
               ></input>
               <div className="time-window-unselected">
                 <img className="check-image" src="/Images/Vector.png"></img>
               </div>
             </label>
-            
+
             <p>12pm to 1pm</p>
           </div>
           <div className="delivery-time-window gray-background">
-          <label>
+            <label>
               <input
                 className="input-radio-hidden"
-              type="radio"
-              name="delivery-time"
-              value="1pm-2pm"
-              onChange={deliveryTimeChanged}
+                type="radio"
+                name="delivery-time"
+                value="1pm-2pm"
+                onChange={deliveryTimeChanged}
               ></input>
               <div className="time-window-unselected">
                 <img className="check-image" src="/Images/Vector.png"></img>
@@ -129,13 +131,13 @@ export default function DeliveryTime() {
             <p>1pm to 2pm</p>
           </div>
           <div className="delivery-time-window">
-          <label>
+            <label>
               <input
                 className="input-radio-hidden"
-              type="radio"
-              name="delivery-time"
-              value="2pm-3pm"
-              onChange={deliveryTimeChanged}
+                type="radio"
+                name="delivery-time"
+                value="2pm-3pm"
+                onChange={deliveryTimeChanged}
               ></input>
               <div className="time-window-unselected">
                 <img className="check-image" src="/Images/Vector.png"></img>
@@ -144,13 +146,13 @@ export default function DeliveryTime() {
             <p>2pm to 3pm</p>
           </div>
           <div className="delivery-time-window gray-background">
-          <label>
+            <label>
               <input
                 className="input-radio-hidden"
-              type="radio"
-              name="delivery-time"
-              value="3pm-4pm"
-              onChange={deliveryTimeChanged}
+                type="radio"
+                name="delivery-time"
+                value="3pm-4pm"
+                onChange={deliveryTimeChanged}
               ></input>
               <div className="time-window-unselected">
                 <img className="check-image" src="/Images/Vector.png"></img>
@@ -159,13 +161,13 @@ export default function DeliveryTime() {
             <p>3pm to 4pm</p>
           </div>
           <div className="delivery-time-window">
-          <label>
+            <label>
               <input
                 className="input-radio-hidden"
-              type="radio"
-              name="delivery-time"
-              value="4pm-5pm"
-              onChange={deliveryTimeChanged}
+                type="radio"
+                name="delivery-time"
+                value="4pm-5pm"
+                onChange={deliveryTimeChanged}
               ></input>
               <div className="time-window-unselected">
                 <img className="check-image" src="/Images/Vector.png"></img>
@@ -174,13 +176,13 @@ export default function DeliveryTime() {
             <p>4pm to 5pm</p>
           </div>
           <div className="delivery-time-window gray-background">
-          <label>
+            <label>
               <input
                 className="input-radio-hidden"
-              type="radio"
-              name="delivery-time"
-              value="5pm-6pm"
-              onChange={deliveryTimeChanged}
+                type="radio"
+                name="delivery-time"
+                value="5pm-6pm"
+                onChange={deliveryTimeChanged}
               ></input>
               <div className="time-window-unselected">
                 <img className="check-image" src="/Images/Vector.png"></img>
@@ -189,13 +191,13 @@ export default function DeliveryTime() {
             <p>5pm to 6pm</p>
           </div>
           <div className="delivery-time-window">
-          <label>
+            <label>
               <input
                 className="input-radio-hidden"
-              type="radio"
-              name="delivery-time"
-              value="6pm-7pm"
-              onChange={deliveryTimeChanged}
+                type="radio"
+                name="delivery-time"
+                value="6pm-7pm"
+                onChange={deliveryTimeChanged}
               ></input>
               <div className="time-window-unselected">
                 <img className="check-image" src="/Images/Vector.png"></img>

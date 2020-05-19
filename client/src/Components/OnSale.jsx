@@ -1,12 +1,15 @@
 import React from "react";
+
 import "./ItemCarousels.css"
 import SmallProduct from "./SmallProduct"
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 
+
 function OnSale(props) {
-  const results = props.results
+  const results = props.results;
   return (
     <div>
+
       <h3 className="ItemCarousel-header">On Sale</h3>
       {/* <div className='ItemCarousel-container'>
         {props.results.map((result, index) => (
@@ -26,7 +29,8 @@ function OnSale(props) {
           }))}
           arrowRight={<img src="/Images/Scroll Arrow.png"></img>}
         />
-    </div>
-  )
 
-} export default OnSale
+    </div>
+  );
+}
+export default OnSale;

@@ -6,7 +6,7 @@ import ShoppingList from "./Components/AccountMenu/ShoppingList/ShoppingList";
 import SignUp from "./Components/Credentials/Sign-up";
 import SignIn from "./Components/Credentials/Sign-in";
 import ChangePassword from "./Components/Credentials/Change-password";
-
+import LiveChat from "./Components/LiveChat";
 function App() {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
@@ -34,11 +34,12 @@ function App() {
             path="/sign-in"
             render={() => <SignIn setCurrentUser={setCurrentUser} />}
           />
-          <Route
+          <Route exact path="/livechat" render={() => <LiveChat />} />
+          {/* <Route
             exact
             path="/change-password"
             render={() => <ChangePassword setCurrentUser={setCurrentUser} />}
-          />
+          /> */}
         </div>
       </Switch>
     </div>
