@@ -48,20 +48,6 @@
   min-height: 30px;
 }
 
-.home-SmallProduct-container {
-  display: flex;
-  flex-flow:wrap;
-  justify-content: space-around;
-}
-
-.SmallProduct-area {
-  width: 40%;
-  margin-bottom: 30px;
-}
-
-.SmallProduct-header {
-  color: #5B5461;
-  text-align: left;
-  width: 90%;
-  margin: 0 auto;
+.scroll-items-display {
+  margin-right:20px;
 }
