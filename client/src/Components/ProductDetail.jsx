@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getProduct, deleteProduct } from "../services/product";
 
-export default function ProductDetail({product}) {
+export default function ProductDetail({ product }) {
   const [imgURL, setImgURL] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -21,7 +21,7 @@ export default function ProductDetail({product}) {
     getProductData();
   });
 
-  console.log(id)
+  console.log(id);
 
   return (
     <div className="product-details">
@@ -34,9 +34,11 @@ export default function ProductDetail({product}) {
           Edit
         </Link>
       </button>
-      <button className="delete-button" onClick={() => deleteProduct(id)}>
+      <Link to="/">
+        <button className="delete-button" onClick={() => deleteProduct(id)}>
           Delete
-      </button>
+        </button>
+      </Link>
     </div>
   );
 }
