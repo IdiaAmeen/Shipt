@@ -198,6 +198,7 @@ const getProduct = async (request, response) => {
     try {
         const { id } = request.params;
         //! find params. :id is what's passed on the new window
+      console.log(id)
         const product = await Product.findById(id);
         //! find product by id;
         if (product) { //! if product isTrue

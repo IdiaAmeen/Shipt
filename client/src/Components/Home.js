@@ -8,7 +8,7 @@ import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
 import axios from "axios";
 import OnSale from "./OnSale";
-import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import SmallProduct from "./SmallProduct";
 
 export default function Home() {
@@ -24,11 +24,11 @@ export default function Home() {
     const apiResults = await axios(
       "https://shiptserver.herokuapp.com/api/products"
     );
-    console.log(apiResults.data.splice(0, 4));
     updateBuyAgainProducts(apiResults.data.splice(0, 4));
     updateForYouProducts(apiResults.data.splice(0, 4));
     updateOnSaleProducts(apiResults.data.splice(0, 4));
   };
+
 
   
   return (
@@ -77,10 +77,11 @@ export default function Home() {
         <div>
           <img src="/images/Exclusive Saving.png"></img>
         </div>
-       
+
         <BuyAgain results={buyAgainProducts} />
         <ForYou results={forYouProducts} />
         <OnSale results={onSaleProducts} />
+        
       </Layout>
     </div>
   );
