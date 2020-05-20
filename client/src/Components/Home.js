@@ -42,12 +42,11 @@ export default function Home() {
         {
           url: "/Images/Sale Icon.png",
           label: "On Sale",
-        }
-      ]
+        },
+      ],
     },
     {
       images: [
-    
         {
           url: "/Images/Browse Icon.png",
           label: "Browse",
@@ -55,17 +54,14 @@ export default function Home() {
         {
           url: "/Images/Component 1.png",
           label: "Exclusive Savings",
-        }
-      ]
-    }
-  ]
+        },
+      ],
+    },
+  ];
 
   const renderPagination = ({ onNext, onPrev, onDotClick, selectedDot }) => {
-    return (
-       <>
-        </>
-    )
-}
+    return <></>;
+  };
 
   return (
     <div>
@@ -96,14 +92,14 @@ export default function Home() {
               activeDotColor: "#5d5d5d",
               unactiveDotsColor: "#d5d5d5",
               draggable: true,
-              infinite:true
+              infinite: true,
             }}
           >
             {productLinkPages.map((page, index) => (
               <div className="horizontal-scroll-links-page" key={index}>
                 {page.images.map((image, key) => (
                   <div className="horizontal-scroll-links" key={key}>
-                    <img className="home-group-icons" src={image.url} ></img>
+                    <img className="home-group-icons" src={image.url}></img>
                     <span>{image.label}</span>
                   </div>
                 ))}

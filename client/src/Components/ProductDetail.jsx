@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getProduct, deleteProduct } from "../services/product";
+import Layout from "./shared/Layout";
+import "./ProductDetail.css";
 
 export default function ProductDetail({ product }) {
   const [imgURL, setImgURL] = useState("");
@@ -21,24 +23,33 @@ export default function ProductDetail({ product }) {
     getProductData();
   });
 
-  console.log(id);
-
   return (
-    <div className="product-details">
-      <img src={imgURL} alt={name} />
-      <div>{name}</div>
-      <div>${price}</div>
-      <div>{measurement}</div>
-      <button className="edit-button">
-        <Link className="edit-link" to={`/products/${id}/update`}>
-          Edit
-        </Link>
-      </button>
-      <Link to="/">
-        <button className="delete-button" onClick={() => deleteProduct(id)}>
-          Delete
-        </button>
-      </Link>
-    </div>
+    <Layout>
+      <div className="product-details">
+        <img className="product-details-image" src={imgURL} alt={name} />
+        <div className="product-details-info">{name}</div>
+        <div className="product-details-info">${price}</div>
+        <div className="product-details-measurement">{measurement}</div>
+
+        <div className="product-details-buttons">
+          <button className="product-details-edit-button">
+            <Link
+              className="product-details-edit-link"
+              to={`/products/${id}/update`}
+            >
+              Edit
+            </Link>
+          </button>
+          <Link className="product-details-delete-link" to="/">
+            <button
+              className="product-details-delete-button"
+              onClick={() => deleteProduct(id)}
+            >
+              Delete
+            </button>
+          </Link>
+        </div>
+      </div>
+    </Layout>
   );
 }

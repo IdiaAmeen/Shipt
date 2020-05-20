@@ -7,7 +7,7 @@
 .edit-form {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .edit-input {
@@ -15,6 +15,7 @@
   margin: 0 auto;
   margin-top: 20px;
   width: 50vw;
+  max-width: 400px;
   height: 38px;
   font-size: 15px;
   border: 0.5px solid rgb(198, 196, 196);
@@ -28,6 +29,7 @@
   margin-top: 30px;
   justify-content: center;
   width: 45vw;
+  max-width: 250px;
   height: 38px;
   border-radius: 8px;
   background-color: rgb(43, 122, 95);
