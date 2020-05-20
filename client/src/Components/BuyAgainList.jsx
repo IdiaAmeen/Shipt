@@ -1,31 +1,33 @@
-import React from 'react'
+import React from "react";
+import { useState, useEffect } from "react";
+import { getProducts } from "../services/product";
+import SmallProduct from "./SmallProduct.js";
 
-function BuyAgainList(props) {
+function BuyAgainList() {
+  const [buyAgainList, updateBuyAgainList] = useState([]);
 
+  useEffect(() => {
+    callGetProducts();
+  }, []);
 
+  const callGetProducts = async () => {
+    const apiResults = await getProducts();
+    updateBuyAgainList(apiResults.splice(0, 16));
+  };
   return (
-
-    <div className='buyagainlist'>
-      {props.results.map((result, index) =>
-        <div className='list-items'>
-          {/* <img
-            src={result.[index].name}
-            height='170px'
-            width='125px'
-          /> */}
-
-          <h3 className="search-h3">{result.name}</h3>
-        </div>
-      )}
-
+    <div>
+      <div>
+        <h2>Buy Again</h2>
+        <p>Select products that you have purchased in the past.</p>
+      </div>
+      <div className="buyagainlist">
+        {buyAgainList.map((result, index) => (
+          <div key={index} className="list-items">
+            <SmallProduct product={result} />
+          </div>
+        ))}
+      </div>
     </div>
-
-
-
-  )
-
+  );
 }
-
-
-export default BuyAgainList
-
+export default BuyAgainList;

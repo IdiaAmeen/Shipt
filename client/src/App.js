@@ -8,6 +8,8 @@ import SignIn from "./Components/Credentials/Sign-in";
 import ChangePassword from "./Components/Credentials/Change-password";
 import LiveChat from "./Components/LiveChat";
 import ProductDetail from './Components/ProductDetail'
+import BuyAgainList from "./Components/BuyAgainList";
+import Layout from "./Components/shared/Layout"
 
 function App() {
   const [input, setInput] = useState("");
@@ -34,12 +36,8 @@ function App() {
             render={() => <SignIn setCurrentUser={setCurrentUser} />}
           />
           <Route exact path="/livechat" render={() => <LiveChat />} />
-          {/* <Route
-            exact
-            path="/change-password"
-            render={() => <ChangePassword setCurrentUser={setCurrentUser} />}
-          /> */}
-          <Route exact path="/products/:id" render={(props) => <ProductDetail productDetail={props}/>} />
+          <Route exact path="/products/:id" render={(props) => <ProductDetail productDetail={props} />} />
+          <Route exact path="/BuyAgainList" render={() => <Layout><BuyAgainList /></Layout>} />
         </div>
       </Switch>
     </div>
