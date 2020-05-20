@@ -28,9 +28,7 @@ export default function Modal() {
       </div>
     );
   }
-
 }
 
 // Modul most appear on page load .
 // When user clicks out it renders home page
-

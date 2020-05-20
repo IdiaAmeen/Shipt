@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import HelpIcon from "../../Assets/help-icon.svg";
 import LiveChat from "../LiveChat";
-// import DeliveryTime from '../DeliveryTime'
 
-export default function Nav(user) {
+export default function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
   let [isDisplay, setIsDisplay] = useState(false);
   if (isDisplay === true) {
@@ -49,7 +48,19 @@ export default function Nav(user) {
                   className="desktop-nav-account-icon"
                   src="/Images/account-icon@2x.png"
                 />
-                <span className="desktop-nav-account-span">Account</span>
+                <div>
+                  {props.user ? (
+                    <>
+                      <span className="desktop-nav-account-span">
+                        {props.user.username}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="desktop-nav-account-span">Account</span>
+                    </>
+                  )}
+                </div>
               </Link>
             </div>
           </div>
@@ -79,9 +90,6 @@ export default function Nav(user) {
               <img src="/images/Shopping Cart.png"></img>
             </Link>
           </div>
-          {/* <div className="home-delivery-time-container">
-          <DeliveryTime />
-        </div> */}
         </div>
       </div>
     );

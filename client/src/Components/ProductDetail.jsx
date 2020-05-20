@@ -31,7 +31,7 @@ export default function ProductDetail({ product, user }) {
           <div className="product-details-info">{name}</div>
           <div className="product-details-info">${price}</div>
           <div className="product-details-measurement">{measurement}</div>
-          {user && (
+          {user &&
             <div className="product-details-buttons">
               <button className="product-details-edit-button">
                 <Link
@@ -39,7 +39,7 @@ export default function ProductDetail({ product, user }) {
                   to={`/products/${id}/update`}
                 >
                   Edit
-                </Link>
+              </Link>
               </button>
               <Link className="product-details-delete-link" to="/">
                 <button
@@ -47,12 +47,13 @@ export default function ProductDetail({ product, user }) {
                   onClick={() => deleteProduct(id)}
                 >
                   Delete
-                </button>
+              </button>
               </Link>
             </div>
-          )}
+          }
         </div>
       </Layout>
     </>
+    
   );
 }

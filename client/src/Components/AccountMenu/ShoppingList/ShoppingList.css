@@ -1,11 +1,35 @@
+.main-shopping-list-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 95vw;
+  max-width: 700px;
+}
+
 .shopping-list {
   display: flex;
   margin-left: 15px;
-  margin-top: 10px;
+  margin-top: 20px;
   height: 15px;
   font-family: "Rubik", sans-serif;
   font-size: 24px;
   font-weight: 900;
+}
+
+.shopping-list-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 5px;
+  width: 90vw;
+  max-width: 600px;
+  min-height: 380px;
+  height: inherit;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 .input-section {
@@ -15,19 +39,27 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-.shopping-list-form {
+.shopping-list-input {
+  display: flex;
+  font-size: 25px;
+  width: 70vw;
+  max-width: 500px;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.list {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 5px;
-  width: 90vw;
-  min-height: 380px;
-  height: inherit;
-  border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  background-color: white;
+}
+
+.shopping-list-items {
+  font-size: 25px;
+  color: black;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .add-icon {
@@ -40,22 +72,8 @@
   margin: 0 10px;
 }
 
-.shopping-list-input {
-  display: flex;
-  font-size: 25px;
-  width: 75vw;
-  margin-left: 5px;
-  margin-top: 5px;
-  padding-left: 10px;
-}
-
-.shopping-list-items {
-  font-size: 25px;
-  color: black;
-  margin-bottom: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+.checked {
+  display: none;
 }
 
 .complete {
@@ -68,6 +86,13 @@
   text-decoration: line-through;
 }
 
+.deleted {
+  /* display: none; */
+  float: right;
+  border-style: none;
+  background-color: white;
+}
+
 .shopping-list-complete {
   float: right;
   margin-top: 5px;
@@ -76,18 +101,7 @@
   background-color: white;
 }
 
-.checked {
-  display: none;
-}
-
 .shopping-list-delete {
-  float: right;
-  border-style: none;
-  background-color: white;
-}
-
-.deleted {
-  /* display: none; */
   float: right;
   border-style: none;
   background-color: white;
@@ -97,35 +111,17 @@
   display: none;
 }
 
-.account-shopping-container {
-  z-index: -1;
-}
-
-@media (min-width: 765px) {
-  .account-shopping-container {
-    display: flex;
-    justify-content: center;
-  }
+@media (min-width: 765px){
 
   .main-shopping-list-container {
+    display: flex;
     margin-top: 160px;
     margin-left: 40px;
   }
 
-  .shopping-list-form {
-    width: 30vw;
-    min-width: 40vw;
-    min-height: 550px;
-    height: inherit;
-  }
-
-  .shopping-list-input {
+  .account-shopping-container {
     display: flex;
-    font-size: 25px;
-    max-width: 20vw;
-    margin-left: 5px;
-    margin-top: 5px;
-    /* border: none; */
+    justify-content: center;
   }
 
   .desktop-menu-container {
@@ -156,14 +152,30 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-top: 30px;
     height: 50px;
-    max-width: 30vw;
+    width: 25vw;
+    max-width: 250px;
     text-align: left;
     font-weight: 900;
     font-size: 18px;
     font-family: "Rubik", sans-serif;
   }
 
-  .desktop-shopping-list-link {
+  .desktop-list-name {
+    margin-left: 20px;
+    opacity: 0.3;
+  }
+
+  .desktop-menu-icon-span {
+    float: right;
+    width: 20px;
+    margin-right: 20px;
+  }
+
+  .desktop-link-name {
+    margin-left: 20px;
+  }
+
+  .desktop-menu-list-link {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-top: 30px;
     height: 50px;
@@ -176,29 +188,47 @@
     color: black;
   }
 
-  .desktop-list-name {
-    margin-left: 20px;
-    opacity: 0.3;
-  }
-
-  .desktop-shopping-list-name {
-    margin-left: 20px;
-  }
-
-  .desktop-shopping-list-icon {
+  .desktop-active-icon {
     float: right;
     width: 20px;
     margin-right: 10px;
-  }
-
-  .desktop-menu-icon-span {
-    float: right;
-    width: 20px;
-    margin-right: 20px;
   }
 
   .desktop-menu-icon {
     width: 20px;
     opacity: 0.4;
   }
+
+  .shopping-list-form {
+    width: 50vw;
+    max-width: 1000px;
+    min-height: 550px;
+    height: inherit;
+  }
+
+  .shopping-list-input {
+    display: flex;
+    font-size: 25px;
+    width: 40vw;
+    max-width: 600px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border: none;
+  }
+
 }
+
+/* 
+
+.account-shopping-container {
+  z-index: -1;
+} 
+*/
+
+/* @media (min-width: 765px) {
+ 
+
+
+
+
+} */

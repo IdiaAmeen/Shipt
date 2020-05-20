@@ -157,6 +157,10 @@
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.list-name {
+  opacity: 0.3;
+}
+
 .menu-icon-span {
   display: flex;
   margin-left: auto;
