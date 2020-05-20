@@ -29,8 +29,9 @@ export default function Nav(props) {
               <Link className="nav-question-mark" to="/">
                 <img src={HelpIcon} className="nav-help-icon" />
               </Link>
+
               <div className="mobile-menu">
-                <button
+                <Link
                   className="nav-account-icon"
                   onClick={() => setShowMenu(!showMenu)}
                 >
@@ -38,12 +39,14 @@ export default function Nav(props) {
                     src="/Images/account-icon@2x.png"
                     className="nav-account-icon"
                   />
-                </button>
-
+                </Link>
                 <div className="drop-down">{showMenu && <AccountMenu />}</div>
               </div>
 
-              <Link to="/products/shopping-list" className="desktop-nav-container">
+              <Link
+                to="/products/shopping-list"
+                className="desktop-nav-container"
+              >
                 <img
                   className="desktop-nav-account-icon"
                   src="/Images/account-icon@2x.png"

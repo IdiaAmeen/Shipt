@@ -6,7 +6,7 @@
   width: 100%;
   height: 92rem;
   background: grey;
-  z-index: 1000;
+  z-index: 2;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -68,6 +68,11 @@
   font-family: "Rubik", sans-serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.account-menu-link :hover {
+  font-size: 23px;
+  transition: .2s;
 }
 
 .list-name {

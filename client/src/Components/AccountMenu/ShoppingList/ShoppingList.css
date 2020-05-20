@@ -187,6 +187,11 @@
     color: black;
   }
 
+  .desktop-menu-list-link:hover{
+    font-size: 19px;
+    transition: ease-in .2s;
+  }
+
   .desktop-active-icon {
     float: right;
     width: 20px;
