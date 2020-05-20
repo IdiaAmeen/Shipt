@@ -1,4 +1,7 @@
 .outer-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -9,20 +12,30 @@
   background: grey;
   z-index: 1000;
   background-color: rgb(0,0,0,0.3);
-
 }
+
 .inner-modal {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  height: 440px;
-  width: 100vw;
+  height: 280px;
+  width: 400px;
   top: 11.5%;
   background-color: rgb(255,255,255,1);
   bottom: 25%;
   border-radius: 21.7px;
   z-index: 1;
   font-family: Rubik, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
 }
+
+.main-inner{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
 .got-it {
   background-color: #3a8569;
   height: 37px;
@@ -30,14 +43,22 @@
   border-radius: 11.2px;
   font-family: Rubik, sans-serif;
   font-size: 20.2px;
-  color: white;
 }
 
 .x {
   font-family: Rubik, sans-serif;
-  font-size: 32.2px;
-  float: right;
+  font-size: 18.2px;
+  border-radius: 21.7px;
   width: 40px;
-  height: 36.7;
   color: grey;
+  padding-top: 10px;
+  border:none;
+  background-color:white;
+  outline:none;
+}
+
+.x-box{
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 11.2px;
 }

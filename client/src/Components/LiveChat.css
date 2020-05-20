@@ -37,7 +37,9 @@
 .x1 {
   height: 35px;
   width: 35px;
-
+  border:none;
+  background-color:transparent;
+  outline:none;
   /* transform: translateY(-px); */
   margin-top: 0;
   margin-bottom: 50px;
