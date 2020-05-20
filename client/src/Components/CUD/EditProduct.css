@@ -1,0 +1,42 @@
+.main-edit-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.edit-input {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 50vw;
+  height: 38px;
+  font-size: 15px;
+  border: 0.5px solid rgb(198, 196, 196);
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+.edit-save-button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  justify-content: center;
+  width: 45vw;
+  height: 38px;
+  border-radius: 8px;
+  background-color: rgb(43, 122, 95);
+  color: white;
+  font-size: 20px;
+}
+
+.edit-image {
+  display: flex;
+  margin-top: 20px;
+  width: 60vw;
+}
