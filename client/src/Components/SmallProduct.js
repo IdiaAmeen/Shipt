@@ -4,7 +4,7 @@ import "./SmallProduct.css";
 
 export default function SmallProduct({ product }) {
   return (
-    <Link to={"/products/" + product._id}>
+    <Link className="SmallProduct-link" to={"/products/" + product._id}>
       <div className="SmallProduct-container">
         <div className="SmallProduct-image-container">
           <img className="SmallProduct-image" src={product.imgURL}></img>

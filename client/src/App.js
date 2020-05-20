@@ -20,6 +20,7 @@ function App() {
   const [user, setUser] = useState();
 
   return (
+
     <>
       <div className="App">
         <Link to="/"> Home</Link>
@@ -28,7 +29,6 @@ function App() {
         <Link to="/change-password"> ChangePassword </Link>
         <Link to="/create-product"> CreateProduct</Link>
       </div>
-
       <Switch>
         <div>
           <Route exact path="/" render={() => <Home />} />

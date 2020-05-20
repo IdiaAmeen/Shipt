@@ -1,0 +1,30 @@
+.footer-container { 
+  height: 300px;
+  background-color:#F7F4EA;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 60px;
+}
+
+.sign-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sign-links > a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.credits {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.credits-group > p {
+  margin: 5px auto;
+}

@@ -19,10 +19,12 @@ export default function Nav(user) {
       <div>
         <div className="nav-border">
           <div className="nav-container">
-            <img
-              className="nav-shipt-logo"
-              src="/Images/brand-elements.png"
-            ></img>
+            <Link to="/">
+              <img
+                className="nav-shipt-logo"
+                src="/Images/brand-elements.png"
+              ></img>
+            </Link>
             <div className="nav-links-container">
               <Link className="nav-question-mark" to="/">
                 <img src={HelpIcon} className="nav-help-icon" />
@@ -64,17 +66,18 @@ export default function Nav(user) {
           {/* <Link to="/livechat">
           <img src="/images/1381552 2.png" />
         </Link> */}
+          <div className="nav-services-icons">
+            <button
+              className="nav-services-icons"
+              onClick={() => setIsDisplay(!isDisplay)}
+            >
+              <img src="/images/1381552 2.png" className="nav-services-icons" />
+            </button>
 
-          <button
-            className="nav-services-icons"
-            onClick={() => setIsDisplay(!isDisplay)}
-          >
-            <img src="/images/1381552 2.png" className="nav-services-icons" />
-          </button>
-
-          <Link to="">
-            <img src="/images/Shopping Cart.png"></img>
-          </Link>
+            <Link to="">
+              <img src="/images/Shopping Cart.png"></img>
+            </Link>
+          </div>
         </div>
       </div>
     );
