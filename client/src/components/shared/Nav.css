@@ -38,7 +38,6 @@
   margin-left: auto;
   max-width: 35px;
   height: 35px;
-
   border: none;
   background-color: transparent;
 }
@@ -47,18 +46,9 @@
   display: none;
 }
 
-.drop-down {
-  position: absolute;
-  z-index: 2;
-  display: inline-block;
-  margin-top: 34px;
-  margin-right: 240px;
-  transform: translateX(-185px);
-}
-
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 @media (min-width: 765px) {
