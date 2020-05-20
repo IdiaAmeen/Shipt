@@ -16,11 +16,11 @@ function BuyAgainList() {
   };
   return (
     <div>
-      <div>
+      <div className="BuyAgainList-text">
         <h2>Buy Again</h2>
         <p>Select products that you have purchased in the past.</p>
       </div>
-      <div className="buyagainlist">
+      <div className="BuyAgainList-container">
         {buyAgainList.map((result, index) => (
           <div key={index} className="list-items">
             <SmallProduct product={result} />
