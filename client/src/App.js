@@ -8,10 +8,14 @@ import SignIn from "./Components/Credentials/Sign-in";
 import SignOut from "./Components/Credentials/SignOut";
 import ChangePassword from "./Components/Credentials/Change-password";
 import LiveChat from "./Components/LiveChat";
+import ProductDetail from './Components/ProductDetail'
+import BuyAgainList from "./Components/BuyAgainList";
+import Layout from "./Components/shared/Layout"
 import EditProduct from "./Components/CUD/EditProduct";
 import { verifyUser } from "./services/user";
 import ProductDetail from "./Components/ProductDetail";
 import CreateProduct from "./Components/CUD/CreateProduct";
+
 
 
 function App() {
@@ -71,6 +75,7 @@ function App() {
                         render={() => <EditProduct />}
                     />
                     <Route exact path="/sign-out" render={(props) => <SignOut user={currentUser} setCurrentUser={setCurrentUser} />} />
+                    <Route exact path="/BuyAgainList" render={() => <Layout><BuyAgainList /></Layout>} />
                 </Switch>
             </div>
         </>
