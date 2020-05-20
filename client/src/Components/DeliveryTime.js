@@ -7,11 +7,11 @@ export default function DeliveryTime() {
   const [showTimeWindow, updateShowTimeWindow] = useState(
     "show-time-window-hidden"
   );
-  //What's displayed on top
+  //!What's displayed on top
   const [deliveryTime, updateDeliveryTime] = useState(
     "Choose your delivery time ..."
   );
-  //Keeps track of what day was selected
+  //!Keeps track of what day was selected
   const [deliveryDate, updateDeliveryDate] = useState("today");
 
   //!Function to toggle dropdown area on and off
@@ -112,7 +112,6 @@ export default function DeliveryTime() {
                 <img className="check-image" src="/Images/Vector.png"></img>
               </div>
             </label>
-
             <p>12pm to 1pm</p>
           </div>
           <div className="delivery-time-window gray-background">

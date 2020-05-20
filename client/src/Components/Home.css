@@ -44,10 +44,31 @@
 
 .home-group-icons {
   display: block;
-  margin: 0 auto;
+  margin: auto 55px;
   min-height: 30px;
+  
 }
 
 .scroll-items-display {
   margin-right:20px;
+}
+
+.horizontal-scroll-links {
+  display: flex;
+  flex-flow: column;
+  
+}
+
+.horizontal-scroll-links-page {
+  display: flex;
+}
+/* this was the only way to style the ReactSmartScroller library component */
+/* removing the arrows and resizing the bullets to match the ux design */
+.ivXhxe, .giUXNv {
+  display: none !important;
+}
+
+.fdnftI {
+  height: 15px !important;
+  width: 15px !important;
 }
