@@ -5,7 +5,7 @@ import AccountMenu from "../AccountMenu/AccountMenu";
 import HelpIcon from "../../Assets/help-icon.svg";
 import LiveChat from "../LiveChat";
 
-export default function Nav(props) {
+export default function Nav(user) {
   const [showMenu, setShowMenu] = useState(false);
   let [isDisplay, setIsDisplay] = useState(false);
   if (isDisplay === true) {

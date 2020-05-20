@@ -58,10 +58,12 @@ export default function AccountMenu() {
           </span>
         </Link>
         <li className="account-menu-list">
-          <span className="list-name">Log Out</span>
-          <span className="menu-icon-span">
-            <img className="menu-icon" src={LogoutIcon} alt="logout icon" />
-          </span>
+          <Link className="account-menu-logout-link" to="/sign-out">
+            <span className="list-name">Log Out</span>
+            <span className="menu-icon-span">
+              <img className="menu-icon" src={LogoutIcon} alt="logout icon" />
+            </span>
+          </Link>
         </li>
         <div className="remainder-list"></div>
       </ul>
