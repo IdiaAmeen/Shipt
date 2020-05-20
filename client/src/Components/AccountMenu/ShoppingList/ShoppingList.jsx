@@ -106,14 +106,16 @@ export default function ShoppingList(item, index) {
                 </span>
               </Link>
               <li className="desktop-menu-list">
-                <span className="desktop-list-name">Log Out</span>
-                <span className="desktop-menu-icon-span">
-                  <img
-                    className="desktop-menu-icon"
-                    src={LogoutIcon}
-                    alt="logout-icon"
-                  />
-                </span>
+                <Link className="desktop-menu-logout-link" to="/sign-out">
+                  <span className="desktop-list-name">Log Out</span>
+                  <span className="desktop-menu-icon-span">
+                    <img
+                      className="desktop-menu-icon"
+                      src={LogoutIcon}
+                      alt="logout-icon"
+                    />
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>

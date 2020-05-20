@@ -27,7 +27,7 @@ export default function ProductDetail({ product }) {
     <div className="product-details">
       <img src={imgURL} alt={name} />
       <div>{name}</div>
-      <div>{price}</div>
+      <div>${price}</div>
       <div>{measurement}</div>
       <button className="edit-button">
         <Link className="edit-link" to={`/products/${id}/update`}>
