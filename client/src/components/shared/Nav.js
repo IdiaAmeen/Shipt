@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import HelpIcon from "../../Assets/help-icon.svg";
 import LiveChat from "../LiveChat";
+// import DeliveryTime from '../DeliveryTime'
 
 export default function Nav(user) {
   const [showMenu, setShowMenu] = useState(false);
@@ -78,6 +79,9 @@ export default function Nav(user) {
               <img src="/images/Shopping Cart.png"></img>
             </Link>
           </div>
+          {/* <div className="home-delivery-time-container">
+          <DeliveryTime />
+        </div> */}
         </div>
       </div>
     );

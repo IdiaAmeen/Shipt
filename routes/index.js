@@ -5,10 +5,10 @@ const router = Router();
 
 router.get('/', (req, res) => res.send('I am gROOT!'));
 router.get('/products', controllers.getProducts);
-router.post('/products', controllers.createProduct);
 router.get('/products/:id', controllers.getProduct);
-router.put('/products/:id', controllers.updateProduct);
-router.delete('/products/:id', controllers.deleteProduct);
+router.post('/products', restrict, controllers.createProduct);
+router.put('/products/:id', restrict, controllers.updateProduct);
+router.delete('/products/:id', restrict, controllers.deleteProduct);
 
 
 router.post('/sign-up', controllers.signUp); //? works

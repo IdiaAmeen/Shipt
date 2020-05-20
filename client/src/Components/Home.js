@@ -10,7 +10,7 @@ import axios from "axios";
 import OnSale from "./OnSale";
 import { ReactSmartScroller } from "react-smart-scroller";
 
-export default function Home() {
+export default function Home(props) {
   const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
   const [forYouProducts, updateForYouProducts] = useState([]);
   const [onSaleProducts, updateOnSaleProducts] = useState([]);
@@ -65,7 +65,7 @@ export default function Home() {
 
   return (
     <div>
-      <Layout>
+      <Layout user={props.user}>
         <Route exact path="/">
           <Modal />
         </Route>
