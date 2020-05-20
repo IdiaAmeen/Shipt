@@ -5,13 +5,13 @@ import Nav from "./Nav"
 
 
 export default function Layout(props) {
-  return (
-    <div>
-      <Nav />
-      <div>
-        {props.children}
-      </div>
-      <Footer />
-    </div>
-  )
+    return (
+        <div>
+            <Nav user={props.user} />
+            <div>
+                {props.children}
+            </div>
+            <Footer user={props.user} />
+        </div>
+    )
 }
