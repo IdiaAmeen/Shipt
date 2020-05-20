@@ -6,10 +6,10 @@ export default function LiveChat() {
   const [isDisplay, setIsDisplay] = useState(true);
   const [userOption, setUserOption] = useState(true);
   useEffect(() => {
-    if (userOption == true && isDisplay == true) {
+    if (userOption === true && isDisplay === true) {
       document.getElementById("member1").style.backgroundColor = "#3a8569";
       document.getElementById("shopper1").style.backgroundColor = "#cfe7e1";
-    } else if (userOption != true && isDisplay == true) {
+    } else if (userOption !== true && isDisplay === true) {
       document.getElementById("shopper1").style.backgroundColor = "#3a8569";
       document.getElementById("member1").style.backgroundColor = "#cfe7e1";
     }
