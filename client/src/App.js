@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import { Switch, Route, Redirect, Link, useParams } from "react-router-dom";
+import { verifyUser } from "./services/user";
 import Home from "./Components/Home";
-import ShoppingList from "./Components/AccountMenu/ShoppingList/ShoppingList";
 import SignUp from "./Components/Credentials/Sign-up";
 import SignIn from "./Components/Credentials/Sign-in";
 import SignOut from "./Components/Credentials/SignOut";
 import ChangePassword from "./Components/Credentials/Change-password";
 import LiveChat from "./Components/LiveChat";
-import EditProduct from "./Components/CUD/EditProduct";
-import { verifyUser } from "./services/user";
+import ShoppingList from "./Components/AccountMenu/ShoppingList/ShoppingList";
 import ProductDetail from "./Components/ProductDetail";
+import EditProduct from "./Components/CUD/EditProduct";
 import CreateProduct from "./Components/CUD/CreateProduct";
+import "./App.css";
 
 function App() {
   const [input, setInput] = useState("");
@@ -37,11 +37,6 @@ function App() {
           <Route exact path="/" render={() => <Home user={currentUser} />} />
           <Route
             exact
-            path="/ShoppingList"
-            render={() => <ShoppingList user={currentUser} />}
-          />
-          <Route
-            exact
             path="/sign-up"
             render={(props) => <SignUp setCurrentUser={setCurrentUser} />}
           />
@@ -63,11 +58,17 @@ function App() {
           />
           <Route
             exact
+            path="/products/shopping-list"
+            render={() => <ShoppingList user={currentUser} />}
+          />
+          <Route
+            exact
             path="/products/:id"
             render={(props) => (
               <ProductDetail user={currentUser} productDetail={props} />
             )}
           />
+
           <Route
             exact
             path="/products/:id/update"

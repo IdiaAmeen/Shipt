@@ -43,7 +43,7 @@ export default function Nav(props) {
                 <div className="drop-down">{showMenu && <AccountMenu />}</div>
               </div>
 
-              <Link to="/ShoppingList" className="desktop-nav-container">
+              <Link to="/products/shopping-list" className="desktop-nav-container">
                 <img
                   className="desktop-nav-account-icon"
                   src="/Images/account-icon@2x.png"

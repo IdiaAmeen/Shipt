@@ -48,7 +48,7 @@ export default function AccountMenu() {
               <img className="menu-icon" src={RewardsIcon} alt="rewards icon" />
             </span>
           </li >
-          <Link className="account-menu-link" to={"/ShoppingList"}>
+          <Link className="account-menu-link" to={"/products/shopping-list"}>
             <span className="shopping-list-name">Shopping List</span>
             <span className="active-icon">
               <img
