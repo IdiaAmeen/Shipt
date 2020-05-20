@@ -17,10 +17,6 @@ function App() {
 
   return (
     <div className="App">
-      <Link to="/"> Home</Link>
-      <Link to="/sign-up"> Sign-up </Link>
-      <Link to="/sign-in"> Sign-in </Link>
-      <Link to="/change-password"> ChangePassword </Link>
       <Switch>
         <div>
           <Route exact path="/" render={() => <Home />} />
