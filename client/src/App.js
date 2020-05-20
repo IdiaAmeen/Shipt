@@ -8,9 +8,10 @@ import SignIn from "./Components/Credentials/Sign-in";
 import SignOut from "./Components/Credentials/SignOut";
 import ChangePassword from "./Components/Credentials/Change-password";
 import LiveChat from "./Components/LiveChat";
-import ProductDetail from "./Components/ProductDetail";
 import EditProduct from "./Components/CUD/EditProduct";
 import { verifyUser } from "./services/user";
+import ProductDetail from "./Components/ProductDetail";
+import CreateProduct from "./Components/CUD/CreateProduct";
 
 function App() {
   const [input, setInput] = useState("");
@@ -19,16 +20,18 @@ function App() {
   const [user, setUser] = useState();
 
   return (
-    <div className="App">
-      <Link to="/"> Home</Link>
-      <Link to="/sign-up"> Sign-up </Link>
-      <Link to="/sign-in"> Sign-in </Link>
-      <Link to="/change-password"> ChangePassword </Link>
+    <>
+      <div className="App">
+        <Link to="/"> Home</Link>
+        <Link to="/sign-up"> Sign-up </Link>
+        <Link to="/sign-in"> Sign-in </Link>
+        <Link to="/change-password"> ChangePassword </Link>
+        <Link to="/create-product"> CreateProduct</Link>
+      </div>
 
       <Switch>
         <div>
           <Route exact path="/" render={() => <Home />} />
-
           <Route exact path="/ShoppingList" render={() => <ShoppingList />} />
           <Route
             exact
@@ -41,6 +44,11 @@ function App() {
             render={() => <SignIn setCurrentUser={setCurrentUser} />}
           />
           <Route exact path="/livechat" render={() => <LiveChat />} />
+          <Route
+            exact
+            path="/create-product"
+            render={() => <CreateProduct />}
+          />
           {/* <Route
             exact
             path="/change-password"
@@ -59,7 +67,7 @@ function App() {
           <Route exact path="/sign-out" render={() => <SignOut />} />
         </div>
       </Switch>
-    </div>
+    </>
   );
 }
 export default App;
