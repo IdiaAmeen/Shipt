@@ -35,16 +35,12 @@
   align-items: center;
 }
 .x1 {
-  background-color: #3a8569;
-  border: solid 1.5px white;
-  color: white;
-  font-size: 20px;
-  border-radius: 50%;
   height: 35px;
   width: 35px;
-  text-decoration: none;
-  font-family: Rubik, sans-serif;
-  font-size: 25.2px;
+
+  /* transform: translateY(-px); */
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 .quit {
   float: right;
@@ -76,11 +72,12 @@
   margin-right: 29px;
   margin-top: 20px;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .member-shopper1 {
   display: flex;
-  margin-top: 0;
+  margin-bottom: 10px;
   justify-content: space-around;
 }
 
@@ -113,5 +110,6 @@
   align-self: center;
   font-size: 18px;
   font-weight: 500;
-  margin-top: 10px;
+  /* margin-top: 5px; */
+  margin-bottom: 25px;
 }

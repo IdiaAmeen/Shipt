@@ -17,10 +17,10 @@ function ForAgain(props) {
 
       </div> */}
       <ScrollMenu 
-          data={(results.map(item => {
+          data={(results.map((item, key) => {
             return (
-              <div className="scroll-items-display">
-                <SmallProduct product={item} />
+              <div key={item._id} className="scroll-items-display">
+                <SmallProduct product={item} key={item._id} />
               </div>
             )
           }))}

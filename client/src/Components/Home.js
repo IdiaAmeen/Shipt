@@ -29,12 +29,7 @@ export default function Home() {
     updateOnSaleProducts(apiResults.data.splice(0, 4));
   };
 
-  let menuItems = buyAgainProducts.map((item) => {
-    return {
-      key: item._id,
-      ...item,
-    };
-  });
+
   
   return (
     <div>
