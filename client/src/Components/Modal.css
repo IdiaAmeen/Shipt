@@ -69,7 +69,7 @@
   .inner-modal {
     border-radius: 36px;
     box-shadow: 0 3px 12px 0 var(--headingcolor-30);
-    font-size: 15px;
+    font-size: 18px;
     position: absolute;
     width: 520px;
     height: 258px;
@@ -89,5 +89,8 @@
     width: 131px;
     height: 33px;
     border-radius: 10px;
+  }
+  .nav-shipt-logo {
+    margin-top: 3px;
   }
 }
