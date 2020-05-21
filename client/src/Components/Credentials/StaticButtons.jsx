@@ -6,20 +6,20 @@ function StaticButtons() {
     <div className="buttonDiv">
       <button className="appleButton staticButton">
         <div className="divAppleStyle">
-          <img src="/Images/applelogo.png" alt="" width="60%" />
+          <img src="/Images/applelogo.png" alt="Apple logo" width="60%" />
         </div>
 
         <p>Continue with Apple</p>
       </button>
       <button className="googleButton staticButton">
         <div className="divGoogleStyle">
-          <img src="/Images/GoogleLogo.png" alt="" />
+          <img src="/Images/GoogleLogo.png" alt="Google logo" />
         </div>
         <p>Continue with Google</p>
       </button>
       <button className="facebookButton staticButton">
         <div className="divFacebookStyle">
-          <img src="/Images/FbLogo.png" alt="" />
+          <img src="/Images/FbLogo.png" alt="Facebook logo" />
         </div>
         <p>Continue with Facebook</p>
       </button>

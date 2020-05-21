@@ -7,7 +7,7 @@ export default function SmallProduct({ product }) {
     <Link className="SmallProduct-link" to={"/products/" + product._id}>
       <div className="SmallProduct-container">
         <div className="SmallProduct-image-container">
-          <img className="SmallProduct-image" src={product.imgURL}></img>
+          <img className="SmallProduct-image" src={product.imgURL} alt="product image"></img>
           <img
             className="SmallProduct-add-image"
             src="/Images/Group 79.png"
