@@ -6,9 +6,9 @@ import BuyAgain from "./BuyAgain";
 import ForYou from "./ForYou";
 import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
-import axios from "axios";
 import OnSale from "./OnSale";
 import { ReactSmartScroller } from "react-smart-scroller";
+import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 export default function Home(props) {
   const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
@@ -28,40 +28,72 @@ export default function Home(props) {
     updateOnSaleProducts(apiResults.data.splice(0, 4));
   };
 
-  const productLinkPages = [
-    {
-      images: [
-        {
-          url: "/images/Buy Again Icon.png",
-          label: "Buy Again",
-        },
-        {
-          url: "/images/Shopping Bag Icon.png",
-          label: "For You",
-        },
-        {
-          url: "/Images/Sale Icon.png",
-          label: "On Sale",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          url: "/Images/Browse Icon.png",
-          label: "Browse",
-        },
-        {
-          url: "/Images/Component 1.png",
-          label: "Exclusive Savings",
-        },
-      ],
-    },
-  ];
+   const productLinkPages = [
+      {
+          images: [
+              {
+                  url: "/images/Buy Again Icon.png",
+                  label: "Buy Again",
+              },
+              {
+                  url: "/images/Shopping Bag Icon.png",
+                  label: "For You",
+              },
+              {
+                  url: "/Images/Sale Icon.png",
+                  label: "On Sale",
+              }
+          ]
+      },
+      {
+          images: [
 
+              {
+                  url: "/Images/Browse Icon.png",
+                  label: "Browse",
+              },
+              {
+                  url: "/Images/Component 1.png",
+                  label: "Exclusive Savings",
+              }
+          ]
+      }
+  ]
+
+  const productLinkImages = [
+    {
+      url: "/images/Buy Again Icon.png",
+      label: "Buy Again",
+    },
+    {
+        url: "/images/Shopping Bag Icon.png",
+        label: "For You",
+    },
+    {
+        url: "/Images/Sale Icon.png",
+        label: "On Sale",
+      },
+      {
+        url: "/Images/Browse Icon.png",
+        label: "Browse",
+    },
+    {
+        url: "/Images/Component 1.png",
+        label: "Exclusive Savings",
+    }
+  ]
+
+  const exclusiveSavings = [
+    "/Images/Exclusive Saving Desktop.png",
+    "/Images/Exclusive Saving Desktop.png",
+    "/Images/Exclusive Saving Desktop.png",
+    "/Images/Exclusive Saving Desktop.png",
+    "/Images/Exclusive Saving Desktop.png"
+  ]
   const renderPagination = ({ onNext, onPrev, onDotClick, selectedDot }) => {
     return <></>;
   };
+  
 
   return (
     <div>
@@ -74,6 +106,7 @@ export default function Home(props) {
         </div>
         <div className="home-search-container">
           <img className="home-target-logo" src="/images/Target Logo.png"></img>
+          <img className="home-target-logo-desktop" src="/images/Target Logo Desktop.png"></img>
           <img className="home-target-text" src="/images/Group 123.png"></img>
           <input
             className="home-search"
@@ -89,17 +122,17 @@ export default function Home(props) {
             pagination
             draggable
             paginationConfig={{
-              activeDotColor: "#5d5d5d",
-              unactiveDotsColor: "#d5d5d5",
-              draggable: true,
-              infinite: true,
+                activeDotColor: "#5d5d5d",
+                unactiveDotsColor: "#d5d5d5",
+                draggable: true,
+                infinite: true
             }}
           >
             {productLinkPages.map((page, index) => (
               <div className="horizontal-scroll-links-page" key={index}>
                 {page.images.map((image, key) => (
                   <div className="horizontal-scroll-links" key={key}>
-                    <img className="home-group-icons" src={image.url}></img>
+                    <img className="home-group-icons" src={image.url} ></img>
                     <span>{image.label}</span>
                   </div>
                 ))}
@@ -107,12 +140,34 @@ export default function Home(props) {
             ))}
           </ReactSmartScroller>
         </div>
-        <div>
-          <img src="/images/Exclusive Saving.png"></img>
+        <div className="home-products-links-desktop">
+        {productLinkImages.map((image, key) => (
+          <div className="horizontal-scroll-links-desktop" key={key}>
+            <img className="home-group-icons" src={image.url} ></img>
+            <p>{image.label}</p>
+          </div>
+        ))}
         </div>
-        <BuyAgain results={buyAgainProducts} />
-        <ForYou results={forYouProducts} />
-        <OnSale results={onSaleProducts} />
+        <div className="home-layout-desktop">
+          <div className="exclusive-savings">
+            <img src="/images/Exclusive Saving.png"></img>
+          </div> 
+          <div className="exclusive-savings-desktop">
+            <ScrollMenu 
+              data={(exclusiveSavings.map((item, key) => {
+                return (
+                  <div key={key} className="scroll-items-display">
+                    <img src={item} />
+                  </div>
+                )
+              }))}
+              arrowRight={<img src="/Images/Scroll Arrow.png"></img>}
+            />
+          </div>
+        <BuyAgain results={props.results.buyAgain} />
+        <ForYou results={props.results.forYou} />
+        <OnSale results={props.results.onSale} />
+        </div>
       </Layout>
     </div>
   );

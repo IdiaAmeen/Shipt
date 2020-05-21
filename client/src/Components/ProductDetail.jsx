@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import Layout from "../Components/shared/Layout";
+import "../Components/ProductDetail.css";
 import { getProduct, deleteProduct } from "../services/product";
 import Layout from "./shared/Layout";
 import "./ProductDetail.css";
 
-export default function ProductDetail({ user }) {
+
+export default function ProductDetail({ product, user }) {
+
   const [imgURL, setImgURL] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -26,11 +30,14 @@ export default function ProductDetail({ user }) {
   return (
     <>
       <Layout user={user}>
+        <h3 className="page-title">Product Details</h3>
+        <div className="product-page">
         <div className="product-details">
           <img className="product-details-image" src={imgURL} alt={name} />
           <div className="product-details-info">{name}</div>
           <div className="product-details-info">${price}</div>
           <div className="product-details-measurement">{measurement}</div>
+        </div>
           {user && (
             <div className="product-details-buttons">
               <Link

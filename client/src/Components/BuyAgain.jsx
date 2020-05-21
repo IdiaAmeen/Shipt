@@ -11,24 +11,17 @@ function BuyAgain(props) {
       <Link className="ItemCarousel-link" to={`/BuyAgainList/`} >
         <h3 className="ItemCarousel-header">Buy Again</h3>
       </Link>
-      {/* <div className='ItemCarousel-container'>
-        {props.results.map((result, index) => (
-          <div className="SmallProduct-area">
-            <SmallProduct product={result} />
-          </div>
-        ))}
 
-      </div> */}
-      <ScrollMenu 
-          data={(results.map((item, key) => {
-            return (
-              <div key={item._id} className="scroll-items-display">
-                <SmallProduct product={item} key={item._id} />
-              </div>
-            )
-          }))}
-          arrowRight={<img src="/Images/Scroll Arrow.png"></img>}
-        />
+      <ScrollMenu
+        data={(results.map((item, key) => {
+          return (
+            <div key={item._id} className="scroll-items-display">
+              <SmallProduct product={item} key={item._id} />
+            </div>
+          )
+        }))}
+        arrowRight={<img src="/Images/Scroll Arrow.png"></img>}
+      />
     </div>
   )
 

@@ -1,8 +1,10 @@
 import React from "react";
 import ProductItem from "./ProductItem.jsx";
-import "./ProductItemPage.css";
+import "./ProductItemPage.css"
 
-function BuyAgainList(props) {
+function OnSaleList(props) {
+
+
   return (
     <div className="ProductItemPage-body">
       <div className="newDiv">
@@ -17,9 +19,8 @@ function BuyAgainList(props) {
             </div>
           ))}
         </div>
-        z
       </div>
     </div>
   );
 }
-export default BuyAgainList;
+export default OnSaleList;

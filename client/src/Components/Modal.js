@@ -9,26 +9,29 @@ export default function Modal() {
     return (
       <div className="outer-modal">
         <div className="inner-modal">
-          <button className="x" onClick={() => setIsDisplay(false)}>
-            X
+          <div className="x-box">
+            <button className="x" onClick={() => setIsDisplay(false)}>
+              X
           </button>
-          <img
-            className="nav-shipt-logo"
-            src="/Images/brand-elements.png"
-            alt="product"
-          ></img>
-          <p>
-            Due to high demand, we recommend you choose your preferred delivery
+          </div>
+          <div className="main-inner">
+            <img
+              className="nav-shipt-logo"
+              src="/Images/brand-elements.png"
+              alt="product"
+            ></img>
+            <p>
+              Due to high demand, we recommend you choose your preferred delivery
             time before shopping.{" "}
-          </p>
-          <button className="got-it" onClick={() => setIsDisplay(false)}>
-            Got It
+            </p>
+            <button className="got-it" onClick={() => setIsDisplay(false)}>
+              Got It
           </button>
+          </div>
+
         </div>
       </div>
     );
   }
 }
 
-// Modul most appear on page load .
-// When user clicks out it renders home page
