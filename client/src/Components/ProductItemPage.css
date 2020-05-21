@@ -9,6 +9,7 @@
   font-size: 8.3;
   text-align: left;
   margin-left: 10px;
+  font-family: Arial;
 }
 
 .ProductItemPage-container{
@@ -18,7 +19,7 @@
 
 .list-items {
   width: 150px;
-  height: 260px;
-  } 
+  height: 260px; 
+  }  
 
 

@@ -36,6 +36,8 @@
 .SmallProduct-price > p {
   margin-top: 25px;
   margin-bottom: 5px;
+  font-family: 'Manjari', sans-serif;
+
 }
 
 .SmallProduct-name {
@@ -47,6 +49,8 @@
 
 .SmallProduct-name > p {
   margin-top: 0;
+  font-family: 'Manjari', sans-serif;
+
 }
 
 .SmallProduct-measurement {
@@ -54,6 +58,9 @@
   color:gray;
   text-align: left;
   margin-left: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+
 }
 
 .SmallProduct-link {

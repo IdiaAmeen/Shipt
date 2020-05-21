@@ -4,8 +4,12 @@
   box-shadow: 0px 4px 4px 0px rgba(186,186,186,.3);
   border-radius: 6px;
   width: 160px;
- height: 260px;
- background-color: white;
+  height: 260px;
+  background-color: white;
+  /* display: flex;
+  flex-wrap: wrap;
+  margin: 20px; */
+
 }
 
 .ProductItem-image-container {
@@ -33,9 +37,10 @@
   margin-bottom: 5px;
   text-align: left;
   margin-left: 15px;
-  font-weight: 500; 
+  font-weight: 600; 
   text-overflow: initial;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: 'Manjari', sans-serif;
 }
 
 
@@ -55,6 +60,9 @@
   color:gray;
   text-align: left;
   margin-left: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+
 }
 
 .ProductItem-link {

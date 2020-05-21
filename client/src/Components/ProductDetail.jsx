@@ -27,7 +27,11 @@ export default function ProductDetail({ product }) {
 
   return (
     <Layout>
+      <h3 className="page-title">
+        Product Details
+        </h3>
       <div className="product-page">
+
         <div className="product-details">
           <img className="product-image" src={imgURL} alt={name} />
           <div className="product-labels">
