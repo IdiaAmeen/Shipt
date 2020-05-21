@@ -124,7 +124,7 @@ export default function SignIn(props) {
                       }}
                     >
                       {" "}
-                      SignUp{" "}
+                      Sign Up{" "}
                     </Link>
                   </div>
                 </div>

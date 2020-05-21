@@ -94,7 +94,7 @@ const SignUp = (props) => {
                     <p className="inputField">Password:</p>
                     <input
                       type="password"
-                      placeholder="atleast 6 characters"
+                      placeholder="At least 6 characters"
                       className="inputBox"
                       onChange={(e) => setPassword(e.target.value)}
                     ></input>
