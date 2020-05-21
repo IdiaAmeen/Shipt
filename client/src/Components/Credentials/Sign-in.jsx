@@ -21,9 +21,7 @@ export default function SignIn(props) {
       let user = await signIn(signInObject);
       user = user.user;
       props.setCurrentUser(user);
-      // console.log(user);
-
-      //! created SetState object, and need to connect to database before redirect
+ 
       setSignInCreated(!!user._id);
     } catch (error) {
       setErrorMessage("Invalid Credentials. Please try again!");
