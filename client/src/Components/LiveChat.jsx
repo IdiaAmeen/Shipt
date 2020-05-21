@@ -24,7 +24,7 @@ export default function LiveChat() {
     return (
       <div className="outer-modal">
         <div className="inner-modal1">
-          <div className="quit">
+          <div className="quit1">
             <button onClick={() => setIsDisplay(!isDisplay)} className="x1">
               <img src="Images/Group 97.png" alt="X" />
             </button>
