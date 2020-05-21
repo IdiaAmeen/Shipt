@@ -7,7 +7,7 @@ import SignUp from "./Components/Credentials/Sign-up";
 import SignIn from "./Components/Credentials/Sign-in";
 import SignOut from "./Components/Credentials/SignOut";
 import ChangePassword from "./Components/Credentials/Change-password";
-
+import ProductDetail from "./Components/ProductDetail";
 import BuyAgainList from "./Components/BuyAgainList";
 import Layout from "./Components/shared/Layout";
 import EditProduct from "./Components/CUD/EditProduct";
