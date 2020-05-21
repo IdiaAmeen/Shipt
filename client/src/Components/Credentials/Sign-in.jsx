@@ -64,7 +64,7 @@ export default function SignIn(props) {
                   <StaticButtons />
 
                   <p style={{ color: "#838383" }}>
-                    _____________________or_____________________
+                    _________________or_________________
                   </p>
                   {/* Guard Operator */}
                   <p style={{ color: "red", fontWeight: "900" }}>

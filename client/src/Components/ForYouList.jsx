@@ -4,8 +4,6 @@ import "./ProductItemPage.css"
 
 
 function ForYouList(props) {
-
-
   return (
     <div className="ProductItemPage-body">
       <div className="ProductItemPage-text">
