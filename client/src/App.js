@@ -13,7 +13,6 @@ import BuyAgainList from "./Components/BuyAgainList";
 import Layout from "./Components/shared/Layout"
 import EditProduct from "./Components/CUD/EditProduct";
 import { verifyUser } from "./services/user";
-import ProductDetail from "./Components/ProductDetail";
 import CreateProduct from "./Components/CUD/CreateProduct";
 
 
