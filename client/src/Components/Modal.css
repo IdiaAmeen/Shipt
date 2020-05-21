@@ -8,15 +8,14 @@
   width: 100vw;
   background: grey;
   z-index: 1000;
-  background-color: rgb(0,0,0,0.3);
-
+  background-color: rgb(0, 0, 0, 0.3);
 }
 .inner-modal {
   position: absolute;
   height: 440px;
   width: 100vw;
   top: 11.5%;
-  background-color: rgb(255,255,255,1);
+  background-color: rgb(255, 255, 255, 1);
   bottom: 25%;
   border-radius: 21.7px;
   z-index: 1;
@@ -40,4 +39,31 @@
   width: 40px;
   height: 36.7;
   color: grey;
+}
+
+@media (min-width: 765px) {
+  .inner-modal {
+    border-radius: 36px;
+    box-shadow: 0 3px 12px 0 var(--headingcolor-30);
+    font-size: 15px;
+    position: absolute;
+    width: 520px;
+    height: 258px;
+    left: 460px;
+    top: 321px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .x {
+    margin-top: 10px;
+    background-color: white;
+    margin-right: 10px;
+    border: none;
+    font-size: 29px;
+  }
+  .got-it {
+    width: 131px;
+    height: 33px;
+    border-radius: 10px;
+  }
 }

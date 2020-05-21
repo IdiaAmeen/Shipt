@@ -7,7 +7,8 @@ import SignUp from "./Components/Credentials/Sign-up";
 import SignIn from "./Components/Credentials/Sign-in";
 import SignOut from "./Components/Credentials/SignOut";
 import ChangePassword from "./Components/Credentials/Change-password";
-import LiveChat from "./Components/LiveChat";
+
+
 import ProductDetail from './Components/ProductDetail'
 import BuyAgainList from "./Components/BuyAgainList";
 import Layout from "./Components/shared/Layout"
@@ -53,7 +54,7 @@ function App() {
                         path="/sign-in"
                         render={(props) => <SignIn setCurrentUser={setCurrentUser} />}
                     />
-                    <Route exact path="/livechat" render={() => <LiveChat />} />
+                   
                     <Route
                         exact
                         path="/create-product"
@@ -80,5 +81,6 @@ function App() {
             </div>
         </>
     );
+
 }
 export default App;
