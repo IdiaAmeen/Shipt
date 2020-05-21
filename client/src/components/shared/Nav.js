@@ -68,7 +68,7 @@ export default function Nav(props) {
                   src="/Images/account-icon@2x.png"
                   alt="account-icon"
                 />
-                <div className='this-account-title'>
+                <div className="this-account-title">
                   {props.user ? (
                     <>
                       <span className="desktop-nav-account-span">
@@ -89,10 +89,10 @@ export default function Nav(props) {
           <div className="nav-services-container">
             <div className="nav-services-icons">
               <Link to="">
-                <img src="/images/Categories.png" alt="Categories"></img>
+                <img src="/Images/Categories.png" alt="Categories"></img>
               </Link>
               <Link to="">
-                <img src="/images/SearchIcon.png" alt="SearchIcon"></img>
+                <img src="/Images/SearchIcon.png" alt="SearchIcon"></img>
               </Link>
             </div>
             <div className="nav-services-icons-desktop">
@@ -107,7 +107,7 @@ export default function Nav(props) {
               <div className="vertical-line"></div>
               <div className="nav-categories-desktop-container">
                 <Link className="nav-categories-desktop" to="">
-                  <img src="/images/Categories.png" alt="categories"></img>
+                  <img src="/Images/Categories.png" alt="categories"></img>
                 </Link>
                 <p>Categories</p>
               </div>
@@ -117,12 +117,17 @@ export default function Nav(props) {
                 className="nav-services-icons"
                 onClick={() => setIsDisplay(!isDisplay)}
               >
-
-                <img src="/images/1381552 2.png" className="nav-services-icons" alt="services icon" />
-
+                <img
+                  src="/Images/1381552 2.png"
+                  className="nav-services-icons"
+                  alt="services icon"
+                />
               </button>
               <Link to="">
-                <img src="/images/Shopping Cart.png" alt="shopping cart icon"></img>
+                <img
+                  src="/Images/Shopping Cart.png"
+                  alt="shopping cart icon"
+                ></img>
               </Link>
             </div>
             <div className="nav-services-icons-desktop">
@@ -131,13 +136,13 @@ export default function Nav(props) {
                   className="cart-icon-desktop"
                   onClick={() => setIsDisplay(!isDisplay)}
                 >
-                  <img src="/images/1381552 2.png" alt="live chat" />
+                  <img src="/Images/1381552 2.png" alt="live chat" />
                 </Link>
                 <p>Live Chat</p>
               </div>
               <div className="nav-services-icons-container">
                 <Link className="cart-icon-desktop" to="">
-                  <img src="/images/Shopping Cart.png" alt="cart icon"></img>
+                  <img src="/Images/Shopping Cart.png" alt="cart icon"></img>
                 </Link>
                 <p>Cart</p>
               </div>
