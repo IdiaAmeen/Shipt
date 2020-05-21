@@ -8,11 +8,13 @@
   position: relative;
   height: 85px;
   padding-top: 20px;
+  text-align: center;
 }
 
 .SmallProduct-image {
   height:100%;
-  margin-top: 10px
+  margin-top: 10px;
+  max-width: 80%;
 }
 
 .SmallProduct-add-image {
@@ -36,7 +38,9 @@
 
 .SmallProduct-name {
   text-align: left;
+  width: 150px;
   margin-left: 15px;
+  min-height: 50px;
 }
 
 .SmallProduct-name > p {
@@ -48,4 +52,9 @@
   color:gray;
   text-align: left;
   margin-left: 15px;
+}
+
+.SmallProduct-link {
+  text-decoration: none;
+  color: black;
 }
