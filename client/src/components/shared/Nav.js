@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import HelpIcon from "../../Assets/help-icon.svg";
 import LiveChat from "../LiveChat";
-import DeliveryTime from "../DeliveryTime"
+import DeliveryTime from "../DeliveryTime";
 
 export default function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
@@ -76,10 +76,10 @@ export default function Nav(props) {
                       </span>
                     </>
                   ) : (
-                      <>
-                        <span className="desktop-nav-account-span">Account</span>
-                      </>
-                    )}
+                    <>
+                      <span className="desktop-nav-account-span">Account</span>
+                    </>
+                  )}
                 </div>
               </Link>
             </div>
@@ -117,7 +117,9 @@ export default function Nav(props) {
                 className="nav-services-icons"
                 onClick={() => setIsDisplay(!isDisplay)}
               >
+
                 <img src="/images/1381552 2.png" className="nav-services-icons" alt="services icon" />
+
               </button>
               <Link to="">
                 <img src="/images/Shopping Cart.png" alt="shopping cart icon"></img>

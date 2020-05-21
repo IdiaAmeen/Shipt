@@ -73,10 +73,10 @@ const SignUp = (props) => {
 
                   <div className="sign-up-input">
                     <h3>Sign up with email</h3>
-                    <p className="inputField">Full Name:</p>
+                    <p className="inputField">Username:</p>
                     <input
                       type="text"
-                      placeholder="Enter your full name"
+                      placeholder="Enter your username"
                       className="inputBox"
                       onChange={(e) => setUserName(e.target.value)}
                     ></input>
@@ -111,7 +111,7 @@ const SignUp = (props) => {
                   <button className="post-button" onClick={callSignUp}>
                     Sign Up
                   </button>
-                  <div style={{ paddingBottom: "20px" }}>
+                  <div style={{ paddingBottom: "20px", fontSize: "12px" }}>
                     Already have an account?
                     <Link
                       to="/sign-in"
