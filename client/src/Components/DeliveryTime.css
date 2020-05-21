@@ -97,3 +97,12 @@
 .check-image {
   margin-top: 8px;
 }
+
+@media (min-width: 765px) {
+  .delivery-time-container {
+    left: auto;
+    margin-left: auto;
+    width: 260px;
+    margin-top: -11px; 
+  }
+}

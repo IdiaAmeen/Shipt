@@ -27,6 +27,10 @@
   padding-bottom: 5px;
 }
 
+.home-target-logo-desktop {
+  display: none;
+}
+
 .home-search {
   min-width: 75%;
   border-radius: 25px;
@@ -73,4 +77,88 @@
 .fdnftI {
   height: 15px !important;
   width: 15px !important;
+}
+
+.home-products-links-desktop {
+  display: none;
+}
+
+.exclusive-savings-desktop {
+  display: none;
+}
+
+@media (min-width: 765px) {
+  .home-delivery-time-container {
+    display: none;
+  }
+
+  .home-search-container {
+    background-image: url("/Images/vegetable desktop.png");
+    min-height: 350px;
+  }
+
+  .home-target-text {
+    display: none;
+  }
+
+  .home-target-logo {
+    display: none;
+  }
+  .home-target-logo-desktop {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+  }
+
+  .home-search {
+    min-width: 45%;
+    height: 30px;
+    font-size: 25px;
+  }
+
+  .gift-bar {
+    display: none;
+  }
+
+  .home-products-links {
+    display: none;
+  }
+
+  .home-products-links-desktop {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F9F9F9;
+  }
+
+  .horizontal-scroll-links {
+    display: flex;
+    justify-content: row;
+  }
+
+  .horizontal-scroll-links-desktop {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .horizontal-scroll-links-desktop > p {
+    margin: auto 0;
+    font-size: 25px;
+  }
+  
+  .home-group-icons {
+    margin: 20px;
+    min-height: 40px;
+  }
+
+  .exclusive-savings {
+    display: none;
+  }
+  .exclusive-savings-desktop {
+    display: block;
+  }
+
+  .home-layout-desktop {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
