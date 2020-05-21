@@ -13,7 +13,7 @@ import ShoppingListIcon from "../../../Assets/shopping-list-icon.svg";
 import LogoutIcon from "../../../Assets/logout-icon.svg";
 import Layout from "../../shared/Layout";
 
-export default function ShoppingList({user}) {
+export default function ShoppingList({ user }) {
   const [value, setValue] = useState("");
   const [items, setItem] = useState([]);
 
@@ -116,6 +116,11 @@ export default function ShoppingList({user}) {
                   />
                 </span>
               </Link>
+              {user && (
+                <Link className="desktop-menu-list-link" to="/create-product">
+                  <span className="desktop-link-name">Create Product</span>
+                </Link>
+              )}
             </ul>
           </div>
           <div className="main-shopping-list-container">

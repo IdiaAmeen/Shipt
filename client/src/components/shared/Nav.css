@@ -6,11 +6,6 @@
   z-index: 2;
 }
 
-.nav-border {
-  box-shadow: 0 1px 4px 0;
-  background-color: #f9f9f9;
-}
-
 .nav-shipt-logo {
   height: 40px;
   margin: 15px 0;
@@ -64,7 +59,6 @@
 
 .nav-services-icons-desktop {
   display: none;
-  
 }
 
 .nav-services-icons {
@@ -85,14 +79,22 @@
   margin: 10px 0 15px 250px;
 }
 
-.delivery-target-text-container { 
+.delivery-target-text-container {
   margin: auto 10px;
   font-weight: bold;
+  text-align: left;
 }
 
 .delivery-text {
   color: green;
   margin-bottom: 0;
+}
+
+.nav-services-box-shadow {
+  box-shadow: 0px 0px 4px 0px rgba(186, 186, 186, 0.8);
+  padding-top: 3px;
+  padding-bottom: 0.09px;
+  height: 105px;
 }
 
 .target-text {
@@ -103,7 +105,7 @@
 .nav-categories-desktop-container {
   display: flex;
 }
-.nav-categories-desktop-container  > p {
+.nav-categories-desktop-container > p {
   margin-top: 25px;
   font-size: 20px;
 }
@@ -121,7 +123,7 @@
 
 .cart-icon-desktop {
   margin-top: 10px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .nav-services-container {
@@ -138,9 +140,26 @@
   border: none;
 }
 
+@media (max-width: 764px) {
+  .nav-services-box-shadow {
+    height: 75px;
+  }
+}
+@media (min-width: 985px) {
+  .nav-delivery-time-container {
+    display: block;
+  }
+}
+
 @media (min-width: 765px) {
   .nav-account-icon {
     display: none;
+  }
+  .nav-services-box-shadow {
+    box-shadow: 0px 0px 4px 0px rgba(186, 186, 186, 0.8);
+    padding-top: 3px;
+    padding-bottom: 0.09px;
+    height: 110px;
   }
   .desktop-nav-container {
     display: flex;
@@ -160,6 +179,8 @@
   .desktop-nav-account-span {
     margin-top: 5px;
     padding-left: 5px;
+
+    font-family: "Manjari", sans-serif;
     font-size: 23px;
   }
   .desktop-nav-container:hover {
@@ -169,17 +190,14 @@
     display: none;
   }
   .nav-services-icons-desktop {
-    display: flex;
     border: none;
     background-color: transparent;
     display: flex;
     justify-content: space-around;
     min-width: 25%;
+    height: 75px;
   }
   .nav-services-icons {
     display: none;
-  }
-  .nav-delivery-time-container {
-    display: block;
   }
 }

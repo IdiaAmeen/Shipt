@@ -7,10 +7,11 @@ export default function ProductItem({ product }) {
     <Link className="ProductItem-link" to={"/products/" + product._id}>
       <div className="ProductItem-container">
         <div className="ProductItem-image-container">
-          <img className="ProductItem-image" src={product.imgURL}></img>
+          <img className="ProductItem-image" src={product.imgURL} alt="product image"></img>
           <img
             className="ProductItem-add-image"
             src="/Images/Group 79.png"
+            alt="product image"
           ></img>
         </div>
         <div className="ProductItem-price-name">

@@ -15,111 +15,123 @@ import EditProduct from "./Components/CUD/EditProduct";
 import ProductDetail from "./Components/ProductDetail";
 import CreateProduct from "./Components/CUD/CreateProduct";
 import "./App.css";
-import { getProducts } from "./services/product"
-import axios from "axios"
+import { getProducts } from "./services/product";
+import axios from "axios";
 
-function App() {
-    const [input, setInput] = useState("");
-    const [currentUser, setCurrentUser] = useState(null);
-    const [results, setResults] = useState({
-        buyAgain: [],
-        forYou: [],
-        onSale: []
-    });
+function App(props) {
+  const [input, setInput] = useState("");
+  const [currentUser, setCurrentUser] = useState(null);
+  const [results, setResults] = useState({
+    buyAgain: [],
+    forYou: [],
+    onSale: [],
+  });
 
+  useEffect(() => {
+    callGetProducts(); //! this is for the caraselle
+  }, []);
 
+  const callGetProducts = async () => {
+    const apiResults = await axios(
+      "https://shiptserver.herokuapp.com/api/products"
+    );
+    const buyAgain = apiResults.data.splice(0, 9);
+    const forYou = apiResults.data.splice(0, 9);
+    const onSale = apiResults.data.splice(0, 9);
+    setResults({ buyAgain, forYou, onSale });
+  };
 
-    useEffect(() => {
-        callGetProducts(); //! this is for the caraselle
-    }, []);
+  useEffect(() => {
+    reSignIn(); //! for users. Resigning In
+  }, []);
 
+  const reSignIn = async () => {
+    const { user } = await verifyUser();
+    console.log(user);
+    if (user) {
+      setCurrentUser(user);
+    }
+  };
 
-    const callGetProducts = async () => {
-        const apiResults = await axios("https://shiptserver.herokuapp.com/api/products");
-        const buyAgain = (apiResults.data.splice(0, 9));
-        const forYou = (apiResults.data.splice(0, 9));
-        const onSale = (apiResults.data.splice(0, 9));
-        setResults({ buyAgain, forYou, onSale })
-    };
-
-
-    useEffect(() => {
-        reSignIn(); //! for users. Resigning In
-    }, []);
-
-    const reSignIn = async () => {
-        const { user } = await verifyUser();
-        console.log(user);
-        if (user) {
-            setCurrentUser(user);
-        }
-    };
-
-    return (
-        <>
-            <div className="App">
-                <Switch>
-                    <Route exact path="/" render={() => <Home user={currentUser} results={results} />} />
-                    <Route exact path="/ShoppingList" render={() => <ShoppingList />} />
-                    <Route
-                        exact
-                        path="/sign-up"
-                        render={(props) => <SignUp setCurrentUser={setCurrentUser} />}
-                    />
-                    <Route
-                        exact
-                        path="/sign-in"
-                        render={(props) => <SignIn setCurrentUser={setCurrentUser} />}
-                    />
-                    <Route
-                        exact
-                        path="/create-product"
-                        render={() => <CreateProduct />}
-                    />
-                    <Route
-                        exact
-                        path="/change-password"
-                        render={() => <ChangePassword setCurrentUser={setCurrentUser} />}
-                    />
-                    <Route
-                        exact
-                        path="/products/shopping-list"
-                        render={(props) => <ShoppingList user={currentUser} />}
-                    />
-                    <Route
-                        exact
-                        path="/products/:id"
-                        render={(props) => (
-                            <ProductDetail user={currentUser} productDetail={props} />
-                        )}
-                    />
-
-                    <Route
-                        exact
-                        path="/products/:id/update"
-                        render={() => <EditProduct user={currentUser} />}
-                    />
-                    <Route
-                        exact
-                        path="/sign-out"
-                        render={(props) => (
-                            <SignOut user={currentUser} setCurrentUser={setCurrentUser} />
-                        )}
-                    />
-
-                    <Route exact path="/BuyAgainList" render={() => <Layout><BuyAgainList
-                        results={results.buyAgain} title='Buy Again'
-                    /></Layout>} />
-                    <Route exact path="/ForYouList" render={() =>
-                        <Layout>
-                            <ForYouList results={results.forYou} title='For You'
-                            />
-                        </Layout>} />
-                )}
+  return (
+    <>
+      <div className="App">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => <Home user={currentUser} results={results} />}
+          />
+          <Route
+            exact
+            path="/ShoppingList"
+            render={() => <ShoppingList/>}
+          />
+          <Route
+            exact
+            path="/sign-up"
+            render={(props) => <SignUp setCurrentUser={setCurrentUser} />}
+          />
+          <Route
+            exact
+            path="/sign-in"
+            render={(props) => <SignIn setCurrentUser={setCurrentUser} />}
+          />
+          <Route
+            exact
+            path="/create-product"
+            render={() => <CreateProduct user={currentUser} />}
+          />
+          <Route
+            exact
+            path="/change-password"
+            render={() => <ChangePassword setCurrentUser={setCurrentUser} />}
+          />
+          <Route
+            exact
+            path="/products/shopping-list"
+            render={(props) => <ShoppingList user={currentUser} />}
+          />
+          <Route
+            exact
+            path="/products/:id"
+            render={(props) => (
+              <ProductDetail user={currentUser} productDetail={props} />
+            )}
+          />
+          <Route
+            exact
+            path="/products/:id/update"
+            render={() => <EditProduct user={currentUser} />}
+          />
+          <Route
+            exact
+            path="/sign-out"
+            render={(props) => (
+              <SignOut user={currentUser} setCurrentUser={setCurrentUser} />
+            )}
+          />
+          <Route
+            exact
+            path="/BuyAgainList"
+            render={() => (
+              <Layout>
+                <BuyAgainList results={results.buyAgain} title="Buy Again" />
+              </Layout>
+            )}
+          />
+          <Route
+            exact
+            path="/ForYouList"
+            render={() => (
+              <Layout>
+                <ForYouList results={results.forYou} title="For You" />
+              </Layout>
+            )}
           />
         </Switch>
-            </div>
-        </>
-    );
+      </div>
+    </>
+  );
 }
 export default App;
