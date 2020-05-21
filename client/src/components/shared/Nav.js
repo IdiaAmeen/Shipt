@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import HelpIcon from "../../Assets/help-icon.svg";
 import LiveChat from "../LiveChat";
-import DeliveryTime from "../DeliveryTime"
+import DeliveryTime from "../DeliveryTime";
 
 export default function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
@@ -28,16 +28,16 @@ export default function Nav(props) {
             </Link>
             <div className="nav-links-container">
               <img
-                  className="desktop-nav-account-icon"
-                  src="/Images/Group 81.png"
+                className="desktop-nav-account-icon"
+                src="/Images/Group 81.png"
               />
               <img
-                  className="desktop-nav-account-icon"
-                  src="/Images/Group 82.png"
+                className="desktop-nav-account-icon"
+                src="/Images/Group 82.png"
               />
               <img
-                  className="desktop-nav-account-icon"
-                  src="/Images/Group 84.png"
+                className="desktop-nav-account-icon"
+                src="/Images/Group 84.png"
               />
               <Link className="nav-question-mark" to="/">
                 <img src={HelpIcon} className="nav-help-icon" />
@@ -108,9 +108,6 @@ export default function Nav(props) {
             </div>
           </div>
 
-          {/* <Link to="/livechat">
-          <img src="/images/1381552 2.png" />
-        </Link> */}
           <div className="nav-services-icons">
             <button
               className="nav-services-icons"
@@ -129,7 +126,7 @@ export default function Nav(props) {
                 className="nav-services-icons-desktop"
                 onClick={() => setIsDisplay(!isDisplay)}
               >
-                <img src="/images/1381552 2.png"/>
+                <img src="/images/1381552 2.png" />
               </button>
               <p>Live Chat</p>
             </div>

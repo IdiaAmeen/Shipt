@@ -13,7 +13,7 @@
   right: 0;
   z-index: 1;
 }
-.outer-modal {
+.outer-modal1 {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -24,6 +24,9 @@
   background: grey;
   z-index: 1000;
   background-color: rgb(0, 0, 0, 0.3);
+}
+.nav1 {
+  display: none;
 }
 #member1 {
   background-color: #cfe7e1;
@@ -37,16 +40,16 @@
   align-items: center;
 }
 .x1 {
-  height: 35px;
-  width: 35px;
+  height: 51px;
+  width: 51.3px;
   border: none;
   background-color: transparent;
   outline: none;
-  /* transform: translateY(-px); */
+
   margin-top: 0;
   margin-bottom: 50px;
 }
-.quit {
+.quit1 {
   float: right;
   margin-left: 300px;
   margin-bottom: 10px;
@@ -114,19 +117,24 @@
   align-self: center;
   font-size: 18px;
   font-weight: 500;
-  /* margin-top: 5px; */
+
   margin-bottom: 25px;
 }
 
 @media (min-width: 765px) {
+  .outer-modal1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   .inner-modal1 {
-    position: absolute;
     width: 178px;
-    height: 283px;
-    left: 1200px;
-    top: 123.56px;
-    border-radius: 5px;
+    height: 293px;
 
+    right: -10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   #member1 {
@@ -137,24 +145,47 @@
     width: 75px;
     height: 25px;
   }
+  .nav1 {
+    display: block;
+  }
   .greeting1 {
     font-size: 12px;
-  }
-  /* .member-shopper1 {
-    /* margin-top: 35px;} */
 
+    margin: 0;
+    padding: 0;
+  }
+
+  .member-shopper1 {
+    margin-bottom: 0px;
+    margin-top: 25px;
+  }
   .chat-box1 {
-    height: 169px;
+    height: 189px;
     width: 142px;
     margin-right: 100px;
+    margin-left: 20px;
+    margin-right: 39px;
+    margin-top: 12px;
+    border-radius: 4px;
+    margin-bottom: 18px;
   }
   .quit1 {
-    float: right;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    display: inline-block;
+    align-self: flex-end;
   }
   .text-box1 {
-    height: 111px;
+    height: 105px;
     width: 127px;
     border-radius: 4px;
+    margin-right: 25px;
+    margin-left: 5px;
+    margin-bottom: 25px;
   }
   .send {
     height: 24px;
@@ -162,5 +193,11 @@
     font-size: 15px;
     border-radius: 15px;
     align-self: center;
+    margin-bottom: 70px;
+  }
+  .x1 {
+    max-height: 28px;
+    max-width: 28px;
+    margin-bottom: 10px;
   }
 }
