@@ -2,24 +2,21 @@ import React from 'react'
 // import './Search.css'
 
 
-function Search(props) {
+export default function Search(products) {
+  const handleChange = (e) => {
+    products.onChange(e.target.value);
+  };
 
   return (
-    <div>hello
-      <form  >
+    <div>
+      <form>
         <input
           type="text"
-          placeholder='Search'
-          onChange={props.onChange}
-          value={props.input}
+          placeholder="Search"
+          onChange={handleChange}
+          className="Search"
         />
       </form>
     </div>
-  )
-
+  );
 }
-
-
-
-
-export default Search

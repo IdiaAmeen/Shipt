@@ -18,6 +18,7 @@ function App() {
   const [results, setResults] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
 
+
   useEffect(() => {
     reSignIn();
   }, []);
@@ -81,6 +82,7 @@ function App() {
               <SignOut user={currentUser} setCurrentUser={setCurrentUser} />
             )}
           />
+
         </Switch>
       </div>
     </>
