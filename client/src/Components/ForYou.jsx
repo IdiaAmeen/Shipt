@@ -22,7 +22,7 @@ function ForAgain(props) {
             </div>
           )
         }))}
-        arrowRight={<img src="/Images/Scroll Arrow.png"></img>}
+        arrowRight={<img src="/Images/Scroll Arrow.png" alt="scroll arrow"></img>}
       />
     </div>
   )

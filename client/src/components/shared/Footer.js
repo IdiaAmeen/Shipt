@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer(props) {
   return (
     <div className="footer-container">
-      <img className="footer-logo" src="/Images/Footer logo.png"></img>
+      <img className="footer-logo" src="/Images/Footer logo.png" alt="shipt logo"></img>
       <div className="sign-links">
         {props.user ? (
           <>
