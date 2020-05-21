@@ -109,7 +109,7 @@ export default function DeliveryTime() {
                                 onChange={deliveryTimeChanged}
                             ></input>
                             <div className="time-window-unselected">
-                                <img className="check-image" src="/Images/Vector.png"></img>
+                                <img className="check-image" src="/Images/Vector.png" alt="Check image"></img>
                             </div>
                         </label>
                         <p>12pm to 1pm</p>
@@ -124,7 +124,7 @@ export default function DeliveryTime() {
                                 onChange={deliveryTimeChanged}
                             ></input>
                             <div className="time-window-unselected">
-                                <img className="check-image" src="/Images/Vector.png"></img>
+                                <img className="check-image" src="/Images/Vector.png" alt="Check image"></img>
                             </div>
                         </label>
                         <p>1pm to 2pm</p>
@@ -139,7 +139,7 @@ export default function DeliveryTime() {
                                 onChange={deliveryTimeChanged}
                             ></input>
                             <div className="time-window-unselected">
-                                <img className="check-image" src="/Images/Vector.png"></img>
+                                <img className="check-image" src="/Images/Vector.png" alt="Check image"></img>
                             </div>
                         </label>
                         <p>2pm to 3pm</p>
@@ -154,7 +154,7 @@ export default function DeliveryTime() {
                                 onChange={deliveryTimeChanged}
                             ></input>
                             <div className="time-window-unselected">
-                                <img className="check-image" src="/Images/Vector.png"></img>
+                                <img className="check-image" src="/Images/Vector.png" alt="Check image"></img>
                             </div>
                         </label>
                         <p>3pm to 4pm</p>
@@ -169,7 +169,7 @@ export default function DeliveryTime() {
                                 onChange={deliveryTimeChanged}
                             ></input>
                             <div className="time-window-unselected">
-                                <img className="check-image" src="/Images/Vector.png"></img>
+                                <img className="check-image" src="/Images/Vector.png" alt="Check image"></img>
                             </div>
                         </label>
                         <p>4pm to 5pm</p>
@@ -184,7 +184,7 @@ export default function DeliveryTime() {
                                 onChange={deliveryTimeChanged}
                             ></input>
                             <div className="time-window-unselected">
-                                <img className="check-image" src="/Images/Vector.png"></img>
+                                <img className="check-image" src="/Images/Vector.png" alt="Check image"></img>
                             </div>
                         </label>
                         <p>5pm to 6pm</p>
@@ -199,7 +199,7 @@ export default function DeliveryTime() {
                                 onChange={deliveryTimeChanged}
                             ></input>
                             <div className="time-window-unselected">
-                                <img className="check-image" src="/Images/Vector.png"></img>
+                                <img className="check-image" src="/Images/Vector.png" alt="Check image"></img>
                             </div>
                         </label>
                         <p>6pm to 7pm</p>

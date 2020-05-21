@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import HelpIcon from "../../Assets/help-icon.svg";
 import LiveChat from "../LiveChat";
-import DeliveryTime from "../DeliveryTime"
+import DeliveryTime from "../DeliveryTime";
 
 export default function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
@@ -24,20 +24,24 @@ export default function Nav(props) {
               <img
                 className="nav-shipt-logo"
                 src="/Images/brand-elements.png"
+                alt="Shipt logo"
               ></img>
             </Link>
             <div className="nav-links-container">
               <img
-                  className="desktop-nav-account-icon"
-                  src="/Images/Group 81.png"
+                className="desktop-nav-account-icon"
+                src="/Images/Group 81.png"
+                alt="gift get $10"
               />
               <img
-                  className="desktop-nav-account-icon"
-                  src="/Images/Group 82.png"
+                className="desktop-nav-account-icon"
+                src="/Images/Group 82.png"
+                alt="address"
               />
               <img
-                  className="desktop-nav-account-icon"
-                  src="/Images/Group 84.png"
+                className="desktop-nav-account-icon"
+                src="/Images/Group 84.png"
+                alt="Help"
               />
               <Link className="nav-question-mark" to="/">
                 <img src={HelpIcon} className="nav-help-icon" />
@@ -51,6 +55,7 @@ export default function Nav(props) {
                   <img
                     src="/Images/account-icon@2x.png"
                     className="nav-account-icon"
+                    alt="account"
                   />
                 </Link>
                 <div className="drop-down">{showMenu && <AccountMenu />}</div>
@@ -63,6 +68,7 @@ export default function Nav(props) {
                 <img
                   className="desktop-nav-account-icon"
                   src="/Images/account-icon@2x.png"
+                  alt="account"
                 />
                 <div>
                   {props.user ? (
@@ -84,14 +90,14 @@ export default function Nav(props) {
         <div className="nav-services-container">
           <div className="nav-services-icons">
             <Link to="">
-              <img src="/images/Categories.png"></img>
+              <img src="/images/Categories.png" alt="Categories"></img>
             </Link>
             <Link to="">
-              <img src="/images/SearchIcon.png"></img>
+              <img src="/images/SearchIcon.png" alt="Search icon"></img>
             </Link>
           </div>
           <div className="nav-services-icons-desktop">
-            <img src="/Images/Target Logo.png"></img>
+            <img src="/Images/Target Logo.png" alt="Target logo"></img>
             <div className="delivery-target-text-container">
               <p className="delivery-text">Delivery</p>
               <p className="target-text">Target ▼</p>
@@ -129,13 +135,13 @@ export default function Nav(props) {
                 className="nav-services-icons-desktop"
                 onClick={() => setIsDisplay(!isDisplay)}
               >
-                <img src="/images/1381552 2.png"/>
+                <img src="/images/1381552 2.png" />
               </button>
               <p>Live Chat</p>
             </div>
             <div className="nav-services-icons-container">
               <Link className="cart-icon-desktop" to="">
-                <img src="/images/Shopping Cart.png"></img>
+                <img src="/images/Shopping Cart.png" alt="Shopping cart"></img>
               </Link>
               <p>Cart</p>
             </div>

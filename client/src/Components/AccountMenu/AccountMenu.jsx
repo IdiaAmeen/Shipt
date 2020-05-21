@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, Route } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./AccountMenu.css";
 import AccountIcon from "../../Assets/account-icon.svg";
 import AddressIcon from "../../Assets/address-icon.svg";
