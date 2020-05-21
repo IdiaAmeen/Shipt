@@ -2,20 +2,15 @@ import React, { useState } from "react";
 import "./DeliveryTime.css";
 
 export default function DeliveryTime() {
-    //!State variables
-    //!ShowTimeWindow toggles the visibility of the dropdown area
+   
     const [showTimeWindow, updateShowTimeWindow] = useState(
         "show-time-window-hidden"
     );
-    //!What's displayed on top
     const [deliveryTime, updateDeliveryTime] = useState(
         "Choose your delivery time ..."
     );
-    //!Keeps track of what day was selected
     const [deliveryDate, updateDeliveryDate] = useState("today");
 
-    //!Function to toggle dropdown area on and off
-    //!OnClick event of the top button
     const showHideDeliveryTime = () => {
         if (showTimeWindow == "show-time-window-hidden") {
             updateShowTimeWindow("show-time-window");
@@ -24,24 +19,21 @@ export default function DeliveryTime() {
         }
     };
 
-    //!onChange event for all the radio buttons
-    //!Update the deliveryTime display and the radio button styles
     const deliveryTimeChanged = (event) => {
         updateDeliveryTime(`Delivery ${deliveryDate} ${event.target.value}`);
-        //!Unselect all selected radio buttons
+        
         let selectedItems = document.querySelectorAll(".time-window-selected");
         selectedItems.forEach(
             (item) => (item.className = "time-window-unselected")
         );
-        //!get the radio button parent label and change the class name of the child div to show either white or green
+       
         let label = event.target.parentElement;
         let divImage = label.childNodes[1];
         divImage.className = "time-window-selected";
 
-        //!after selecting a time, close the window
         showHideDeliveryTime();
     };
-    //!onClick event for the today and tomorrow buttons. Toggles the style and sets state variable
+    
     const deliveryDateChanged = (event) => {
         if (event.target.value == "today") {
             document.getElementById("deliveryDateButtonTomorrow").className =
@@ -53,7 +45,6 @@ export default function DeliveryTime() {
         event.target.className = "delivery-date-button-selected";
         updateDeliveryDate(event.target.value);
 
-        //!Unselect all radio buttons
         let radioButtons = document.querySelectorAll("input[type='radio']");
         radioButtons.forEach((radio) => unselectRadioButton(radio));
         updateDeliveryTime("Choose your delivery time ...");
