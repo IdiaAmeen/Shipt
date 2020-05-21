@@ -21,7 +21,7 @@ export default function SignIn(props) {
       let user = await signIn(signInObject);
       user = user.user;
       props.setCurrentUser(user);
- 
+
       setSignInCreated(!!user._id);
     } catch (error) {
       setErrorMessage("Invalid Credentials. Please try again!");
@@ -60,7 +60,6 @@ export default function SignIn(props) {
               <div style={{ justifyContent: "center", display: "flex" }}>
                 <div className="sign-in-area">
                   <StaticButtons />
-
 
                   <div className="signUp-signIn-separator">
                     <div className="signUp-signIn-or">
@@ -113,7 +112,7 @@ export default function SignIn(props) {
                   <button className="post-button" onClick={signInAndRedirect}>
                     Log in
                   </button>
-                  <div style={{ paddingBottom: "20px" }}>
+                  <div style={{ paddingBottom: "20px", fontSize: "12px" }}>
                     Don't have an account?
                     <Link
                       to="/sign-up"
