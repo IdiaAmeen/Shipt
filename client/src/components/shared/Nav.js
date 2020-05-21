@@ -24,20 +24,28 @@ export default function Nav(props) {
               <img
                 className="nav-shipt-logo"
                 src="/Images/brand-elements.png"
+                alt="Shipt logo"
+
               ></img>
             </Link>
             <div className="nav-links-container">
               <img
                 className="desktop-nav-account-icon"
                 src="/Images/Group 81.png"
+                alt="gift get $10"
+
               />
               <img
                 className="desktop-nav-account-icon"
                 src="/Images/Group 82.png"
+                alt="address"
+
               />
               <img
                 className="desktop-nav-account-icon"
                 src="/Images/Group 84.png"
+                alt="Help"
+
               />
               <Link className="nav-question-mark" to="/">
                 <img src={HelpIcon} className="nav-help-icon" />
@@ -51,9 +59,12 @@ export default function Nav(props) {
                   <img
                     src="/Images/account-icon@2x.png"
                     className="nav-account-icon"
+                    alt="account"
                   />
                 </Link>
-                <div className="drop-down">{showMenu && <AccountMenu />}</div>
+                <div className="drop-down">
+                  {showMenu && <AccountMenu user={props.user} />}
+                </div>
               </div>
 
               <Link
@@ -63,6 +74,8 @@ export default function Nav(props) {
                 <img
                   className="desktop-nav-account-icon"
                   src="/Images/account-icon@2x.png"
+                  alt="account"
+
                 />
                 <div>
                   {props.user ? (
@@ -76,6 +89,7 @@ export default function Nav(props) {
                       <span className="desktop-nav-account-span">Account</span>
                     </>
                   )}
+
                 </div>
               </Link>
             </div>

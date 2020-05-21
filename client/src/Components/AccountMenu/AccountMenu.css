@@ -72,7 +72,7 @@
 
 .account-menu-link :hover {
   font-size: 23px;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .list-name {
@@ -98,9 +98,7 @@
   width: 30px;
   height: 30px;
   margin-right: 10px;
-  
 }
-
 
 @media (min-width: 765px) {
   .account-menu-main-container {
