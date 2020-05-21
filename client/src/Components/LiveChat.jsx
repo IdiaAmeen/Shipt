@@ -22,33 +22,46 @@ export default function LiveChat() {
     );
   } else {
     return (
-      <div className="outer-modal">
-        <div className="inner-modal1">
-          <div className="quit1">
-            <button onClick={() => setIsDisplay(!isDisplay)} className="x1">
-              <img src="Images/Group 97.png" alt="X" />
-            </button>
-          </div>
-          <div className="member-shopper1">
-            <button id="member1" onClick={() => setUserOption("member1")}>
-              Member{" "}
-            </button>
-            <button id="shopper1" onClick={() => setUserOption("shopper1")}>
-              Shopper{" "}
-            </button>
-          </div>
-          <div className="chat-box1">
-            <div className="greeting1">
-              <p>Hi there!</p>
-              <p>How can I help you?</p>
-            </div>
-            <div>
-              <input className="text-box1" type="text" />
-            </div>
-          </div>
-          <button className="send"> Send </button>
+      <>
+        {" "}
+        <div className="nav1">
+          <Nav />
         </div>
-      </div>
+        <div className="outer-modal1">
+          <div className="inner-modal1">
+            <div className="quit1">
+              <img
+                onClick={() => setIsDisplay(!isDisplay)}
+                src="Images/Group 97.png"
+                alt="X"
+                className="x1"
+              />
+            </div>
+            <div className="member-shopper1">
+              <button id="member1" onClick={() => setUserOption("member1")}>
+                Member{" "}
+              </button>
+              <button id="shopper1" onClick={() => setUserOption("shopper1")}>
+                Shopper{" "}
+              </button>
+            </div>
+            <div className="chat-box1">
+              <div className="greeting1">
+                <div className="hi">
+                  <p>Hi there!</p>
+                </div>
+                <div className="help">
+                  <p>How can I help you?</p>
+                </div>
+              </div>
+              <div>
+                <input className="text-box1" type="text" />
+              </div>
+            </div>
+            <button className="send"> Send </button>
+          </div>
+        </div>
+      </>
     );
   }
 }
