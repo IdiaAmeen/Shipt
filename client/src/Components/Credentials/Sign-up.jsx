@@ -66,9 +66,14 @@ const SignUp = (props) => {
               <div style={{ justifyContent: "center", display: "flex" }}>
                 <div className="sign-up-area">
                   <StaticButtons />
-                  <p style={{ color: "#838383" }}>
-                    _____________________or_____________________
-                  </p>
+                  <div className="signUp-signIn-separator">
+                    <div className="signUp-signIn-or">
+                      <span className="signUp-signIn-divider"></span>{" "}
+                      <span className="signUp-signIn-or-span">or</span>{" "}
+                      <span className="signUp-signIn-divider"></span>
+                    </div>
+                  </div>
+
                   <div className="sign-up-input">
                     <h3>Sign up with email</h3>
                     <p className="inputField">Full Name:</p>
