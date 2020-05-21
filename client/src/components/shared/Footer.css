@@ -1,8 +1,9 @@
 .footer-container { 
-  height: 300px;
+  min-height: 300px;
   background-color:#F7F4EA;
   margin-top: 30px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .footer-logo {
@@ -18,11 +19,6 @@
   font-size: 20px;
   text-decoration: none;
   color: black;
-}
-
-.credits {
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .credits-group > p {

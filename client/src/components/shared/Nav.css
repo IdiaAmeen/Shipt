@@ -7,7 +7,7 @@
 }
 
 .nav-border {
-  box-shadow: 0 1px 12px 0;
+  box-shadow: 0 1px 4px 0;
   background-color: #f9f9f9;
 }
 
@@ -38,7 +38,6 @@
   margin-left: auto;
   max-width: 35px;
   height: 35px;
-
   border: none;
   background-color: transparent;
 }
@@ -59,6 +58,72 @@
 .mobile-menu {
   display: flex;
   flex-direction: column;
+}
+
+.desktop-nav-account-icon {
+  display: none;
+}
+
+.nav-services-icons-desktop {
+  display: none;
+  
+}
+
+.nav-services-icons {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  min-width: 25%;
+}
+
+.nav-delivery-time-container {
+  display: none;
+  padding: 30px;
+}
+
+.vertical-line {
+  border-left: 1px solid gray;
+  margin: 10px 0 15px 250px;
+}
+
+.delivery-target-text-container { 
+  margin: auto 10px;
+  font-weight: bold;
+}
+
+.delivery-text {
+  color: green;
+  margin-bottom: 0;
+}
+
+.target-text {
+  font-size: 23px;
+  margin: 0;
+}
+
+.nav-categories-desktop-container {
+  display: flex;
+}
+.nav-categories-desktop-container  > p {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.nav-categories-desktop {
+  margin: 20px 20px;
+  text-decoration: none;
+}
+
+.nav-services-icons-container {
+  display: flex;
+  margin: auto 0;
+  justify-content: space-between;
+}
+
+.cart-icon-desktop {
+  margin-top: 10px;
+  margin-right: 10px; 
 }
 
 @media (min-width: 765px) {
@@ -85,6 +150,24 @@
     padding-left: 5px;
     font-size: 20px;
   }
+  .nav-question-mark {
+    display: none;
+  }
+  .nav-services-icons-desktop {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    min-width: 25%;
+  }
+  .nav-services-icons {
+    display: none;
+  }
+
+  .nav-delivery-time-container {
+    display: block;
+  }
 }
 
 .nav-services-container {
@@ -94,9 +177,11 @@
   width: 85%;
 }
 
+
 .nav-services-icons {
   display: flex;
   justify-content: space-between;
   min-width: 25%;
   border: none;
 }
+
