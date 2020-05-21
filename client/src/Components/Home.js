@@ -6,27 +6,10 @@ import BuyAgain from "./BuyAgain";
 import ForYou from "./ForYou";
 import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
-import axios from "axios";
 import OnSale from "./OnSale";
 import { ReactSmartScroller } from "react-smart-scroller";
 
-export default function Home() {
-  const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
-  const [forYouProducts, updateForYouProducts] = useState([]);
-  const [onSaleProducts, updateOnSaleProducts] = useState([]);
-
-  useEffect(() => {
-    callGetProducts();
-  }, []);
-
-  const callGetProducts = async () => {
-    const apiResults = await axios(
-      "https://shiptserver.herokuapp.com/api/products"
-    );
-    updateBuyAgainProducts(apiResults.data.splice(0, 4));
-    updateForYouProducts(apiResults.data.splice(0, 4));
-    updateOnSaleProducts(apiResults.data.splice(0, 4));
-  };
+export default function Home(props) {
 
   const productLinkPages = [
     {
@@ -47,7 +30,7 @@ export default function Home() {
     },
     {
       images: [
-    
+
         {
           url: "/Images/Browse Icon.png",
           label: "Browse",
@@ -62,10 +45,10 @@ export default function Home() {
 
   const renderPagination = ({ onNext, onPrev, onDotClick, selectedDot }) => {
     return (
-       <>
-        </>
+      <>
+      </>
     )
-}
+  }
 
   return (
     <div>
@@ -96,7 +79,7 @@ export default function Home() {
               activeDotColor: "#5d5d5d",
               unactiveDotsColor: "#d5d5d5",
               draggable: true,
-              infinite:true
+              infinite: true
             }}
           >
             {productLinkPages.map((page, index) => (
@@ -114,9 +97,9 @@ export default function Home() {
         <div>
           <img src="/images/Exclusive Saving.png"></img>
         </div>
-        <BuyAgain results={buyAgainProducts} />
-        <ForYou results={forYouProducts} />
-        <OnSale results={onSaleProducts} />
+        <BuyAgain results={props.results.buyAgain} />
+        <ForYou results={props.results.forYou} />
+        <OnSale results={props.results.onSale} />
       </Layout>
     </div>
   );

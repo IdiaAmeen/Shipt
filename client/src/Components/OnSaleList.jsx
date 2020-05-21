@@ -2,7 +2,7 @@ import React from "react";
 import ProductItem from "./ProductItem.jsx";
 import "./ProductItemPage.css"
 
-function BuyAgainList(props) {
+function OnSaleList(props) {
 
 
   return (
@@ -23,4 +23,4 @@ function BuyAgainList(props) {
     </div>
   );
 }
-export default BuyAgainList;
+export default OnSaleList;
