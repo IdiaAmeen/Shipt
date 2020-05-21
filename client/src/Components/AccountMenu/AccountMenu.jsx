@@ -9,7 +9,7 @@ import RewardsIcon from "../../Assets/rewards-icon.svg";
 import ShoppingListIcon from "../../Assets/shopping-list-icon.svg";
 import LogoutIcon from "../../Assets/logout-icon.svg";
 
-export default function AccountMenu() {
+export default function AccountMenu(props) {
   return (
     <div className="account-menu-main-container">
       <div className="account-menu-container">
@@ -47,7 +47,7 @@ export default function AccountMenu() {
             <span className="menu-icon-span">
               <img className="menu-icon" src={RewardsIcon} alt="rewards icon" />
             </span>
-          </li >
+          </li>
           <Link className="account-menu-link" to={"/products/shopping-list"}>
             <span className="shopping-list-name">Shopping List</span>
             <span className="active-icon">
@@ -58,17 +58,20 @@ export default function AccountMenu() {
               />
             </span>
           </Link>
-            <Link className="account-menu-link" to="/sign-out">
-              <span className="account-menu-logout-name">Log Out</span>
-              <span className="active-icon">
-                <img
-                  className="active-icon"
-                  src={LogoutIcon}
-                  alt="logout icon"
-                />
-              </span>
-            </Link>
-          <div className="remainder-list"></div>
+          <Link className="account-menu-link" to="/sign-out">
+            <span className="account-menu-logout-name">Log Out</span>
+            <span className="active-icon">
+              <img className="active-icon" src={LogoutIcon} alt="logout icon" />
+            </span>
+          </Link>
+
+          {props.user && (
+            <div>
+              <Link className="account-menu-link" to="/create-product">
+                <span className="account-menu-create-name">Create Product</span>
+              </Link>
+            </div>
+          )}
         </ul>
       </div>
     </div>

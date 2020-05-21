@@ -64,7 +64,7 @@ export default function Nav(props) {
                     alt="account"
                   />
                 </Link>
-                <div className="drop-down">{showMenu && <AccountMenu />}</div>
+                <div className="drop-down">{showMenu && <AccountMenu user={props.user}/>}</div>
               </div>
 
               <Link
