@@ -11,10 +11,24 @@ import { ReactSmartScroller } from "react-smart-scroller";
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 export default function Home(props) {
+  const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
+  const [forYouProducts, updateForYouProducts] = useState([]);
+  const [onSaleProducts, updateOnSaleProducts] = useState([]);
 
-  
+  useEffect(() => {
+    callGetProducts();
+  }, []);
 
-  const productLinkPages = [
+  const callGetProducts = async () => {
+    const apiResults = await axios(
+      "https://shiptserver.herokuapp.com/api/products"
+    );
+    updateBuyAgainProducts(apiResults.data.splice(0, 4));
+    updateForYouProducts(apiResults.data.splice(0, 4));
+    updateOnSaleProducts(apiResults.data.splice(0, 4));
+  };
+
+   const productLinkPages = [
       {
           images: [
               {
@@ -79,7 +93,7 @@ export default function Home(props) {
   const renderPagination = ({ onNext, onPrev, onDotClick, selectedDot }) => {
     return <></>;
   };
-
+  
 
   return (
     <div>
@@ -89,7 +103,6 @@ export default function Home(props) {
         </Route>
         <div className="home-delivery-time-container">
           <DeliveryTime />
-
         </div>
         <div className="home-search-container">
           <img className="home-target-logo" src="/images/Target Logo.png"></img>
@@ -155,7 +168,6 @@ export default function Home(props) {
         <ForYou results={props.results.forYou} />
         <OnSale results={props.results.onSale} />
         </div>
-
       </Layout>
     </div>
   );

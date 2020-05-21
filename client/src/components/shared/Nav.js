@@ -6,7 +6,7 @@ import HelpIcon from "../../Assets/help-icon.svg";
 import LiveChat from "../LiveChat";
 import DeliveryTime from "../DeliveryTime"
 
-export default function Nav(user) {
+export default function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
   let [isDisplay, setIsDisplay] = useState(false);
   if (isDisplay === true) {
@@ -42,8 +42,9 @@ export default function Nav(user) {
               <Link className="nav-question-mark" to="/">
                 <img src={HelpIcon} className="nav-help-icon" />
               </Link>
+
               <div className="mobile-menu">
-                <button
+                <Link
                   className="nav-account-icon"
                   onClick={() => setShowMenu(!showMenu)}
                 >
@@ -51,17 +52,31 @@ export default function Nav(user) {
                     src="/Images/account-icon@2x.png"
                     className="nav-account-icon"
                   />
-                </button>
-
+                </Link>
                 <div className="drop-down">{showMenu && <AccountMenu />}</div>
               </div>
 
-              <Link to="/ShoppingList" className="desktop-nav-container">
+              <Link
+                to="/products/shopping-list"
+                className="desktop-nav-container"
+              >
                 <img
                   className="desktop-nav-account-icon"
                   src="/Images/account-icon@2x.png"
                 />
-                <span className="desktop-nav-account-span">Account</span>
+                <div>
+                  {props.user ? (
+                    <>
+                      <span className="desktop-nav-account-span">
+                        {props.user.username}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="desktop-nav-account-span">Account</span>
+                    </>
+                  )}
+                </div>
               </Link>
             </div>
           </div>

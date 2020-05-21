@@ -1,9 +1,8 @@
 import React from "react";
+import "./ItemCarousels.css";
+import SmallProduct from "./SmallProduct";
+import ScrollMenu from "react-horizontal-scrolling-menu";
 import { Link, } from 'react-router-dom'
-import "./ItemCarousels.css"
-import SmallProduct from "./SmallProduct"
-import ScrollMenu from 'react-horizontal-scrolling-menu';
-
 
 function OnSale(props) {
   const results = props.results;
@@ -12,8 +11,6 @@ function OnSale(props) {
       <Link className="ItemCarousel-link" to={`/ForYouList/`} >
         <h3 className="ItemCarousel-header">On Sale</h3>
       </Link>
-
-
       <ScrollMenu
         data={(results.map((item, key) => {
           return (
@@ -24,7 +21,6 @@ function OnSale(props) {
         }))}
         arrowRight={<img src="/Images/Scroll Arrow.png"></img>}
       />
-
     </div>
   );
 }

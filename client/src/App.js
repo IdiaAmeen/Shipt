@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, Redirect, Link, useParams } from "react-router-dom";
-import "./App.css";
+import { verifyUser } from "./services/user";
 import Home from "./Components/Home";
 import BuyAgainList from "./Components/BuyAgainList";
 import ForYouList from "./Components/ForYouList";
@@ -13,7 +13,16 @@ import ChangePassword from "./Components/Credentials/Change-password";
 import Layout from "./Components/shared/Layout";
 import EditProduct from "./Components/CUD/EditProduct";
 import ProductDetail from "./Components/ProductDetail";
+import EditProduct from "./Components/CUD/EditProduct";
 import CreateProduct from "./Components/CUD/CreateProduct";
+import "./App.css";
+
+function App() {
+  const [input, setInput] = useState("");
+  const [results, setResults] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
 import { verifyUser } from "./services/user";
 import { getProducts } from "./services/product"
 
@@ -76,21 +85,20 @@ function App() {
             path="/sign-in"
             render={(props) => <SignIn setCurrentUser={setCurrentUser} />}
           />
-
-
           <Route
             exact
             path="/create-product"
             render={() => <CreateProduct />}
           />
-
-         
-          
-
-      <Route
+          <Route
             exact
             path="/change-password"
             render={() => <ChangePassword setCurrentUser={setCurrentUser} />}
+          />
+          <Route
+            exact
+            path="/products/shopping-list"
+            render={(props) => <ShoppingList user={currentUser} />}
           />
           <Route
             exact
@@ -99,10 +107,11 @@ function App() {
               <ProductDetail user={currentUser} productDetail={props} />
             )}
           />
+
           <Route
             exact
             path="/products/:id/update"
-            render={() => <EditProduct />}
+            render={() => <EditProduct user={currentUser} />}
           />
           <Route
             exact
@@ -110,8 +119,7 @@ function App() {
             render={(props) => (
               <SignOut user={currentUser} setCurrentUser={setCurrentUser} />
             )}
-          />
-         
+          />  
             
 <Route exact path="/BuyAgainList" render={() => <Layout><BuyAgainList
             results={results.buyAgain} title='Buy Again'

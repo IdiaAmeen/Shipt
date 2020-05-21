@@ -13,7 +13,7 @@ import ShoppingListIcon from "../../../Assets/shopping-list-icon.svg";
 import LogoutIcon from "../../../Assets/logout-icon.svg";
 import Layout from "../../shared/Layout";
 
-export default function ShoppingList(item, index) {
+export default function ShoppingList({user}) {
   const [value, setValue] = useState("");
   const [items, setItem] = useState([]);
 
@@ -42,7 +42,7 @@ export default function ShoppingList(item, index) {
 
   return (
     <>
-      <Layout>
+      <Layout user={user}>
         <div className="account-shopping-container">
           <div className="desktop-menu-container">
             <p className="desktop-account">Account</p>
@@ -93,30 +93,29 @@ export default function ShoppingList(item, index) {
                   />
                 </span>
               </li>
-              <Link className="desktop-shopping-list-link" to={"/ShoppingList"}>
-                <span className="desktop-shopping-list-name">
-                  Shopping List
-                </span>
-                <span className="desktop-shopping-list-icon">
+              <Link
+                className="desktop-menu-list-link"
+                to={"/products/shopping-list"}
+              >
+                <span className="desktop-link-name">Shopping List</span>
+                <span className="desktop-active-icon">
                   <img
-                    className="desktop-shopping-list-icon"
+                    className="desktop-active-icon"
                     src={ShoppingListIcon}
                     alt="shopping list icon"
                   />
                 </span>
               </Link>
-              <li className="desktop-menu-list">
-                <Link className="desktop-menu-logout-link" to="/sign-out">
-                  <span className="desktop-list-name">Log Out</span>
-                  <span className="desktop-menu-icon-span">
-                    <img
-                      className="desktop-menu-icon"
-                      src={LogoutIcon}
-                      alt="logout-icon"
-                    />
-                  </span>
-                </Link>
-              </li>
+              <Link className="desktop-menu-list-link" to="/sign-out">
+                <span className="desktop-link-name">Log Out</span>
+                <span className="desktop-active-icon">
+                  <img
+                    className="desktop-active-icon"
+                    src={LogoutIcon}
+                    alt="logout-icon"
+                  />
+                </span>
+              </Link>
             </ul>
           </div>
           <div className="main-shopping-list-container">

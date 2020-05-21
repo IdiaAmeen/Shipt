@@ -18,7 +18,7 @@
 
 .nav-links-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: auto 0;
   min-width: 25%;
 }
@@ -42,22 +42,20 @@
   background-color: transparent;
 }
 
+.nav-services-container {
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.nav-services-icons {
+  display: flex;
+  justify-content: space-between;
+  min-width: 25%;
+}
 .desktop-nav-container {
   display: none;
-}
-
-.drop-down {
-  position: absolute;
-  z-index: 2;
-  display: inline-block;
-  margin-top: 34px;
-  margin-right: 240px;
-  transform: translateX(-185px);
-}
-
-.mobile-menu {
-  display: flex;
-  flex-direction: column;
 }
 
 .desktop-nav-account-icon {
@@ -126,6 +124,20 @@
   margin-right: 10px; 
 }
 
+.nav-services-container {
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.nav-services-icons {
+  display: flex;
+  justify-content: space-between;
+  min-width: 25%;
+  border: none;
+}
+
 @media (min-width: 765px) {
   .nav-account-icon {
     display: none;
@@ -148,7 +160,10 @@
   .desktop-nav-account-span {
     margin-top: 5px;
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 23px;
+  }
+  .desktop-nav-container:hover {
+    text-decoration: underline;
   }
   .nav-question-mark {
     display: none;
@@ -164,24 +179,7 @@
   .nav-services-icons {
     display: none;
   }
-
   .nav-delivery-time-container {
     display: block;
   }
 }
-
-.nav-services-container {
-  margin: 15px auto;
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-}
-
-
-.nav-services-icons {
-  display: flex;
-  justify-content: space-between;
-  min-width: 25%;
-  border: none;
-}
-

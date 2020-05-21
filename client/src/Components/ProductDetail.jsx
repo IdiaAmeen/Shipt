@@ -4,8 +4,11 @@ import Layout from "../Components/shared/Layout";
 import "../Components/ProductDetail.css";
 import { getProduct, deleteProduct } from "../services/product";
 import Layout from "./shared/Layout";
+import "./ProductDetail.css";
+
 
 export default function ProductDetail({ product, user }) {
+
   const [imgURL, setImgURL] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -24,38 +27,36 @@ export default function ProductDetail({ product, user }) {
     getProductData();
   });
 
-  console.log(id);
-
   return (
     <>
       <Layout user={user}>
         <h3 className="page-title">Product Details</h3>
         <div className="product-page">
-          <div className="product-details">
-            <img src={imgURL} alt={name} />
-            <div className="product-labels">
-              <div>{name}</div>
-              <div>${price}</div>
-              <div>{measurement}</div>
-            </div>
-            {user && (
-              <>
-                <button className="edit-button">
-                  <Link className="edit-link" to={`/products/${id}/update`}>
-                    Edit
-                  </Link>
+        <div className="product-details">
+          <img className="product-details-image" src={imgURL} alt={name} />
+          <div className="product-details-info">{name}</div>
+          <div className="product-details-info">${price}</div>
+          <div className="product-details-measurement">{measurement}</div>
+        </div>
+          {user && (
+            <div className="product-details-buttons">
+              <Link
+                className="product-details-edit-link"
+                to={`/products/${id}/update`}
+              >
+                <button className="product-details-edit-button">Edit</button>
+              </Link>
+
+              <Link className="product-details-delete-link" to="/">
+                <button
+                  className="product-details-delete-button"
+                  onClick={() => deleteProduct(id)}
+                >
+                  Delete
                 </button>
-                <Link to="/">
-                  <button
-                    className="delete-button"
-                    onClick={() => deleteProduct(id)}
-                  >
-                    Delete
-                  </button>
-                </Link>
-              </>
-            )}
-          </div>
+              </Link>
+            </div>
+          )}
         </div>
       </Layout>
     </>
