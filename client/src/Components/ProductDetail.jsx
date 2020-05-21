@@ -4,7 +4,7 @@ import { getProduct, deleteProduct } from "../services/product";
 import Layout from "./shared/Layout";
 import "./ProductDetail.css";
 
-export default function ProductDetail({ product, user }) {
+export default function ProductDetail({ user }) {
   const [imgURL, setImgURL] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -31,29 +31,27 @@ export default function ProductDetail({ product, user }) {
           <div className="product-details-info">{name}</div>
           <div className="product-details-info">${price}</div>
           <div className="product-details-measurement">{measurement}</div>
-          {user &&
+          {user && (
             <div className="product-details-buttons">
-              <button className="product-details-edit-button">
-                <Link
-                  className="product-details-edit-link"
-                  to={`/products/${id}/update`}
-                >
-                  Edit
+              <Link
+                className="product-details-edit-link"
+                to={`/products/${id}/update`}
+              >
+                <button className="product-details-edit-button">Edit</button>
               </Link>
-              </button>
+
               <Link className="product-details-delete-link" to="/">
                 <button
                   className="product-details-delete-button"
                   onClick={() => deleteProduct(id)}
                 >
                   Delete
-              </button>
+                </button>
               </Link>
             </div>
-          }
+          )}
         </div>
       </Layout>
     </>
-    
   );
 }

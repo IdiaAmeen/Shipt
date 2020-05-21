@@ -13,7 +13,7 @@ import ShoppingListIcon from "../../../Assets/shopping-list-icon.svg";
 import LogoutIcon from "../../../Assets/logout-icon.svg";
 import Layout from "../../shared/Layout";
 
-export default function ShoppingList(item, index, user) {
+export default function ShoppingList({user}) {
   const [value, setValue] = useState("");
   const [items, setItem] = useState([]);
 

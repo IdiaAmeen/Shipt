@@ -59,7 +59,7 @@ function App() {
           <Route
             exact
             path="/products/shopping-list"
-            render={() => <ShoppingList user={currentUser} />}
+            render={(props) => <ShoppingList user={currentUser} />}
           />
           <Route
             exact
