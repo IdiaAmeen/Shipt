@@ -21,9 +21,7 @@ export default function SignIn(props) {
       let user = await signIn(signInObject);
       user = user.user;
       props.setCurrentUser(user);
-      // console.log(user);
-
-      //! created SetState object, and need to connect to database before redirect
+ 
       setSignInCreated(!!user._id);
     } catch (error) {
       setErrorMessage("Invalid Credentials. Please try again!");
@@ -63,6 +61,7 @@ export default function SignIn(props) {
                 <div className="sign-in-area">
                   <StaticButtons />
 
+
                   <div className="signUp-signIn-separator">
                     <div className="signUp-signIn-or">
                       <span className="signUp-signIn-divider"></span>{" "}
@@ -70,6 +69,7 @@ export default function SignIn(props) {
                       <span className="signUp-signIn-divider"></span>
                     </div>
                   </div>
+
                   {/* Guard Operator */}
                   <p style={{ color: "red", fontWeight: "900" }}>
                     {errorMessage && errorMessage}

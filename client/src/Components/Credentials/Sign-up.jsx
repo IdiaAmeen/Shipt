@@ -31,12 +31,9 @@ const SignUp = (props) => {
     } else {
       alert("Passwords Do Not Match");
       return <Redirect to="/sign-up" />;
-      //! SET THIS UP FOR SIGN UP PAGE
     }
   };
-
-  //TODO: Redirect to homePage on SignUp.
-  //! created SetState object, and need to connect to database before redirect
+  
   if (signUpCreated) {
     return <Redirect to="/" />;
   } else {
