@@ -63,9 +63,13 @@ export default function SignIn(props) {
                 <div className="sign-in-area">
                   <StaticButtons />
 
-                  <p style={{ color: "#838383" }}>
-                    _____________________or_____________________
-                  </p>
+                  <div className="signUp-signIn-separator">
+                    <div className="signUp-signIn-or">
+                      <span className="signUp-signIn-divider"></span>{" "}
+                      <span className="signUp-signIn-or-span">or</span>{" "}
+                      <span className="signUp-signIn-divider"></span>
+                    </div>
+                  </div>
                   {/* Guard Operator */}
                   <p style={{ color: "red", fontWeight: "900" }}>
                     {errorMessage && errorMessage}

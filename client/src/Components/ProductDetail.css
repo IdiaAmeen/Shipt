@@ -73,6 +73,13 @@
   text-decoration: none;
 }
 
+.page-title{
+  font-size: 25px;
+  text-decoration: underline;
+  font-family: "Rubik", sans-serif;
+
+}
+
 /* @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
 
 .product-page{
