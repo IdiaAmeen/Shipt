@@ -106,17 +106,17 @@ export default function Home(props) {
         <div className="home-search-container">
           <img
             className="home-target-logo"
-            src="/images/Target Logo.png"
+            src="/Images/Target Logo.png"
             alt="Target logo"
           ></img>
           <img
             className="home-target-logo-desktop"
-            src="/images/Target Logo Desktop.png"
+            src="/Images/Target Logo Desktop.png"
             alt="Target logo"
           ></img>
           <img
             className="home-target-text"
-            src="/images/Group 123.png"
+            src="/Images/Group 123.png"
             alt="Target text"
           ></img>
           <input
@@ -126,7 +126,7 @@ export default function Home(props) {
           ></input>
         </div>
         <div className="gift-bar">
-          <img src="/images/Gift.png" alt="Gift image"></img>{" "}
+          <img src="/Images/Gift.png" alt="Gift image"></img>{" "}
           <span>Get $10 Off</span>
         </div>
         <div className="home-products-links">
@@ -171,7 +171,7 @@ export default function Home(props) {
         <div className="home-layout-desktop">
           <div className="exclusive-savings">
             <img
-              src="/images/Exclusive Saving.png"
+              src="/Images/Exclusive Saving.png"
               alt="Exclusive Savings"
             ></img>
           </div>
