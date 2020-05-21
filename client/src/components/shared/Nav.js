@@ -62,7 +62,6 @@ export default function Nav(props) {
                   {showMenu && <AccountMenu user={props.user} />}
                 </div>
               </div>
-
               <Link
                 to="/products/shopping-list"
                 className="desktop-nav-container"
