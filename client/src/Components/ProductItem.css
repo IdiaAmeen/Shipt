@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+
+.ProductItem-container {
+  box-shadow: 0px 4px 4px 0px rgba(186,186,186,.3);
+  border-radius: 6px;
+  width: 160px;
+  height: 260px;
+  background-color: white;
+  /* display: flex;
+  flex-wrap: wrap;
+  margin: 20px; */
+
+}
+
+.ProductItem-image-container {
+  position: relative;
+  height: 85px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.ProductItem-image {
+  height:100%;
+  margin-top: 10px;
+  max-width: 80%;
+}
+
+.ProductItem-add-image {
+  position: absolute;
+  bottom: -30px;
+  right: 25px;
+  height: 30px;
+}
+
+.ProductItem-price-name{
+  margin-top: 25px;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-left: 15px;
+  font-weight: 600; 
+  text-overflow: initial;
+  font-size: 15px;
+  font-family: 'Manjari', sans-serif;
+}
+
+
+.ProductItem-name {
+  text-align: left;
+  width: 150px;
+  margin-left: 15px;
+  min-height: 50px;
+}
+
+.ProductItem-name > p {
+  margin-top: 0;
+}
+
+.ProductItem-measurement {
+  padding-bottom: 10px;
+  color:gray;
+  text-align: left;
+  margin-left: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+
+}
+
+.ProductItem-link {
+  text-decoration: none;
+  color: black;
+  width: 150px;
+}

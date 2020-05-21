@@ -6,29 +6,13 @@ import BuyAgain from "./BuyAgain";
 import ForYou from "./ForYou";
 import DeliveryTime from "./DeliveryTime";
 import Modal from "./Modal";
-import axios from "axios";
 import OnSale from "./OnSale";
 import { ReactSmartScroller } from "react-smart-scroller";
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 export default function Home(props) {
-  const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
-  const [forYouProducts, updateForYouProducts] = useState([]);
-  const [onSaleProducts, updateOnSaleProducts] = useState([]);
 
-  useEffect(() => {
-      callGetProducts();
-  }, []);
-
-  const callGetProducts = async () => {
-    const apiResults = await axios(
-        "https://shiptserver.herokuapp.com/api/products"
-    );
-    
-    updateBuyAgainProducts(apiResults.data.splice(0, 9));
-    updateForYouProducts(apiResults.data.splice(0, 9));
-    updateOnSaleProducts(apiResults.data.splice(0, 9));
-  };
+  
 
   const productLinkPages = [
       {
@@ -92,6 +76,10 @@ export default function Home(props) {
     "/Images/Exclusive Saving Desktop.png",
     "/Images/Exclusive Saving Desktop.png"
   ]
+  const renderPagination = ({ onNext, onPrev, onDotClick, selectedDot }) => {
+    return <></>;
+  };
+
 
   return (
     <div>
@@ -101,6 +89,7 @@ export default function Home(props) {
         </Route>
         <div className="home-delivery-time-container">
           <DeliveryTime />
+
         </div>
         <div className="home-search-container">
           <img className="home-target-logo" src="/images/Target Logo.png"></img>
@@ -162,10 +151,11 @@ export default function Home(props) {
               arrowRight={<img src="/Images/Scroll Arrow.png"></img>}
             />
           </div>
-          <BuyAgain results={buyAgainProducts} />
-          <ForYou results={forYouProducts} />
-          <OnSale results={onSaleProducts} />
+        <BuyAgain results={props.results.buyAgain} />
+        <ForYou results={props.results.forYou} />
+        <OnSale results={props.results.onSale} />
         </div>
+
       </Layout>
     </div>
   );
