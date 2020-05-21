@@ -63,6 +63,7 @@ export default function SignIn(props) {
                 <div className="sign-in-area">
                   <StaticButtons />
 
+
                   <div className="signUp-signIn-separator">
                     <div className="signUp-signIn-or">
                       <span className="signUp-signIn-divider"></span>{" "}
@@ -70,6 +71,7 @@ export default function SignIn(props) {
                       <span className="signUp-signIn-divider"></span>
                     </div>
                   </div>
+
                   {/* Guard Operator */}
                   <p style={{ color: "red", fontWeight: "900" }}>
                     {errorMessage && errorMessage}

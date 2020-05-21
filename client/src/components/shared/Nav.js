@@ -31,17 +31,23 @@ export default function Nav(props) {
               <img
                 className="desktop-nav-account-icon"
                 src="/Images/Group 81.png"
+
                 alt="gift get $10"
+
               />
               <img
                 className="desktop-nav-account-icon"
                 src="/Images/Group 82.png"
+
                 alt="address"
+
               />
               <img
                 className="desktop-nav-account-icon"
                 src="/Images/Group 84.png"
+
                 alt="Help"
+
               />
               <Link className="nav-question-mark" to="/">
                 <img src={HelpIcon} className="nav-help-icon" />
@@ -78,15 +84,19 @@ export default function Nav(props) {
                       </span>
                     </>
                   ) : (
-                    <>
-                      <span className="desktop-nav-account-span">Account</span>
-                    </>
-                  )}
+                      <>
+                        <span className="desktop-nav-account-span">Account</span>
+                      </>
+                    )}
                 </div>
               </Link>
             </div>
           </div>
         </div>
+
+        <div className="nav-services-box-shadow">
+         
+
         <div className="nav-services-container">
           <div className="nav-services-icons">
             <Link to="">
@@ -108,42 +118,66 @@ export default function Nav(props) {
             <div className="vertical-line"></div>
             <div className="nav-categories-desktop-container">
               <Link className="nav-categories-desktop" to="">
+
                 <img src="/images/Categories.png"></img>
               </Link>
-              <p>Categories</p>
+              <Link to="">
+                <img src="/images/SearchIcon.png"></img>
+              </Link>
             </div>
-          </div>
+            <div className="nav-services-icons-desktop">
+              <img src="/Images/Target Logo.png"></img>
+              <div className="delivery-target-text-container">
+                <p className="delivery-text">Delivery</p>
+                <p className="target-text">Target ▼</p>
+              </div>
+              <div className="nav-delivery-time-container">
+                <DeliveryTime />
+              </div>
+              <div className="vertical-line"></div>
+              <div className="nav-categories-desktop-container">
+                <Link className="nav-categories-desktop" to="">
+                  <img src="/images/Categories.png"></img>
+                </Link>
+                <p>Categories</p>
+              </div>
+            </div>
 
-          {/* <Link to="/livechat">
+            {/* <Link to="/livechat">
           <img src="/images/1381552 2.png" />
         </Link> */}
-          <div className="nav-services-icons">
-            <button
-              className="nav-services-icons"
-              onClick={() => setIsDisplay(!isDisplay)}
-            >
-              <img src="/images/1381552 2.png" className="nav-services-icons" />
-            </button>
-
-            <Link to="">
-              <img src="/images/Shopping Cart.png"></img>
-            </Link>
-          </div>
-          <div className="nav-services-icons-desktop">
-            <div className="nav-services-icons-container">
+            <div className="nav-services-icons">
               <button
-                className="nav-services-icons-desktop"
+                className="nav-services-icons"
                 onClick={() => setIsDisplay(!isDisplay)}
               >
-                <img src="/images/1381552 2.png" />
+
+                <img src="/images/1381552 2.png" className="nav-services-icons" />
               </button>
               <p>Live Chat</p>
             </div>
             <div className="nav-services-icons-container">
               <Link className="cart-icon-desktop" to="">
                 <img src="/images/Shopping Cart.png" alt="Shopping cart"></img>
+
               </Link>
-              <p>Cart</p>
+            </div>
+            <div className="nav-services-icons-desktop">
+              <div className="nav-services-icons-container">
+                <button
+                  className="nav-services-icons-desktop"
+                  onClick={() => setIsDisplay(!isDisplay)}
+                >
+                  <img src="/images/1381552 2.png" />
+                </button>
+                <p>Live Chat</p>
+              </div>
+              <div className="nav-services-icons-container">
+                <Link className="cart-icon-desktop" to="">
+                  <img src="/images/Shopping Cart.png"></img>
+                </Link>
+                <p>Cart</p>
+              </div>
             </div>
           </div>
         </div>
