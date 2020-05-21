@@ -35,13 +35,11 @@ export default function DeliveryTime() {
     };
     
     const deliveryDateChanged = (event) => {
-        if (event.target.value == "today") {
-            document.getElementById("deliveryDateButtonTomorrow").className =
-                "delivery-date-button-unselected";
-        } else {
-            document.getElementById("deliveryDateButtonToday").className =
-                "delivery-date-button-unselected";
-        }
+        let selectedItems = document.querySelectorAll(".delivery-date-button-selected");
+        selectedItems.forEach(
+            (item) => (item.className = "delivery-date-button-unselected")
+        );
+        
         event.target.className = "delivery-date-button-selected";
         updateDeliveryDate(event.target.value);
 
@@ -74,7 +72,6 @@ export default function DeliveryTime() {
                 <div>
                     <button
                         className="delivery-date-button-selected"
-                        id="deliveryDateButtonToday"
                         value="today"
                         onClick={deliveryDateChanged}
                     >
@@ -82,7 +79,6 @@ export default function DeliveryTime() {
           </button>
                     <button
                         className="delivery-date-button-unselected"
-                        id="deliveryDateButtonTomorrow"
                         value="tomorrow"
                         onClick={deliveryDateChanged}
                     >
