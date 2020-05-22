@@ -1,9 +1,6 @@
 import axios from "axios";
 
 const getToken = () => {
-  // return new Promise((resolve) => {
-  //     resolve(`Bearer ${localStorage.getItem("token") || null}`);
-  // });
   const token = localStorage.getItem(`token`);
   return token;
 };
@@ -12,7 +9,7 @@ let apiUrl;
 
 const apiUrls = {
   production: "https://shiptserver.herokuapp.com/api/",
-  development: "https://shiptserver.herokuapp.com/api/",
+  development: "https://localhost:3001",
 };
 
 if (window.location.hostname === "localhost") {

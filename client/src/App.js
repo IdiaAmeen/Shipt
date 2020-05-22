@@ -4,7 +4,6 @@ import { verifyUser } from "./services/user";
 import Home from "./Components/Home";
 import BuyAgainList from "./Components/BuyAgainList";
 import ForYouList from "./Components/ForYouList";
-import LiveChat from "./Components/LiveChat";
 import ShoppingList from "./Components/AccountMenu/ShoppingList/ShoppingList";
 import SignUp from "./Components/Credentials/Sign-up";
 import SignIn from "./Components/Credentials/Sign-in";
@@ -15,7 +14,6 @@ import EditProduct from "./Components/CUD/EditProduct";
 import ProductDetail from "./Components/ProductDetail";
 import CreateProduct from "./Components/CUD/CreateProduct";
 import "./App.css";
-import { getProducts } from "./services/product";
 import axios from "axios";
 
 function App(props) {
@@ -28,7 +26,7 @@ function App(props) {
   });
 
   useEffect(() => {
-    callGetProducts(); //! this is for the caraselle
+    callGetProducts(); //! this is for the carousel
   }, []);
 
   const callGetProducts = async () => {
@@ -65,7 +63,7 @@ function App(props) {
           <Route
             exact
             path="/ShoppingList"
-            render={() => <ShoppingList/>}
+            render={() => <ShoppingList />}
           />
           <Route
             exact
