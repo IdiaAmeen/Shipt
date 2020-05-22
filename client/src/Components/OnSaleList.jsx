@@ -10,7 +10,7 @@ function OnSaleList(props) {
       <div className="newDiv">
         <div className="ProductItemPage-text">
           <h2>{props.title}</h2>
-          <p>Select products that you have purchased in the past.</p>
+          <p>Select products on sale for move savings.</p>
         </div>
         <div className="ProductItemPage-container">
           {props.results.map((result, index) => (
