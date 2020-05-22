@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./ShoppingList.css";
-import AddIcon from "../../../Assets/add-icon.svg";
-import TrashIcon from "../../../Assets/trash-icon.svg";
-import CheckIcon from "../../../Assets/check-icon.svg";
+import Layout from "../../shared/Layout";
 import AccountIcon from "../../../Assets/account-icon.svg";
+import AddIcon from "../../../Assets/add-icon.svg";
 import AddressIcon from "../../../Assets/address-icon.svg";
-import PaymentIcon from "../../../Assets/payments-icon.svg";
+import CheckIcon from "../../../Assets/check-icon.svg";
+import LogoutIcon from "../../../Assets/logout-icon.svg";
 import OrderHistoryIcon from "../../../Assets/order-history-icon.svg";
+import PaymentIcon from "../../../Assets/payments-icon.svg";
 import RewardsIcon from "../../../Assets/rewards-icon.svg";
 import ShoppingListIcon from "../../../Assets/shopping-list-icon.svg";
-import LogoutIcon from "../../../Assets/logout-icon.svg";
-import Layout from "../../shared/Layout";
+import TrashIcon from "../../../Assets/trash-icon.svg";
+
 
 export default function ShoppingList({ user }) {
   const [value, setValue] = useState("");

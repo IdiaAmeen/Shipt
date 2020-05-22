@@ -1,9 +1,11 @@
-import Layout from "../shared/Layout";
-import { signIn } from "../../services/user";
+
 import { Redirect, Link } from "react-router-dom";
 import React, { useState } from "react";
 import StaticButtons from "./StaticButtons.jsx";
+import Layout from "../shared/Layout";
 import "./inputField.css";
+import { signIn } from "../../services/user";
+
 
 export default function SignIn(props) {
   const [username, setUsername] = useState();

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../shared/Layout";
 import { Redirect } from "react-router-dom";
-import { createProduct } from "../../services/product";
 import "./CreateProduct.css";
+import { createProduct } from "../../services/product";
+
 
 const CreateProduct = (props) => {
   const [productCreated, upDateProductCreated] = useState(false);
