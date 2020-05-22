@@ -17,7 +17,6 @@ export const signIn = async (credentials) => {
     return resp.data;
   } catch (error) {
     throw error;
-    // if (error) { alert('invalid credentials') }
   }
 };
 
