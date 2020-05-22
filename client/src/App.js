@@ -15,6 +15,7 @@ import ProductDetail from "./Components/ProductDetail";
 import CreateProduct from "./Components/CUD/CreateProduct";
 import "./App.css";
 import axios from "axios";
+import OnSale from "./Components/OnSale";
 
 function App(props) {
   const [input, setInput] = useState("");
@@ -124,6 +125,15 @@ function App(props) {
             render={() => (
               <Layout>
                 <ForYouList results={results.forYou} title="For You" />
+              </Layout>
+            )}
+          />
+          <Route
+            exact
+            path="/OnSale"
+            render={() => (
+              <Layout>
+                <OnSale results={results.onSale} title="On Sale" />
               </Layout>
             )}
           />
