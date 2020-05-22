@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { changePassword } from "../../services/user";
 import { Redirect, Link } from "react-router-dom";
 import Layout from "../shared/Layout";
+import { changePassword } from "../../services/user";
 import "./inputField.css";
 
 export default function ChangePassword(props) {
@@ -26,7 +26,6 @@ export default function ChangePassword(props) {
         let user = await changePassword(signInObject);
         user = user.user;
         props.setCurrentUser(user);
-        // console.log(user);
 
         //! created SetState object, and need to connect to database before redirect
         setPasswordChanged(!!user._id);

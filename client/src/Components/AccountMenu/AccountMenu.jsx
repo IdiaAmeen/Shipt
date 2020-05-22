@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./AccountMenu.css";
 import AccountIcon from "../../Assets/account-icon.svg";
 import AddressIcon from "../../Assets/address-icon.svg";
-import PaymentIcon from "../../Assets/payments-icon.svg";
+import LogoutIcon from "../../Assets/logout-icon.svg";
 import OrderHistoryIcon from "../../Assets/order-history-icon.svg";
+import PaymentIcon from "../../Assets/payments-icon.svg";
 import RewardsIcon from "../../Assets/rewards-icon.svg";
 import ShoppingListIcon from "../../Assets/shopping-list-icon.svg";
-import LogoutIcon from "../../Assets/logout-icon.svg";
 
 export default function AccountMenu(props) {
   return (

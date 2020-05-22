@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Layout from "../shared/Layout";
-import { Redirect } from "react-router-dom";
-import { signUp } from "../../services/user";
+import { Redirect, Link } from "react-router-dom";
 import StaticButtons from "./StaticButtons.jsx";
-import { Link } from "react-router-dom";
+import Layout from "../shared/Layout";
 import "./inputField.css";
+import { signUp } from "../../services/user";
+
 
 const SignUp = (props) => {
   const [confirmPassword, setConfirmPassword] = useState();
@@ -33,7 +33,7 @@ const SignUp = (props) => {
       return <Redirect to="/sign-up" />;
     }
   };
-  
+
   if (signUpCreated) {
     return <Redirect to="/" />;
   } else {
