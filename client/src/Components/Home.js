@@ -197,3 +197,20 @@ export default function Home(props) {
     </div>
   );
 }
+                    <img src={item} alt="group icons" />
+                  </div>
+                );
+              })}
+              arrowRight={
+                <img src="/Images/Scroll Arrow.png" alt="Scroll arrow"></img>
+              }
+            />
+          </div>
+          <BuyAgain results={props.results.buyAgain} />
+          <ForYou results={props.results.forYou} />
+          <OnSale results={props.results.onSale} />
+        </div>
+      </Layout>
+    </div>
+  );
+}
