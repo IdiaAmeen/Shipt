@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Route } from "react-router-dom";
 import { ReactSmartScroller } from "react-smart-scroller";
 import ScrollMenu from "react-horizontal-scrolling-menu";
-import { Route } from "react-router-dom";
 import BuyAgain from "./BuyAgain";
 import DeliveryTime from "./DeliveryTime";
 import ForYou from "./ForYou";
@@ -11,22 +11,6 @@ import Layout from "./shared/Layout";
 import "./Home.css";
 
 export default function Home(props) {
-  // const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
-  // const [forYouProducts, updateForYouProducts] = useState([]);
-  // const [onSaleProducts, updateOnSaleProducts] = useState([]);
-
-  // useEffect(() => {
-  //     callGetProducts();
-  // }, []);
-
-  // const callGetProducts = async () => {
-  //     const apiResults = await axios(
-  //         "https://shiptserver.herokuapp.com/api/products"
-  //     );
-  //     updateBuyAgainProducts(apiResults.data.splice(0, 4));
-  //     updateForYouProducts(apiResults.data.splice(0, 4));
-  //     updateOnSaleProducts(apiResults.data.splice(0, 4));
-  // };
 
   const productLinkPages = [
     {
