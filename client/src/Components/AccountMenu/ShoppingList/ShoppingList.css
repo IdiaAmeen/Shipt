@@ -87,7 +87,6 @@
 }
 
 .deleted {
-  /* display: none; */
   float: right;
   border-style: none;
   background-color: white;

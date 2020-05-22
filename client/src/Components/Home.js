@@ -1,33 +1,16 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
-import Layout from "./shared/Layout";
-import { Route } from "react-router-dom";
-import BuyAgain from "./BuyAgain";
-import ForYou from "./ForYou";
-import DeliveryTime from "./DeliveryTime";
-import Modal from "./Modal";
-import OnSale from "./OnSale";
 import { ReactSmartScroller } from "react-smart-scroller";
 import ScrollMenu from "react-horizontal-scrolling-menu";
-import axios from "axios";
+import { Route } from "react-router-dom";
+import BuyAgain from "./BuyAgain";
+import DeliveryTime from "./DeliveryTime";
+import ForYou from "./ForYou";
+import Modal from "./Modal";
+import OnSale from "./OnSale";
+import Layout from "./shared/Layout";
+import "./Home.css";
 
 export default function Home(props) {
-  // const [buyAgainProducts, updateBuyAgainProducts] = useState([]);
-  // const [forYouProducts, updateForYouProducts] = useState([]);
-  // const [onSaleProducts, updateOnSaleProducts] = useState([]);
-
-  // useEffect(() => {
-  //     callGetProducts();
-  // }, []);
-
-  // const callGetProducts = async () => {
-  //     const apiResults = await axios(
-  //         "https://shiptserver.herokuapp.com/api/products"
-  //     );
-  //     updateBuyAgainProducts(apiResults.data.splice(0, 4));
-  //     updateForYouProducts(apiResults.data.splice(0, 4));
-  //     updateOnSaleProducts(apiResults.data.splice(0, 4));
-  // };
 
   const productLinkPages = [
     {
@@ -180,23 +163,6 @@ export default function Home(props) {
               data={exclusiveSavings.map((item, key) => {
                 return (
                   <div key={key} className="scroll-items-display">
-                    <img src={item} alt="group icons" />
-                  </div>
-                );
-              })}
-              arrowRight={
-                <img src="/Images/Scroll Arrow.png" alt="Scroll arrow"></img>
-              }
-            />
-          </div>
-          <BuyAgain results={props.results.buyAgain} />
-          <ForYou results={props.results.forYou} />
-          <OnSale results={props.results.onSale} />
-        </div>
-      </Layout>
-    </div>
-  );
-}
                     <img src={item} alt="group icons" />
                   </div>
                 );
