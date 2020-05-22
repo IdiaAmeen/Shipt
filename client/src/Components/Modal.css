@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Rubik:wght@400;500;700&display=swap");
 
+
+
 .outer-modal {
   display: flex;
   justify-content: center;
@@ -21,7 +23,7 @@
   flex-direction: column;
   position: absolute;
   height: 280px;
-  width: 400px;
+  width: 340px;
   top: 11.5%;
   background-color: rgb(255, 255, 255, 1);
   bottom: 25%;
@@ -67,14 +69,11 @@
 
 @media (min-width: 765px) {
   .inner-modal {
-    border-radius: 36px;
-    box-shadow: 0 3px 12px 0 var(--headingcolor-30);
-    font-size: 18px;
-    position: fixed;
+    margin: auto 0;
     width: 520px;
     height: 258px;
-    left: 460px;
-    top: 321px;
+    font-size: 18px;
+    box-shadow: 0 3px 12px 0;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -94,3 +93,4 @@
     margin-top: 3px;
   }
 }
+
